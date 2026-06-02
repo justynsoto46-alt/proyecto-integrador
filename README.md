@@ -4,6 +4,6 @@ Para la pagina web de U Cenfotec
 
 ## MIEMBROS
 
-ivannia Vanessa Quesada Bogantesd
+Ivannia Vanessa Quesada Bogantes
 Joustyn David Quiros Soto
 Jocelyne Miranda Fernandez
