@@ -61,3 +61,7 @@ footer {
 .fotter p {
     color: white;
 }
+
+.fotter h2 {
+    text-align: right;
+}
