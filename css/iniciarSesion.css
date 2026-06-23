@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--color-AzulOscuro: #164a98;
+--color-AzulClaro: #006AEA;
+--color-celesteClaro: #9CC8FF;
+--color-grisClaro: #d2d2d2;
+--color-grisOscuro:  #7c7b75;
+--color-amarilloClaro: #fff200;
+--color-amarilloOscuro:#ffc63e;
+--color-Morado:#712c86;
+}
+
+
+.menu a{
+    display: inline-block;
+    color: white ;
+    margin-right: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: var(--color-celesteClaro);
+    color: white;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-celesteClaro);
+    color: white;
+}
+
+.encabezado{
+    margin-bottom: 10px;
+    background-color: var(--color-celesteClaro);
+    color: var(--color-AzulOscuro);
+    padding: 25px 0;
+    border-bottom: 6px solid var(--color-amarilloOscuro);
+}
+.menu {
+    background-color:var(--color-AzulClaro);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.menu a{
+    display: inline-block;
+    color: white ;
+    margin-right: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: var(--color-celesteClaro);
+    color: white;
+
+}
+
+.boton,.formulario button {
+    display: inline-block;
+    background-color: var(--color-amarilloOscuro);
+    color: var(--color-AzulOscuro);
+    text-decoration: none;
+    border:none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.boton:hover, .formulario button:hover{
+    background-color: var(--color-Morado);
+    transform: scale(1.1);
+}
+
+.contenedor{
+    width: 960px;
+    margin: 0 auto;
+    color: white;
+}
+
+.tarjeta-Inicio-Sesion {
+    width: 520px;
+    background-color: var(--color-AzulClaro);
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0,0.12);
+}
+.formulario{
+    margin-top:20px;
+}
+
+.formulario label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-AzulClaro);
+}
+
+.formulario input {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.formulario button {
+    margin-top: 22px;
+}
