@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--color-AzulOscuro: #164a98;
+--color-AzulClaro: #006AEA;
+--color-celesteClaro: #9CC8FF;
+--color-grisClaro: #d2d2d2;
+--color-grisOscuro:  #7c7b75;
+--color-amarilloClaro: #fff200;
+--color-amarilloOscuro:#ffc63e;
+--color-Morado:#712c86;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-celesteClaro);
+    color: white;
+}
+
+.encabezado{
+    background-color: var(--color-celesteClaro);
+    color: var(--color-AzulOscuro);
+    padding: 25px 0;
+    border-bottom: 6px solid var(--color-amarilloOscuro);
+}
+.menu {
+    background-color:var(--color-AzulClaro);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* enlaces nav */
+
+.menu a{
+    display: inline-block;
+    color: white ;
+    margin-right: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: var(--color-celesteClaro);
+    color: white;
+
+}
+
+footer {
+    background-color:var(--color-AzulClaro);
+    color: white;
+    padding: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.fotter p {
+    color: white;
+}
