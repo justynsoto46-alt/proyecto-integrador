@@ -140,7 +140,8 @@ function iniciarSesionRetorno(){
             });
             limpiarFormulario();
 
-            // PENDIENTE: Aquí va la redirección al menú principal o dashboard
+            // Redirección al menú principal o dashboard
+            window.location.href = "/pages/menuPrincipal.html";
         }
         else{
             Swal.fire({
