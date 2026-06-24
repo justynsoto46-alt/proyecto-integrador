@@ -64,7 +64,6 @@ body {
 /* float:right saca el elemento del flujo normal y lo alinea al borde derecho de su contenedor. 
 Se utiliza para posicionar la información del usuario en la parte derecha del encabezado */
 .usuario {
-    display: inline-block;
     float: right;
     margin-right: 35px;
     margin-top: 18px;
