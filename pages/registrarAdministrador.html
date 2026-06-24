@@ -10,10 +10,37 @@
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            <h1> Registrar Administrador</h1>
+            <h1> Universidad Cenfotec Eventos</h1>
             <nav class="menu">
                 <a href ="/index.html">Inicio</a>
             </nav>
+
+    <main>
+        <section class="section">
+            <div class="contenedor tarjeta-registro">
+                <h2>Crear nuevo administrador</h2>
+                <form class="formulario" action="#"  method="post">
+                    <label for="correo">Nombre </label>
+                        <input type="text" name="Nombre Completo" id="correo"correo placeholder="Nombre Completo " required>
+                    <label for="correo">Correo Electronico </label>
+                        <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
+                    <label for="clave">Contraseña
+                        <input type="password" name="clave" id="clave" placeholder="******" required>
+                    </label>
+                    <label for="rol">Seleccione un Rol</label>
+                    <select name="rol" id="rol">
+                        <option value="defecto">Seleccione una Opcion</option>
+                        
+                        <option value="administrador">
+                        Administrador
+                        </option>
+                    </select>
+                    <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
+                        Crear Usuario</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <h2>Somos lo que sabemos </h2>
