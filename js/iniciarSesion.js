@@ -132,16 +132,14 @@ function iniciarSesionRetorno(){
        validarContrasenia() === false){
 
         if(validarCredenciales()){
-            Swal.fire({
-                title: "Inicio de sesión exitoso",
-                text: "Bienvenido al sistema de eventos de CENFOTEC",
-                icon: "success",
-                confirmButtonText: "Aceptar"
-            });
-            limpiarFormulario();
 
-            // Redirección al menú principal o dashboard
-            window.location.href = "/pages/menuPrincipal.html";
+                limpiarFormulario();
+
+                // Se almacena una sesión temporal para permitir el acceso al menú principal
+                sessionStorage.setItem("sesionActiva", "true");
+
+                // Redirecciona al menú principal del sistema
+                window.location.href = "/pages/menuPrincipal.html";
         }
         else{
             Swal.fire({
@@ -150,6 +148,7 @@ function iniciarSesionRetorno(){
                 icon: "error",
                 confirmButtonText: "Aceptar"
             });
+
             limpiarFormulario()
         }
     }

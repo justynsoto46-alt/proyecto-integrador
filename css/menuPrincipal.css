@@ -161,7 +161,6 @@ Se utiliza para posicionar la información del usuario en la parte derecha del e
     font-size: 18px;
 }
 
-<<<<<<< Updated upstream
 /* Pie de página */
 footer {
     background-color:var(--color-azulClaro);
@@ -169,7 +168,8 @@ footer {
     padding: 18px;
     margin-top: 30px;
     text-align: center;
-=======
+}
+
 .tabla-responsables{
     width: 100%;
     border-collapse: collapse;
@@ -192,5 +192,4 @@ footer {
 
 .tabla-responsables tr:nth-child(even){
     background-color: var(--color-gris) ;
->>>>>>> Stashed changes
 }

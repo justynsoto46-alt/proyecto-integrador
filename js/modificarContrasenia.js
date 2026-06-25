@@ -138,28 +138,30 @@ function limpiarFormulario(){
 
 // Función Principal
 function modificarContraseniaRetorno(){
-    if(validarCamposVacios() === false &&
-       validarCorreo() === false &&
-       validarContrasenia() === false &&
-       validarConfirmacionContrasenia() === false){
-            Swal.fire({
-                title: "Cambio de contraseña exitoso",
-                text: "El cambio de su contraseña ha sido exitoso.",
-                icon: "success",
-                confirmButtonText: "Aceptar"
-            });
+    if(validarCamposVacios() === false && validarCorreo() === false &&
+       validarContrasenia() === false && validarConfirmacionContrasenia() === false){
+        Swal.fire({
+            title: "Cambio de contraseña exitoso",
+            text: "El cambio de su contraseña ha sido exitoso.",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        }).then(() => {
+
             limpiarFormulario();
 
-             // Redirección al inicio de sesión
-            //window.location.href = "/pages/iniciarSesion.html";
-       } else {
-            Swal.fire({
+            // Redirección al inicio de sesión
+            window.location.href = "/pages/iniciarSesion.html";
+
+        });
+
+    } else {
+        Swal.fire({
             title: "No se puede restablecer su contraseña",
             text: "Por favor revise los campos marcados",
             icon: "warning",
             confirmButtonText: "Aceptar"
         });
-       }
+    }
 }
 
 // Evento Final
