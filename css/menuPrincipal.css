@@ -14,6 +14,7 @@
     --color-grisOscuro: #7c7b75;
     --color-amarilloClaro: #fff200;
     --color-amarilloOscuro: #ffc63e;
+    --color-gris:#c9c9c9;
 }
 
 /* Estilos generales */
@@ -24,12 +25,22 @@ body {
     line-height: 1.6;
 }
 
+main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.section {
+    flex: 1;       /* ocupa todo el espacio que sobra a la derecha del menú */
+    padding: 25px;
+}
 /* Encabezado */
 .encabezado {
     background-color: var(--color-azulOscuro);
     color: white;
     padding: 18px 0;
     border-bottom: 6px solid var(--color-amarilloOscuro);
+    font-size: 32px boild;
 }
 
 /* Contenedor general */
@@ -150,6 +161,7 @@ Se utiliza para posicionar la información del usuario en la parte derecha del e
     font-size: 18px;
 }
 
+<<<<<<< Updated upstream
 /* Pie de página */
 footer {
     background-color:var(--color-azulClaro);
@@ -157,4 +169,28 @@ footer {
     padding: 18px;
     margin-top: 30px;
     text-align: center;
+=======
+.tabla-responsables{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tabla-responsables th, .tabla-responsables td {
+    border:1px solid var(--color-grisClaro);
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla-responsables th {
+    background-color: var(--color-azulOscuro);
+    color:white;
+}
+
+.tabla-responsables tr:nth-child(even){
+    background-color: var(--color-gris) ;
+>>>>>>> Stashed changes
 }

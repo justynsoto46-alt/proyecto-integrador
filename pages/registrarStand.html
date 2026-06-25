@@ -14,7 +14,7 @@
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoCenfotec200x200.png" alt="Logo de CENFOTEC" class="logo">
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
@@ -25,98 +25,116 @@
         </div>
     </header>
     <main>
-        <aside class="menu-lateral">
+                <aside class="menu-lateral">
             <nav>
                 <a href="/pages/menuPrincipal.html">
                     <i class="fa-solid fa-location-dot"></i>
                     Dashboard
                 </a>
+
                 <a href="/pages/registrarAdministrador.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
+
                 <a href="/pages/registrarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
+
                 <a href="/pages/registrarActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
+
                 <a href="/pages/registrarStand.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
+
                 <a href="/pages/listarParticipantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
+
                 <a href="/pages/gestionarInscripciones.html">
                     <i class="fa-solid fa-clipboard"></i>
                     Inscripciones
                 </a>
+
                 <a href="/pages/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
                     Agenda
                 </a>
-                <a href="/pages/buscarResponsables.html">
+
+                <a href="/pages/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
+
                 <a href="/pages/pagoSimulado.html">
                     <i class="fa-solid fa-credit-card"></i>
                     Pagos
                 </a>
+
                 <a href="#">
                     <i class="fa-solid fa-gear"></i>
                     Configuración
                 </a>
+
                 <a href="/pages/iniciarSesion.html" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Cerrar Sesión
                 </a>
             </nav>
         </aside>
-
         <section class="section">
-
             <div class="contenedor tarjeta-Inicio-Sesion">
-                <h2>Crear nuevo administrador</h2>
+                <h2>Crear nuevo Stand</h2>
 
                 <form class="formulario" action="#"  method="post">
-
-                    <label for="correo">Nombre </label>
-                        <input type="text" name="Nombre Completo" id="correo"correo placeholder="Nombre Completo " required>
-
+                    <label for="Nombre">Nombre Encargado </label>
+                        <input type="text" name="Nombre Representante" id="Nombre Representante" placeholder="Juan Perez" required>
                     <label for="correo">Correo Electronico </label>
-
                         <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
-                    <label for="clave">Contraseña
 
-                        <input type="password" name="clave" id="clave" placeholder="******" required>
-
+                    <label for="texto">Descripcion
+                        <input type="text" name="numero" id="Descripcion"placeholder="Habla del Representante" required>
                     </label>
 
-                    <label for="rol">Seleccione un Rol</label>
+                    <label for="clave">Telefono
+                        <input type="number" name="numero" id="numero" placeholder="84502036" required>
+                    </label>
 
+                    <label for="rol">Seleccione un evento Asociado</label>
                     <select name="rol" id="rol">
-
                         <option value="defecto">Seleccione una Opcion</option>
-
-                        
-
-                        <option value="administrador">
-                        Administrador
+                        <option value="">
                         </option>
                     </select>
+
+
+                    <label for="rol">Seleccione un Estado del Stand</label>
+                    <select name="rol" id="rol">
+                        <option value="defecto">Seleccione una Opcion</option>
+                        <option value="Activo">
+                        Activo
+                        </option>
+                        <option value="Desactivado">
+                        Desactivado
+                        </option>
+                        <option value="pendiente">
+                        Pendiente
+                        </option>
+                    </select>
+
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
 
-                        Crear Usuario</button>
+                        Crear Stand</button>
                 </form>
             </div>
         </section>
     </main>
-
 
     <footer>
         <h2>Somos lo que sabemos </h2>
