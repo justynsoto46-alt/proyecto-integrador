@@ -1,50 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Administrador</title>
-        <link rel = "Stylesheet" href = "/css/registrarAdmin.css">
+    <title>REgistrar Admin</title>
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel = "Stylesheet" href = "/css/registrarAdmin.css">
 </head>
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            <h1> Universidad Cenfotec Eventos</h1>
-            <nav class="menu">
-                <a href ="/index.html">Inicio</a>
-            </nav>
+            <img src="/img/LogoCenfotec200x200.png" alt="Logo de CENFOTEC" class="logo">
+            <h1>CENFOTEC Página Web Eventos</h1>
 
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
+        </div>
+    </header>
     <main>
+        <aside class="menu-lateral">
+            <nav>
+                <a href="/pages/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+                <a href="/pages/registrarAdministrador.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+                <a href="/pages/registrarEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+                <a href="/pages/registrarActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+                <a href="/pages/registrarStand.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
+                <a href="/pages/listarParticipantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+                <a href="/pages/gestionarInscripciones.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    Inscripciones
+                </a>
+                <a href="/pages/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+                <a href="/pages/buscarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+                <a href="/pages/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </a>
+                <a href="/pages/iniciarSesion.html" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
         <section class="section">
-            <div class="contenedor tarjeta-registro">
+
+            <div class="contenedor tarjeta-Inicio-Sesion">
                 <h2>Crear nuevo administrador</h2>
+
                 <form class="formulario" action="#"  method="post">
+
                     <label for="correo">Nombre </label>
                         <input type="text" name="Nombre Completo" id="correo"correo placeholder="Nombre Completo " required>
+
                     <label for="correo">Correo Electronico </label>
+
                         <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
                     <label for="clave">Contraseña
+
                         <input type="password" name="clave" id="clave" placeholder="******" required>
+
                     </label>
+
                     <label for="rol">Seleccione un Rol</label>
+
                     <select name="rol" id="rol">
+
                         <option value="defecto">Seleccione una Opcion</option>
+
                         
+
                         <option value="administrador">
                         Administrador
                         </option>
                     </select>
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
+
                         Crear Usuario</button>
                 </form>
             </div>
         </section>
     </main>
 
+
     <footer>
         <h2>Somos lo que sabemos </h2>
         <p>&copy; 2026 Universidad Cenfotec </p>
     </footer>
+    </main>
 </body>
 </html>
