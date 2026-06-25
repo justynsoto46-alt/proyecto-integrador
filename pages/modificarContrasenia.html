@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENFOTEC Página Web Eventos - Modificar Contraseña</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/modificarContrasenia.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/img/LogoCenfotec200x200.png" alt="Logo de CENFOTEC" class="logo">
+            <h1>CENFOTEC Página Web Eventos</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-modificar-contrasenia">
+
+            <div class="contenedor-volver">
+                <a href="/pages/iniciarSesion.html" class="enlace-volver">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    Volver
+                </a>
+            </div>
+
+            <div class="contenedor">
+                <h2>Restablecer Contraseña</h2>
+
+                <div class="formulario-contenedor">
+                    <form class="formulario" id="formulario" action="#" method="post">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+
+                        <label for="nuevaContrasenia">Nueva contraseña</label>
+                        <input type="password" id="nuevaContrasenia" name="nuevaContrasenia" required>
+                        <p class="ayuda-contrasenia">
+                            La contraseña debe tener entre 8 y 16 caracteres, una mayúscula, una minúscula, 
+                            un número, un carácter especial y no debe contener vocales.
+                        </p>
+
+                        <label for="confirmarContrasenia">Confirmar nueva contraseña</label>
+                        <input type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
+
+                        <button type="submit">Modificar contraseña</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad Cenfotec </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/modificarContrasenia.js"></script>
+</body>
+</html>
