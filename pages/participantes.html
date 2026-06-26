@@ -13,11 +13,8 @@
 </head>
 
 <body>
-
     <header class="encabezado">
-
         <div class="contenedor">
-
             <img src="/img/LogoCenfotec200x200.png"
                  alt="Logo Universidad CENFOTEC"
                  class="logo">
@@ -28,22 +25,35 @@
                 <i class="fa-solid fa-user"></i>
                 Administrador
             </div>
-
         </div>
 
     </header>
-
     <main>
-
-        <!-- Menú lateral -->
-
         <aside class="menu-lateral">
-
             <nav>
-
                 <a href="/pages/menuPrincipal.html">
-                    <i class="fa-solid fa-house"></i>
-                    Menú Principal
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+
+                <a href="/pages/registrarAdministrador.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/pages/registrarEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+
+                <a href="/pages/registrarActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/pages/registrarStand.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
                 </a>
 
                 <a href="/pages/participantes.html">
@@ -51,17 +61,39 @@
                     Participantes
                 </a>
 
-                <a href="#" id="cerrarSesion" class="cerrar-sesion">
+                <a href="/pages/gestionarInscripciones.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    Inscripciones
+                </a>
+
+                <a href="/pages/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+
+                <a href="/pages/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/pages/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </a>
+
+                <a href="/pages/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Cerrar Sesión
                 </a>
-
             </nav>
-
         </aside>
 
         <!-- Contenido -->
-
         <section class="contenido-principal">
 
             <h2>Participantes</h2>
@@ -72,28 +104,9 @@
 
             <div class="tarjeta-opcion">
 
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-                <h3>Buscar Participantes</h3>
-
-                <p>
-                    Permite localizar un participante por nombre,
-                    identificación o correo electrónico.
-                </p>
-
-                <a href="/pages/buscarParticipantes.html"
-                   class="boton">
-                    Acceder
-                </a>
-
-            </div>
-
-            <div class="tarjeta-opcion">
-
                 <i class="fa-solid fa-list"></i>
 
                 <h3>Listar Participantes</h3>
-
                 <p>
                     Muestra todos los participantes registrados
                     en el sistema.
@@ -103,7 +116,6 @@
                    class="boton">
                     Acceder
                 </a>
-
             </div>
 
             <div class="tarjeta-opcion">
@@ -111,7 +123,6 @@
                 <i class="fa-solid fa-clipboard-list"></i>
 
                 <h3>Consultar por Actividad</h3>
-
                 <p>
                     Visualiza los participantes inscritos
                     en una actividad específica.
@@ -121,11 +132,8 @@
                    class="boton">
                     Acceder
                 </a>
-
             </div>
-
         </section>
-
     </main>
 
     <footer>

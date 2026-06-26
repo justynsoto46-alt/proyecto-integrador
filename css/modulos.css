@@ -140,8 +140,8 @@ body {
 .tarjeta-opcion {
     display: inline-block;
     vertical-align: top;
-    width: 280px;
-    min-height: 290px;
+    width: 400px;
+    min-height: 200px;
     background-color: white;
     padding: 25px;
     margin: 15px 18px 20px 0;
@@ -193,7 +193,7 @@ body {
 
 /* Pie de página */
 footer {
-    background-color: var(--color-azulOscuro);
+    background-color: var(--color-azulClaro);
     color: white;
     padding: 18px;
     margin-top: 30px;
