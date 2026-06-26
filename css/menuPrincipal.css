@@ -174,10 +174,10 @@ footer {
     text-align: center;
 }
 
-<<<<<<< Updated upstream
-=======
+
+
+
 /* TABLAS */
->>>>>>> Stashed changes
 .tabla-responsables{
     width: 100%;
 
@@ -204,13 +204,9 @@ footer {
 }
 
 .tabla-responsables tr:nth-child(even){
-<<<<<<< Updated upstream
-    background-color: var(--color-gris) ;
-=======
     background-color: var(--color-gris);
 }
 
 .tabla-responsables tbody tr:hover {
     background-color: var(--color-celesteClaro);
->>>>>>> Stashed changes
 }
