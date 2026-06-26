@@ -6,88 +6,211 @@
     <title>Registrar Evento</title>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Estilos -->
     <link rel="stylesheet" href="/css/menuPrincipal.css">
     <link rel="stylesheet" href="/css/registrarEvento.css">
 </head>
+
 <body>
-<section class="section">
 
-    <div class="contenedor tarjeta-evento">
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
 
-        <h2>Registrar Evento</h2>
+            <h1>CENFOTEC Página Web Eventos</h1>
 
-        <form class="formulario">
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
+        </div>
+    </header>
 
-        ...
+    <main>
 
-        </form>
+        <aside class="menu-lateral">
 
-    </div>
+            <nav>
 
-</section>
-<label for="nombre"></label>
-<input id="nombre">
-<label for="nombreEvento">
-Nombre del Evento
-</label>
+                <a href="/pages/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
 
-<input
-type="text"
-id="nombreEvento"
-name="nombreEvento"
-required>
-<label for="descripcion">
-Descripción
-</label>
+                <a href="/pages/registrarAdministrador.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
 
-<textarea
-id="descripcion"
-name="descripcion"
-required>
-</textarea>
-<label for="fechaInicio">
-Fecha de inicio
-</label>
+                <a href="/pages/registrarEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
 
-<input
-type="date"
-id="fechaInicio"
-name="fechaInicio">
+                <a href="/pages/registrarActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
 
-<label for="ubicacion">
-Ubicación
-</label>
+                <a href="/pages/registrarStand.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
 
-<input
-type="text"
-id="ubicacion"
-name="ubicacion">
-<option value="">
-Seleccione una opción
-</option>
+                <a href="/pages/listarParticipantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
 
-<option value="activo">
-Activo
-</option>
+                <a href="/pages/gestionarInscripciones.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    Inscripciones
+                </a>
 
-<option value="cancelado">
-Cancelado
-</option>
+                <a href="/pages/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
 
-<option value="finalizado">
-Finalizado
-</option>
+                <a href="/pages/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
 
-</select>
+                <a href="/pages/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
 
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </a>
 
-<button
-type="submit"
-class="boton boton-primario boton-bloque boton-lg">
-Guardar Evento
-</button>
+                <a href="/pages/iniciarSesion.html" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <section class="section">
+
+            <div class="contenedor tarjeta-evento">
+
+                <h2>Registrar Evento</h2>
+
+                <form class="formulario" action="#" method="post">
+
+                    <label for="nombreEvento">
+                        Nombre del Evento
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreEvento"
+                        name="nombreEvento"
+                        placeholder="Ingrese el nombre del evento"
+                        required>
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        placeholder="Ingrese la descripción del evento"
+                        required></textarea>
+
+                    <label for="fechaInicio">
+                        Fecha de inicio
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaInicio"
+                        name="fechaInicio"
+                        required>
+
+                    <label for="fechaFin">
+                        Fecha de finalización
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaFin"
+                        name="fechaFin"
+                        required>
+
+                    <label for="ubicacion">
+                        Ubicación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ubicacion"
+                        name="ubicacion"
+                        placeholder="Ingrese la ubicación"
+                        required>
+
+                    <label for="estado">
+                        Estado
+                    </label>
+
+                    <select
+                        id="estado"
+                        name="estado"
+                        required>
+
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="Activo">
+                            Activo
+                        </option>
+
+                        <option value="Cancelado">
+                            Cancelado
+                        </option>
+
+                        <option value="Finalizado">
+                            Finalizado
+                        </option>
+
+                    </select>
+
+                    <button
+                        type="submit"
+                        class="boton boton-primario boton-bloque boton-lg">
+
+                        Guardar Evento
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h2>Somos lo que sabemos</h2>
+
+        <p>&copy; 2026 Universidad CENFOTEC</p>
+
+    </footer>
 
 </body>
+
+</html>
