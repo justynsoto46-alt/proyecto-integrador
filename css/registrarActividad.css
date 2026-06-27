@@ -1,7 +1,11 @@
 
-.tarjeta-evento{
+/* ==========================================================
+   REGISTRAR ACTIVIDAD
+   ========================================================== */
+
+.tarjeta-actividad{
     margin-top: 30px;
-    width: 650px;
+    width: 700px;
     background-color: white;
     padding: 40px;
     border: 2px solid #ddd;
@@ -9,10 +13,14 @@
     box-shadow: 0 3px 8px rgba(0,0,0,.12);
 }
 
-.tarjeta-evento h2{
+.tarjeta-actividad h2{
     color: var(--color-azulOscuro);
     margin-bottom: 25px;
 }
+
+/* ==========================================================
+   FORMULARIO
+   ========================================================== */
 
 .formulario{
     margin-top: 15px;
@@ -36,6 +44,7 @@
     border-radius: 8px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
 
 .formulario textarea{
@@ -50,11 +59,19 @@
     border-color: var(--color-azulClaro);
 }
 
-.formulario select{
-    background-color: white;
+.formulario input[type="date"],
+.formulario input[type="time"],
+.formulario input[type="number"]{
     cursor: pointer;
 }
 
+.formulario select{
+    cursor: pointer;
+}
+
+/* ==========================================================
+   BOTÓN
+   ========================================================== */
 
 .boton{
     margin-top: 30px;
@@ -78,4 +95,17 @@
 
 .boton-primario:hover{
     background-color: var(--color-azulOscuro);
+}
+
+/* ==========================================================
+   RESPONSIVE BÁSICO
+   ========================================================== */
+
+@media (max-width: 900px){
+
+    .tarjeta-actividad{
+        width: 95%;
+        padding: 25px;
+    }
+
 }
