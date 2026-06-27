@@ -8,7 +8,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/css/listarResponsables.css">
 </head>
 <body>
     <header class="encabezado">
@@ -88,10 +88,22 @@
                 </a>
             </nav>
         </aside>
-        <section class="section">
+
+        <div class ="contenedor-responsables>">
+            <h2>Responsables</h2>
+            <div class="controles">
+                <input type = "search" class="input-buscar"id="buscar" placeholder="Luis... Pedro....">
+
+            <select class="selector-estado">
+                <option value="todos">Estado: Todos</option>
+                <option value="activo">Activo</option>
+            </select>
+            
+            <button class="boton">+ Nuevo Responsable</button>
+            </div>
+
+<section class="section">
             <div class="contenedor">
-                <h2></h2>
-                <p></p>
                 <table class = "tabla-responsables">
                     <thead>
                         <tr>
@@ -101,64 +113,92 @@
                             <th>Institucion</th>
                             <th>Area</th>
                             <th>Estado</th>
-                            <th></th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
                             </td>
-                            <td>Ejemplo Nombre</td>
+                            <td>👤Ejemplo Nombre</td>
                             <td>0000-0000</td>
                             <td>Empresa</td>
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
-                            <td></td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono">❌</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                             </td>
-                            <td>Ejemplo Nombre</td>
+                            <td>👤Ejemplo Nombre</td>
                             <td>0000-0000</td>
                             <td>Empresa</td>
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
-                            <td></td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono">❌</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                             </td>
-                            <td>Ejemplo Nombre</td>
+                            <td>👤Ejemplo Nombre</td>
                             <td>0000-0000</td>
                             <td>Empresa</td>
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
-                            <td></td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono">❌</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                             </td>
-                            <td>Ejemplo Nombre</td>
+                            <td>👤Ejemplo Nombre</td>
                             <td>0000-0000</td>
                             <td>Empresa</td>
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
-                            <td></td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono">❌</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                             </td>
-                            <td>Ejemplo Nombre</td>
+                            <td>👤Ejemplo Nombre</td>
                             <td>0000-0000</td>
                             <td>Empresa</td>
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
-                            <td></td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono">❌</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
+        <div class="paginacion">
+    <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
+    <div class="controles-paginacion">
+    <button class="btn-pag">Anterior</button>
+    <button class="btn-pag activo">1</button>
+    <button class="btn-pag">2</button>
+    <span>...</span>
+    <button class="btn-pag">5</button>
+    <button class="btn-pag">Siguiente</button>
+    </div>
+  </div>
+        </div>
+        
     </main>
 
     <footer>
