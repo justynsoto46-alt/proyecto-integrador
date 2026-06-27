@@ -1,27 +1,89 @@
+
 .tarjeta-actividad{
-<div class="tarjeta-actividad";>
-background-color: white;
-pdding: 40px;
-border-radius: 10px;
-box-shadow: 0 3px 8px rgba(0,0,0,0,12);
-max-width: 900px;
-margin: auto;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    padding: 40px;
+    border: 2px solid var(--color-grisClaro);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
 
 .tarjeta-actividad h2{
-color: var(--color-azulOscuro);
-:root{
---color-azulOscuro: #164a98;
-margin-bottom:30x;
-
+    color: var(--color-azulOscuro);
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
-
+.formulario{
+    margin-top: 20px;
 }
 
+.formulario label{
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-azulOscuro);
+}
 
+.formulario input,
+.formulario textarea,
+.formulario select{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-grisClaro);
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.formulario textarea{
+    resize: vertical;
+    min-height: 120px;
+}
 
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus{
+    outline: none;
+    border-color: var(--color-azulClaro);
+}
 
+.boton{
+    margin-top: 15px;
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.boton-primario{
+    background-color: var(--color-azulClaro);
+    color: white;
+}
 
+.boton-primario:hover{
+    background-color: var(--color-azulOscuro);
+}
+
+.boton-bloque{
+    width: 100%;
+}
+
+.contenido-principal{
+    flex: 1;
+    padding: 35px;
+}
+
+.contenido-principal h2{
+    color: var(--color-azulOscuro);
+    margin-bottom: 25px;
 }
