@@ -1,0 +1,105 @@
+// Se obtienen los elementos necesarios para buscar, modificar y eliminar participantes
+
+// Se obtiene el campo para buscar participantes
+let inputBuscarParticipante = document.getElementById("buscarParticipante");
+// Se obtiene el botón de Buscar
+let btnBuscarParticipante = document.getElementById("btnBuscarParticipante");
+// Se obtienen todos los botones Modificar
+let botonesModificar = document.querySelectorAll(".boton-modificar");
+// Se obtienen todos los botones Eliminar
+let botonesEliminar = document.querySelectorAll(".boton-eliminar");
+// Se obtienen todas las filas de la tabla
+let filasParticipantes = document.querySelectorAll(".tabla-participantes tbody tr");
+
+// Funciones
+
+// Función para redirigir al presionar modificar a la página modificarParticipante.html
+function modificarParticipanteRetorno(){
+    window.location.href = "/pages/modificarParticipante.html";
+}
+
+// Función para confirmar la eliminación de un participante
+function eliminarParticipanteRetorno(){
+
+    Swal.fire({
+        title: "¿Eliminar participante?",
+        text: "Esta acción no se puede deshacer.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Sí, eliminar",
+        cancelButtonText: "Cancelar"
+    }).then((resultado) => {
+
+        if(resultado.isConfirmed){
+
+            Swal.fire({
+                title: "Participante eliminado",
+                text: "El participante fue eliminado correctamente.",
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            });
+        }
+    });
+}
+
+// Función para buscar participantes
+function buscarParticipanteRetorno(){
+
+    let textoBuscar = inputBuscarParticipante.value.trim().toLowerCase();
+
+    // Recorre todas las filas de la tabla
+    filasParticipantes.forEach(function(fila){
+
+    let textoFila = fila.textContent.toLowerCase();
+    });
+
+    // Verifica si el texto buscado se encuentra dentro de la fila
+    if(textoFila.includes(textoBuscar)){
+
+        // Hace que la fila permanezca visible
+        fila.style.display = "";
+    } else {
+
+        fila.style.display = "none";
+    }
+}
+
+// Función para buscar participantes
+function buscarParticipanteRetorno(){
+
+    let textoBuscar = inputBuscarParticipante.value.trim().toLowerCase();
+
+    // Recorre todas las filas de la tabla
+    filasParticipantes.forEach(function(fila){
+
+        let textoFila = fila.textContent.toLowerCase();
+
+        // Verifica si el texto buscado se encuentra dentro de la fila
+        if(textoFila.includes(textoBuscar)){
+
+            // Hace que la fila permanezca visible
+            fila.style.display = "";
+
+        } else {
+
+            // Oculta la fila
+            fila.style.display = "none";
+        }
+    });
+}
+
+
+// Agrega el evento click a todos los botones Eliminar
+botonesEliminar.forEach(function(boton){
+    boton.addEventListener("click", eliminarParticipanteRetorno);
+});
+
+
+// Agrega el evento click a todos los botones Modificar
+botonesModificar.forEach(function(boton){
+    boton.addEventListener("click", modificarParticipanteRetorno);
+});
+
+
+// Ejecuta la búsqueda cuando se presiona el botón Buscar
+btnBuscarParticipante.addEventListener("click", buscarParticipanteRetorno);
