@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Actividad</title>
+    <title>Registrar Evento</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <link rel="stylesheet" href="../css/menuPrincipal.css">
 <link rel="stylesheet" href="../css/registrarEvento.css">
-
 </head>
 
 <body>
+
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoCenfotec200x200.png" alt="Logo de CENFOTEC" class="logo">
+            <img src="../img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
@@ -25,70 +28,189 @@
     </header>
 
     <main>
+
         <aside class="menu-lateral">
+
             <nav>
+
                 <a href="/pages/menuPrincipal.html">
                     <i class="fa-solid fa-location-dot"></i>
                     Dashboard
                 </a>
+
                 <a href="/pages/registrarAdministrador.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
+
                 <a href="/pages/registrarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
+
                 <a href="/pages/registrarActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
+
                 <a href="/pages/registrarStand.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
+
                 <a href="/pages/participantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
+
                 <a href="/pages/gestionarInscripciones.html">
                     <i class="fa-solid fa-clipboard"></i>
                     Inscripciones
                 </a>
+
                 <a href="/pages/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
                     Agenda
                 </a>
-                <a href="/pages/buscarResponsables.html">
+
+                <a href="/pages/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
+
                 <a href="/pages/pagoSimulado.html">
                     <i class="fa-solid fa-credit-card"></i>
                     Pagos
                 </a>
+
                 <a href="#">
                     <i class="fa-solid fa-gear"></i>
                     Configuración
                 </a>
+
                 <a href="/pages/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Cerrar Sesión
                 </a>
+
             </nav>
+
         </aside>
 
-        <section class="contenido-principal">
-            <h2>Menú Principal</h2>
+        <section class="section">
 
-            <div class="tarjeta-bienvenida">
-                <h3>Bienvenido al sistema administrativo</h3>
-                <p>Seleccione una opción del menú lateral para gestionar la información de eventos institucionales de la Universidad CENFOTEC.</p>
+            <div class="contenedor tarjeta-evento">
+
+                <h2>Registrar Evento</h2>
+
+                <form class="formulario" action="#" method="post">
+
+                    <label for="nombreEvento">
+                        Nombre del Evento
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreEvento"
+                        name="nombreEvento"
+                        placeholder="Ingrese el nombre del evento"
+                        required>
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        placeholder="Ingrese la descripción del evento"
+                        required></textarea>
+
+                    <label for="fechaInicio">
+                        Fecha de inicio
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaInicio"
+                        name="fechaInicio"
+                        required>
+
+                    <label for="fechaFin">
+                        Fecha de finalización
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fechaFin"
+                        name="fechaFin"
+                        required>
+
+                    <label for="ubicacion">
+                        Ubicación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ubicacion"
+                        name="ubicacion"
+                        placeholder="Ingrese la ubicación"
+                        required>
+
+                    <label for="estado">
+                        Estado
+                    </label>
+
+                    <select
+                        id="estado"
+                        name="estado"
+                        required>
+
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="Activo">
+                            Activo
+                        </option>
+
+                        <option value="Cancelado">
+                            Cancelado
+                        </option>
+
+                        <option value="Finalizado">
+                            Finalizado
+                        </option>
+
+                    </select>
+
+                    <button
+                        type="submit"
+                        class="boton boton-primario boton-bloque boton-lg">
+
+                        Guardar Evento
+
+                    </button>
+
+                </form>
+
             </div>
+
         </section>
+
     </main>
+
+    <footer>
+
+        <h2>Somos lo que sabemos</h2>
+
+        <p>&copy; 2026 Universidad CENFOTEC</p>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
 </body>
+
 </html>
