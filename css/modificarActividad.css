@@ -1,3 +1,42 @@
+.tarjeta-actividad{
+    margin-top: 30px;
+    width: 700px;
+    background-color: white;
+    padding: 40px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
+}
+
+.tarjeta-actividad h2{
+    color: var(--color-azulOscuro);
+    margin-bottom: 25px;
+}
+
+.formulario{
+    margin-top: 15px;
+}
+
+.formulario label{
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-azulOscuro);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-grisClaro);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .formulario textarea{
     resize: vertical;
     min-height: 120px;
@@ -10,14 +49,16 @@
     border-color: var(--color-azulClaro);
 }
 
-.formulario input[type="date"],
-.formulario input[type="time"],
-.formulario input[type="number"]{
+.formulario select{
+    background-color: white;
     cursor: pointer;
 }
 
-.formulario select{
-    cursor: pointer;
+/* Campo solo lectura para el ID */
+.formulario input[readonly]{
+    background-color: #f2f2f2;
+    color: #666;
+    cursor: not-allowed;
 }
 
 .boton{
@@ -42,13 +83,4 @@
 
 .boton-primario:hover{
     background-color: var(--color-azulOscuro);
-}
-
-@media (max-width: 900px){
-
-    .tarjeta-actividad{
-        width: 95%;
-        padding: 25px;
-    }
-
 }
