@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENFOTEC Página Web Eventos - Participantes</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/listarParticipantes.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
+
+            <h1>CENFOTEC Página Web Eventos</h1>
+
+            <div class="usuario">
+                <i class="fa-solid fa-user"></i>
+                Administrador
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Menú lateral -->
+        <aside class="menu-lateral">
+            <nav>
+                <a href="/pages/menuPrincipal.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+
+                <a href="/pages/registrarAdministrador.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/pages/eventos.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Eventos
+                </a>
+
+                <a href="/pages/actividades.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/pages/stands.html">
+                    <i class="fa-solid fa-store"></i>
+                    Stands
+                </a>
+
+                <a href="/pages/participantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+
+                <a href="/pages/inscripciones.html">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    Inscripciones
+                </a>
+
+                <a href="/pages/consultarAgenda.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Agenda
+                </a>
+
+                <a href="/pages/responsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/pages/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </a>
+
+                <a href="#" id="cerrarSesion" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <section class="contenido-principal">
+
+            <h2>Participantes</h2>
+
+            <p class="descripcion">
+                Consulte, busque, modifique o elimine los participantes registrados.
+            </p>
+
+            <!-- Buscador -->
+            <div class="buscador">
+
+                <label for="buscarParticipante">
+                    Buscar participante
+                </label>
+
+                <input type="text" id="buscarParticipante" placeholder="Nombre, identificación o correo">
+
+                <button class="boton">
+                    Buscar
+                </button>
+            </div>
+
+            <!-- Tabla -->
+            <table class="tabla-participantes">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Identificación</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Ivannia Quesada</td>
+                        <td>123456789</td>
+                        <td>iquesadab@ucenfotec.ac.cr</td>
+                        <td>8888-8888</td>
+                        <td>
+                            <button class="boton-modificar-eliminar boton-modificar">Modificar</button>
+                            <button class="boton-modificar-eliminar boton-eliminar">Eliminar</button>            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Jocelyne Miranda</td>
+                        <td>987654321</td>
+                        <td>jmirandaf@ucenfotec.ac.cr</td>
+                        <td>8777-7777</td>
+                        <td>
+                            <button class="boton-modificar-eliminar boton-modificar">Modificar</button>
+                            <button class="boton-modificar-eliminar boton-eliminar">Eliminar</button>            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad Cenfotec </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/listarParticipantes.js"></script>
+</body>
+</html>
