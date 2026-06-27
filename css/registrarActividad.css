@@ -9,6 +9,11 @@ margin: auto;
 
 .tarjeta-actividad h2{
 color: var(--color-azulOscuro);
+:root{
+--color-azulOscuro: #164a98;
+margin-bottom:30x;
+
+}
 
 
 }
