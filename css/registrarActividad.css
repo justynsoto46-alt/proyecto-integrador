@@ -1,22 +1,21 @@
 
-.tarjeta-actividad{
-    width: 100%;
-    max-width: 900px;
+.tarjeta-evento{
+    margin-top: 30px;
+    width: 650px;
     background-color: white;
     padding: 40px;
-    border: 2px solid var(--color-grisClaro);
+    border: 2px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
 }
 
-.tarjeta-actividad h2{
+.tarjeta-evento h2{
     color: var(--color-azulOscuro);
-    font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .formulario{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .formulario label{
@@ -34,9 +33,8 @@
     width: 100%;
     padding: 12px;
     border: 1px solid var(--color-grisClaro);
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 15px;
-    margin-bottom: 18px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -52,17 +50,25 @@
     border-color: var(--color-azulClaro);
 }
 
+.formulario select{
+    background-color: white;
+    cursor: pointer;
+}
+
+
 .boton{
-    margin-top: 15px;
-    display: inline-block;
+    margin-top: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .boton-primario{
@@ -72,18 +78,4 @@
 
 .boton-primario:hover{
     background-color: var(--color-azulOscuro);
-}
-
-.boton-bloque{
-    width: 100%;
-}
-
-.contenido-principal{
-    flex: 1;
-    padding: 35px;
-}
-
-.contenido-principal h2{
-    color: var(--color-azulOscuro);
-    margin-bottom: 25px;
 }
