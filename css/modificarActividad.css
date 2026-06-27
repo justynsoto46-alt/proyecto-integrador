@@ -1,0 +1,54 @@
+.formulario textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus{
+    outline: none;
+    border-color: var(--color-azulClaro);
+}
+
+.formulario input[type="date"],
+.formulario input[type="time"],
+.formulario input[type="number"]{
+    cursor: pointer;
+}
+
+.formulario select{
+    cursor: pointer;
+}
+
+.boton{
+    margin-top: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton-primario{
+    background-color: var(--color-azulClaro);
+    color: white;
+}
+
+.boton-primario:hover{
+    background-color: var(--color-azulOscuro);
+}
+
+@media (max-width: 900px){
+
+    .tarjeta-actividad{
+        width: 95%;
+        padding: 25px;
+    }
+
+}
