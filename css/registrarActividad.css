@@ -1,0 +1,22 @@
+.tarjeta-actividad{
+<div class="tarjeta-actividad";>
+background-color: white;
+pdding: 40px;
+border-radius: 10px;
+box-shadow: 0 3px 8px rgba(0,0,0,0,12);
+max-width: 900px;
+margin: auto;
+
+.tarjeta-actividad h2{
+color: var(--color-azulOscuro);
+
+
+}
+
+
+
+
+
+
+
+}
