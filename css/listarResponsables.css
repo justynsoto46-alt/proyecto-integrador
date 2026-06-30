@@ -44,7 +44,9 @@ h2 {
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 20px;
-    font-size: 40px;
+    font-size: 50px;
+    color: var(--color-azulOscuro);
+    
 }
 /* Encabezado */
 .encabezado {
@@ -66,6 +68,12 @@ h2 {
     width: 100%;
     margin: 0;
     padding-left: 30px;
+}
+
+.contenedor-responsables{
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
 }
 
 /* Logo */
@@ -187,7 +195,6 @@ footer {
 /* TABLAS */
 .tabla-responsables{
     width: 100%;
-
     border-collapse: collapse;
     margin-top: 25px;
     background-color: white;
@@ -226,9 +233,9 @@ footer {
     color: white;
     text-decoration: none;
     border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 17px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    font-size: 15px;
     cursor: pointer;
     margin-right: 12px;
     transition: transform 0.3s;
@@ -297,10 +304,11 @@ footer {
     border-radius: 10px; 
     outline: none;
 }
+
 .selector-estado {
-    padding: 8px 15px;
+    padding: 15px 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: white;
     cursor: pointer;
 }
