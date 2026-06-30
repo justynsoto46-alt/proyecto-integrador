@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENFOTEC Página Web Eventos - Participantes</title>
+    <title>Listar Responsables</title>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/listarResponsables.css">
 </head>
-
 <body>
-
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
-
-            <h1>CENFOTEC Página Web Eventos</h1>
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+            <h1>CENFOTEC PAGINA WEB EVENTOS</h1>
 
             <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                Administrador
+                <span>Administrador</span>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Menú lateral -->
         <aside class="menu-lateral">
             <nav>
                 <a href="/pages/menuPrincipal.html">
@@ -89,37 +85,24 @@
             </nav>
         </aside>
 
-
-        <!-- Contenido principal -->
-        <section class="contenido-principal">
-
+        <div class ="contenedor-responsables">
             <h2>Responsables</h2>
-
-            <p class="descripcion">
-                Consulte, busque, modifique o elimine los participantes registrados.
-            </p>
-
-            <!-- Buscador -->
-            <div class="buscador">
-
-                <label for="buscarResponsable">Buscar Responsables</label>
-
-                <input type="text" id="buscarResponsable" placeholder="Nombre, telefono o area">
-
+            <div class="controles">
+                <input type = "search" class="input-buscar"id="buscarParticipante" placeholder="Luis... Pedro....">
                 <button id="btnBuscarParticipante" class="boton" type="button">Buscar</button>
 
-                <select class="selector-estado">
+            <select class="selector-estado">
                 <option value="todos">Estado: Todos</option>
                 <option value="activo">Activo</option>
             </select>
+            
             <button class="boton">+ Nuevo Responsable</button>
             </div>
 
-            </div>
-
-            <!-- Tabla -->
-            <table class="tabla-responsables">
-                <thead>
+<section class="section">
+            <div class="contenedor">
+                <table class = "tabla-responsables">
+                    <thead>
                         <tr>
                             <th>Imagen</th>
                             <th>Nombre Completo</th>
@@ -129,50 +112,8 @@
                             <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
-                    </thead>>
-
-                <tbody>
-                    <tr>
-                            <td>
-                            </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-
-                    <tr>
-                            <td>
-                            </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-
-                    <tr>
-                            <td>
-                            </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>
                             </td>
@@ -195,14 +136,53 @@
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono" class="">✏️</button>
+                                <button class="btn-icono">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
-                </tbody>
-            </table>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>👤Ejemplo Nombre</td>
+                            <td>0000-0000</td>
+                            <td>Empresa</td>
+                            <td>Ingeniero </td>
+                            <td>9/06/2026</td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>👤Ejemplo Nombre</td>
+                            <td>0000-0000</td>
+                            <td>Empresa</td>
+                            <td>Ingeniero </td>
+                            <td>9/06/2026</td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>👤Ejemplo Nombre</td>
+                            <td>0000-0000</td>
+                            <td>Empresa</td>
+                            <td>Ingeniero </td>
+                            <td>9/06/2026</td>
+                            <td class="celda-acciones">
+                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
-
         <div class="paginacion">
     <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
     <div class="controles-paginacion">
@@ -217,15 +197,13 @@
         </div>
         
     </main>
-    </main>
 
     <footer>
-        <h2>Somos lo que sabemos </h2>
-        <p>&copy; 2026 Universidad Cenfotec </p>
-    </footer>
 
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/listarParticipantes.js"></script>
+    <script src="/js/listarResponsables.js"></script>
 </body>
 </html>
