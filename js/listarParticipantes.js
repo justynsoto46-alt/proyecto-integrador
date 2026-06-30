@@ -42,37 +42,22 @@ function eliminarParticipanteRetorno(){
     });
 }
 
-// Función para buscar participantes
-function buscarParticipanteRetorno(){
-
-    let textoBuscar = inputBuscarParticipante.value.trim().toLowerCase();
-
-    // Recorre todas las filas de la tabla
-    filasParticipantes.forEach(function(fila){
-
-    let textoFila = fila.textContent.toLowerCase();
-    });
-
-    // Verifica si el texto buscado se encuentra dentro de la fila
-    if(textoFila.includes(textoBuscar)){
-
-        // Hace que la fila permanezca visible
-        fila.style.display = "";
-    } else {
-
-        fila.style.display = "none";
-    }
+// Función para eliminar las tildes de un texto
+function quitarTildes(texto){
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 // Función para buscar participantes
 function buscarParticipanteRetorno(){
 
-    let textoBuscar = inputBuscarParticipante.value.trim().toLowerCase();
+    let textoBuscar = quitarTildes(
+    inputBuscarParticipante.value.trim().toLowerCase());
 
     // Recorre todas las filas de la tabla
     filasParticipantes.forEach(function(fila){
 
-        let textoFila = fila.textContent.toLowerCase();
+        let textoFila = quitarTildes(
+            fila.textContent.toLowerCase());
 
         // Verifica si el texto buscado se encuentra dentro de la fila
         if(textoFila.includes(textoBuscar)){

@@ -229,16 +229,13 @@ body {
 /* Botón modificar y eliminar*/
 .boton-modificar-eliminar {
     display: inline-block;
-    background-color: var(--color-azulClaro);
-    color: white;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    border: none;
-    font-size: 14px;
-    margin-right: 6px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;;
 }
 
 /* Hover del botón modificar y eliminar */
@@ -247,9 +244,41 @@ body {
     transform: scale(1.05);
 }
 
+/* --- PAGINACIÓN --- */
+.paginacion {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: var(--color-azulOscuro);
+    margin-top: 25px;
+}
+
+.controles-paginacion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-pag {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+}
+
+.btn-pag.activo {
+    background-color: var(--color-azulOscuro); /* Botón de página actual en oscuro */
+    color: white;
+    border-color: var(--color-grisOscuro);
+}
+
 /* Pie de página */
 footer {
-    background-color: var(--color-azulOscuro);
+    background-color: var(--color-azulClaro);
     color: white;
     padding: 18px;
     margin-top: 30px;
