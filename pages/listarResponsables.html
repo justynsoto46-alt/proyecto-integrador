@@ -67,7 +67,7 @@
                     Agenda
                 </a>
 
-                <a href="/pages/listarParticipantes.html">
+                <a href="/pages/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
@@ -77,10 +77,6 @@
                     Pagos
                 </a>
 
-                <a href="#">
-                    <i class="fa-solid fa-gear"></i>
-                    Configuración
-                </a>
 
                 <a href="/pages/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
@@ -92,7 +88,8 @@
         <div class ="contenedor-responsables">
             <h2>Responsables</h2>
             <div class="controles">
-                <input type = "search" class="input-buscar"id="buscar" placeholder="Luis... Pedro....">
+                <input type = "search" class="input-buscar"id="buscarParticipante" placeholder="Luis... Pedro....">
+                <button id="btnBuscarParticipante" class="boton" type="button">Buscar</button>
 
             <select class="selector-estado">
                 <option value="todos">Estado: Todos</option>
@@ -126,8 +123,8 @@
                             <td>Ingeniero </td>
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono">✏️</button>
-                                <button class="btn-icono">❌</button>
+                                <button class="btn-icono" class="">✏️</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
                         <tr>
@@ -140,7 +137,7 @@
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono">✏️</button>
-                                <button class="btn-icono">❌</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
                         <tr>
@@ -153,7 +150,7 @@
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono">✏️</button>
-                                <button class="btn-icono">❌</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
                         <tr>
@@ -166,7 +163,7 @@
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono">✏️</button>
-                                <button class="btn-icono">❌</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
                         <tr>
@@ -179,7 +176,7 @@
                             <td>9/06/2026</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono">✏️</button>
-                                <button class="btn-icono">❌</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
                     </tbody>
@@ -207,5 +204,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/listarResponsables.js"></script>
 </body>
 </html>
