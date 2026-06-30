@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagos</title>
+    <title>Registrar Responsables</title>
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/pagoSimulado.css">
     <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel = "Stylesheet" href = "/css/registrarResponsables.css">
 </head>
+<body>
     <header class="encabezado">
         <div class="contenedor">
             <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
@@ -82,32 +85,23 @@
             </nav>
         </aside>
 
+
         <section class="section">
 
             <div class="contenedor tarjeta-Inicio-Sesion">
-                <h2>Configurar Pago actividad</h2>
-
+                <h2>Crear nuevo Responsable</h2>
                 <form class="formulario" action="#"  method="post">
-
-                    <label for="rol">Seleccione una Actividad</label>
-                    <select name="rol" id="rol">
-                        <option value="defecto">Seleccione una Opcion</option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                    </select>
-
-                    <label for="precio">Precio de la actividad
-                        <span class="currency-symbol">&#8353;</span>
-                        <input type="number" name="PrecioActividad" id="precio" placeholder="500" required>
+                    <label for="Nombre">Nombre Completo 
+                        <input type="text" name="Nombre Completo" id="Nombre" placeholder="Juan Perez " required>
+                    </label>
+                    <label for="correo">Correo Electronico 
+                        <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
+                    </label>
+                    <label for="institución">institución
+                        <input type="institucion" name="institucion" id="institucion" placeholder="Microsoft" required>
                     </label>
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
-                        Guardar Precio</button>
+                        Crear Usuario</button>
                 </form>
             </div>
         </section>
@@ -121,4 +115,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+</body>
 </html>

@@ -104,17 +104,15 @@
 
                 <label for="buscarResponsable">Buscar Responsables</label>
 
-                <input type="text" id="buscarResponsable" placeholder="Nombre, telefono o area">
+                <input type="search" id="buscarResponsable" placeholder="Nombre, telefono o area">
 
-                <button id="btnBuscarParticipante" class="boton" type="button">Buscar</button>
+                <button id="btnBuscarResponsable" class="boton" type="button">Buscar</button>
 
                 <select class="selector-estado">
                 <option value="todos">Estado: Todos</option>
                 <option value="activo">Activo</option>
             </select>
-            <button class="boton">+ Nuevo Responsable</button>
-            </div>
-
+            <a href="/pages/registrarResponsables.html" class="boton"> + Nuevo Responsable </a>
             </div>
 
             <!-- Tabla -->
@@ -129,7 +127,7 @@
                             <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
-                    </thead>>
+                    </thead>
 
                 <tbody>
                     <tr>
@@ -212,11 +210,8 @@
     <span>...</span>
     <button class="btn-pag">5</button>
     <button class="btn-pag">Siguiente</button>
-    </div>
-  </div>
+            </div>
         </div>
-        
-    </main>
     </main>
 
     <footer>
@@ -226,6 +221,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/listarParticipantes.js"></script>
+    <script src="/js/listarResponsables.js"></script>
 </body>
 </html>
