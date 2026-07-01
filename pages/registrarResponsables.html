@@ -100,6 +100,24 @@
                     <label for="institución">institución
                         <input type="institucion" name="institucion" id="institucion" placeholder="Microsoft" required>
                     </label>
+                    <label for="biografia">
+                        biografia
+                        <textarea
+                        id="biografia"
+                        name="biografia"
+                        rows="5"
+                        placeholder="Ingrese la biografia del Responsable"
+                        required></textarea>
+                    </label>
+                    
+                    <label for="subirImagen" class="btn-subir-archivo">
+    <i class="fa-solid fa-upload"></i> Seleccionar Imagen
+</label>
+
+<!-- Ocultamos el input real -->
+<input type="file" id="subirImagen" accept="image/*" style="display: none;">
+
+
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
                         Crear Usuario</button>
                 </form>
