@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Responsables</title>
+    <title>CENFOTEC Página Web Eventos - Administradores</title>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/listarResponsables.css">
+    <link rel="stylesheet" href="/css/listarAdmin.css">
 </head>
+
 <body>
+
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
-            <h1>CENFOTEC PAGINA WEB EVENTOS</h1>
+            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
+
+            <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
-                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                <span>Administrador</span>
+                Administrador
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Menú lateral -->
         <aside class="menu-lateral">
             <nav>
                 <a href="/pages/menuPrincipal.html">
@@ -32,7 +36,7 @@
                     Dashboard
                 </a>
 
-                <a href="/pages/registrarAdministrador.html">
+                <a href="/pages/listarAdmin.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
@@ -85,104 +89,107 @@
             </nav>
         </aside>
 
-        <div class ="contenedor-responsables">
-            <h2>Responsables</h2>
-            <div class="controles">
-                <input type = "search" class="input-buscar"id="buscarParticipante" placeholder="Luis... Pedro....">
-                <button id="btnBuscarParticipante" class="boton" type="button">Buscar</button>
+        <!-- Contenido principal -->
+        <section class="contenido-principal">
 
-            <select class="selector-estado">
+            <h2>Administrador</h2>
+
+            <p class="descripcion">
+                Consulte, busque, modifique o elimine los Administradores registrados.
+            </p>
+
+            <!-- Buscador -->
+            <div class="buscador">
+
+                <label for="buscarAdmin">Buscar Administradores</label>
+
+                <input type="search" id="buscarAdmin" placeholder="Nombre, telefono o area">
+
+                <button id="btnBuscarAdmin" class="boton" type="button">Buscar</button>
+
+                <select class="selector-estado">
                 <option value="todos">Estado: Todos</option>
                 <option value="activo">Activo</option>
             </select>
-            
-            <button class="boton">+ Nuevo Responsable</button>
+            <a href="/pages/registrarAdministrador.html" class="boton"> + Nuevo Administrador </a>
             </div>
 
-<section class="section">
-            <div class="contenedor">
-                <table class = "tabla-responsables">
-                    <thead>
+            <!-- Tabla -->
+            <table class="tabla-admin">
+                <thead>
                         <tr>
-                            <th>Imagen</th>
+                            <th>imagen</th>
                             <th>Nombre Completo</th>
-                            <th>Telefono</th>
-                            <th>Institucion</th>
-                            <th>Area</th>
-                            <th>Estado</th>
+                            <th>Correo Electronico</th>
+                            <th>Rol</th>
                             <th>Acciones</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+
+                <tbody>
                         <tr>
                             <td>
                             </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
+                            <td>👤Elena Torres</td>
+                            <td>elena.torres@empresa.com</td>
+                            <td>Administradora</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono" class="">✏️</button>
+                                <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
+                            <td>👤Miguel Soto</td>
+                            <td>msoto@innovacion.cr</td>
+                            <td>Soporte Técnico</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
+                            <td>👤Valeria Navarro</td>
+                            <td>valeria.n@tech.com</td>
+                            <td>Analista Financiero</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
+                            <td>👤Roberto Mora</td>
+                            <td>roberto.mora@logistica.com</td>
+                            <td>Supervisor</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Ejemplo Nombre</td>
-                            <td>0000-0000</td>
-                            <td>Empresa</td>
-                            <td>Ingeniero </td>
-                            <td>9/06/2026</td>
+                            <td>👤Daniela Quirós</td>
+                            <td>dquiros@banco.fi.cr</td>
+                            <td>Auditora</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono">✏️</button>
+                                <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </section>
+
         <div class="paginacion">
     <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
     <div class="controles-paginacion">
@@ -192,18 +199,17 @@
     <span>...</span>
     <button class="btn-pag">5</button>
     <button class="btn-pag">Siguiente</button>
-    </div>
-  </div>
+            </div>
         </div>
-        
     </main>
 
     <footer>
-
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad Cenfotec </p>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/listarResponsables.js"></script>
+    <script src="/js/listarAdmin.js"></script>
 </body>
 </html>

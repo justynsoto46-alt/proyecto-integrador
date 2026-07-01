@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENFOTEC Página Web Eventos - Participantes</title>
+    <title>Registrar Responsables</title>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/modulos.css">
+    <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel = "Stylesheet" href = "/css/registrarResponsables.css">
 </head>
-
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoBlanco.png"
-                 alt="Logo Universidad CENFOTEC"
-                 class="logo">
-
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                Administrador
+                <span>Administrador</span>
             </div>
         </div>
-
     </header>
     <main>
         <aside class="menu-lateral">
@@ -36,7 +32,7 @@
                     Dashboard
                 </a>
 
-                <a href="/pages/listarAdmin.html">
+                <a href="/pages/registrarAdministrador.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
@@ -90,48 +86,56 @@
         </aside>
 
 
-        <!-- Contenido -->
-        <section class="contenido-principal">
+        <section class="section">
 
-            <h2>Participantes</h2>
+            <div class="contenedor tarjeta-Inicio-Sesion">
+                <h2>Crear nuevo Responsable</h2>
+                <form id="formularioResponsable"class="formulario" action="#"  method="post" novalidate>
+                    <label for="Nombre">Nombre Completo 
+                        <input type="text" name="Nombre Completo" id="Nombre" placeholder="Juan Perez " required>
+                    </label>
+                    <label for="correo">Correo Electronico 
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+                    </label>
+                    <label for="institución">institución
+                        <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
+                    </label>
+                    
+                <div id="contenedor-telefonos">
+                    <label>Teléfono
+                        <input type="tel" name="telefono" placeholder="8888-8888" required>
+                    </label>
+                </div>
+            
+                <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btn-mastef">
+                + Agregar otro teléfono
+                </button>
+                
+                    <label for="biografia">
+                        biografia
+                        <textarea
+                        id="biografia"
+                        name="biografia"
+                        rows="5"
+                        placeholder="Ingrese la biografia del Responsable"
+                        required></textarea>
+                    </label>
+                    
+                    <label for="subirImagen" class="btn-subir-archivo">
+    <i class="fa-solid fa-upload"></i> Seleccionar Imagen
+</label>
 
-            <p class="descripcion">
-                Seleccione la acción que desea realizar.
-            </p>
+<!-- Ocultamos el input real -->
+<input type="file" id="subirImagen" accept="image/*" style="display: none;">
 
-            <div class="tarjeta-opcion">
 
-                <i class="fa-solid fa-list"></i>
-
-                <h3>Listar Participantes</h3>
-                <p>
-                    Muestra todos los participantes registrados
-                    en el sistema.
-                </p>
-
-                <a href="/pages/listarParticipantes.html"
-                   class="boton">
-                    Acceder
-                </a>
-            </div>
-
-            <div class="tarjeta-opcion">
-
-                <i class="fa-solid fa-clipboard-list"></i>
-
-                <h3>Consultar por Actividad</h3>
-                <p>
-                    Visualiza los participantes inscritos
-                    en una actividad específica.
-                </p>
-
-                <a href="/pages/consultarParticipantesActividad.html"
-                   class="boton">
-                    Acceder
-                </a>
+                    <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
+                        Crear Usuario</button>
+                </form>
             </div>
         </section>
     </main>
+
 
     <footer>
         <h2>Somos lo que sabemos </h2>
@@ -140,6 +144,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/registrarResponsable.js"></script>
 </body>
-
 </html>

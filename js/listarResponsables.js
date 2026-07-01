@@ -1,25 +1,25 @@
 // Se obtienen los elementos necesarios para buscar, modificar y eliminar participantes
 
 // Se obtiene el campo para buscar participantes
-let inputBuscarParticipante = document.getElementById("buscarParticipante");
+let inputBuscarResponsable = document.getElementById("buscarResponsable");
 // Se obtiene el botón de Buscar
-let btnBuscarParticipante = document.getElementById("btnBuscarParticipante");
+let btnBuscarResponsable = document.getElementById("btnBuscarResponsable");
 // Se obtienen todos los botones Modificar
 let botonesModificar = document.querySelectorAll(".boton-modificar");
 // Se obtienen todos los botones Eliminar
 let botonesEliminar = document.querySelectorAll(".boton-eliminar");
 // Se obtienen todas las filas de la tabla
-let filasParticipantes = document.querySelectorAll(".tabla-participantes tbody tr");
+let filasResponsables = document.querySelectorAll(".tabla-responsables tbody tr");
 
 // Funciones
 
-// Función para redirigir al presionar modificar a la página modificarParticipante.html
-function modificarParticipanteRetorno(){
-    window.location.href = "/pages/modificarParticipante.html";
+// Función para redirigir al presionar modificar a la página modificarResponsable.html
+function modificarResponsableRetorno(){
+    window.location.href = "/pages/modificarResponsable.html";
 }
 
-// Función para confirmar la eliminación de un participante
-function eliminarParticipanteRetorno(){
+//eFunción para confirmar la eliminación de un participante
+function eliminarResponsableRetorno(){
 
     Swal.fire({
         title: "¿Eliminar Responsable?",
@@ -42,50 +42,36 @@ function eliminarParticipanteRetorno(){
     });
 }
 
-// Función para eliminar las tildes de un texto
-function quitarTildes(texto){
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
+// Función para buscar Responsable
+function buscarResponsableRetorno(){
+    let textoBuscar = inputBuscarResponsable.value.trim().toLowerCase();
 
+    filasResponsables.forEach(function(fila){
+        
+        let textoFila = fila.textContent.toLowerCase();
 
-// Función para buscar participantes
-function buscarParticipanteRetorno(){
-
-    let textoBuscar = quitarTildes(
-    inputBuscarParticipante.value.trim().toLowerCase());
-
-    // Recorre todas las filas de la tabla
-    filasParticipantes.forEach(function(fila){
-
-        let textoFila = quitarTildes(
-            fila.textContent.toLowerCase());
-
-        // Verifica si el texto buscado se encuentra dentro de la fila
         if(textoFila.includes(textoBuscar)){
-
-            // Hace que la fila permanezca visible
             fila.style.display = "";
-
         } else {
-
-            // Oculta la fila
             fila.style.display = "none";
         }
-    });
+        
+    }); 
 }
+
 
 
 // Agrega el evento click a todos los botones Eliminar
 botonesEliminar.forEach(function(boton){
-    boton.addEventListener("click", eliminarParticipanteRetorno);
+    boton.addEventListener("click", eliminarResponsableRetorno);
 });
 
 
 // Agrega el evento click a todos los botones Modificar
 botonesModificar.forEach(function(boton){
-    boton.addEventListener("click", modificarParticipanteRetorno);
+    boton.addEventListener("click", modificarResponsableRetorno);
 });
 
 
 // Ejecuta la búsqueda cuando se presiona el botón Buscar
-btnBuscarParticipante.addEventListener("click", buscarParticipanteRetorno);
+btnBuscarResponsable.addEventListener("click", buscarResponsableRetorno);
