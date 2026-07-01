@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Agenda</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/menuPrincipal.css">
+    <link rel="stylesheet" href="../css/agenda.css">
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="contenedor">
+
+            <img src="../img/LogoBlanco.png"
+                alt="Logo de CENFOTEC"
+                class="logo">
+
+            <h1>CENFOTEC Página Web Eventos</h1>
+
+            <div class="usuario">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Administrador</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <aside class="menu-lateral">
+
+            <nav>
+
+                <a href="/pages/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+
+                <a href="/pages/registrarAdministrador.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/pages/registrarEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+
+                <a href="/pages/registrarActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/pages/registrarStand.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
+
+                <a href="/pages/participantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+
+                <a href="/pages/gestionarInscripciones.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    Inscripciones
+                </a>
+
+                <a href="/pages/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+
+                <a href="/pages/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/pages/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </a>
+
+                <a href="/pages/iniciarSesion.html"
+                    class="cerrar-sesion">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Cerrar Sesión
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <section class="section">
+
+            <div class="contenedor tarjeta-agenda">
+
+                <h2>Consultar Agenda</h2>
+
+                <div class="barra-superior">
+
+                    <button class="boton-cambio">
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+                    <h3>Septiembre 2026</h3>
+
+                    <button class="boton-cambio">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+                <table class="calendario">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Dom</th>
+                            <th>Lu</th>
+                            <th>Ma</th>
+                            <th>Mi</th>
+                            <th>Ju</th>
+                            <th>Vi</th>
+                            <th>Sá</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td class="otro-mes">30</td>
+
+                            <td class="otro-mes">31</td>
+
+                            <td>
+
+                                <span class="dia">1</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">2</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">3</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">4</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">5</span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <span class="dia">6</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">7</span>
+
+                                <div class="evento tecnologia">
+
+                                    Taller IA
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">8</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">9</span>
+
+                                <div class="evento cultural">
+
+                                    Concierto
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">10</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">11</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">12</span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <span class="dia">13</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">14</span>
+
+                                <div class="evento deportiva">
+
+                                    Carrera 5K
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">15</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">16</span>
+
+                                <div class="evento artistica">
+
+                                    Pintura
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">17</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">18</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">19</span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <span class="dia">20</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">21</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">22</span>
+
+                                <div class="evento voluntariado">
+
+                                    Reforestación
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">23</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">24</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">25</span>
+
+                                <div class="evento tecnologia">
+
+                                    Hackathon
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">26</span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <span class="dia">27</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">28</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">29</span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="dia">30</span>
+
+                            </td>
+
+                            <td class="otro-mes">1</td>
+
+                            <td class="otro-mes">2</td>
+
+                            <td class="otro-mes">3</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h2>Somos lo que sabemos</h2>
+
+        <p>&copy; 2026 Universidad CENFOTEC</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/cerrarSesion.js"></script>
+
+</body>
+
+</html>
