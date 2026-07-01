@@ -2,12 +2,14 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Del Evento</title>
+
+    <title>Consultar Agenda</title>
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="../css/menuPrincipal.css">
     <link rel="stylesheet" href="../css/consultarAgenda.css">
@@ -16,414 +18,172 @@
 
 <body>
 
-    <header class="encabezado">
+<header class="encabezado">
 
-        <div class="contenedor">
+    <div class="contenedor">
 
-            <img src="../img/LogoBlanco.png"
-                alt="Logo de CENFOTEC"
-                class="logo">
+        <img src="../img/LogoBlanco.png"
+        alt="Logo"
+        class="logo">
 
-            <h1>CENFOTEC Página Web Eventos</h1>
+        <h1>CENFOTEC Página Web Eventos</h1>
 
-            <div class="usuario">
+        <div class="usuario">
 
-                <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
 
-                <i class="fa-solid fa-user"></i>
-
-                <span>Administrador</span>
-
-            </div>
+            <span>Administrador</span>
 
         </div>
 
-    </header>
+    </div>
 
-    <main>
+</header>
 
-        <aside class="menu-lateral">
+<main>
 
-            <nav>
+<aside class="menu-lateral">
 
-                <a href="/pages/menuPrincipal.html">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Dashboard
-                </a>
+<nav>
 
-                <a href="/pages/registrarAdministrador.html">
-                    <i class="fa-solid fa-user-plus"></i>
-                    Administradores
-                </a>
+<a href="menuPrincipal.html"><i class="fa-solid fa-location-dot"></i> Dashboard</a>
 
-                <a href="/pages/registrarEvento.html">
-                    <i class="fa-solid fa-award"></i>
-                    Eventos
-                </a>
+<a href="registrarAdministrador.html"><i class="fa-solid fa-user-plus"></i> Administradores</a>
 
-                <a href="/pages/registrarActividad.html">
-                    <i class="fa-solid fa-book-open"></i>
-                    Actividades
-                </a>
+<a href="registrarEvento.html"><i class="fa-solid fa-award"></i> Eventos</a>
 
-                <a href="/pages/registrarStand.html">
-                    <i class="fa-solid fa-cube"></i>
-                    Stands
-                </a>
+<a href="registrarActividad.html"><i class="fa-solid fa-book-open"></i> Actividades</a>
 
-                <a href="/pages/participantes.html">
-                    <i class="fa-solid fa-users"></i>
-                    Participantes
-                </a>
+<a href="registrarStand.html"><i class="fa-solid fa-cube"></i> Stands</a>
 
-                <a href="/pages/gestionarInscripciones.html">
-                    <i class="fa-solid fa-clipboard"></i>
-                    Inscripciones
-                </a>
+<a href="participantes.html"><i class="fa-solid fa-users"></i> Participantes</a>
 
-                <a href="/pages/consultarAgenda.html">
-                    <i class="fa-solid fa-table-columns"></i>
-                    Agenda
-                </a>
+<a href="gestionarInscripciones.html"><i class="fa-solid fa-clipboard"></i> Inscripciones</a>
 
-                <a href="/pages/listarResponsables.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    Responsables
-                </a>
+<a href="consultarAgenda.html"><i class="fa-solid fa-table-columns"></i> Agenda</a>
 
-                <a href="/pages/pagoSimulado.html">
-                    <i class="fa-solid fa-credit-card"></i>
-                    Pagos
-                </a>
+<a href="listarResponsables.html"><i class="fa-solid fa-user-tie"></i> Responsables</a>
 
-                <a href="#">
-                    <i class="fa-solid fa-gear"></i>
-                    Configuración
-                </a>
+<a href="pagoSimulado.html"><i class="fa-solid fa-credit-card"></i> Pagos</a>
 
-                <a href="/pages/iniciarSesion.html"
-                    class="cerrar-sesion">
+<a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
 
-                    <i class="fa-solid fa-right-from-bracket"></i>
+<a href="iniciarSesion.html" class="cerrar-sesion">
 
-                    Cerrar Sesión
+<i class="fa-solid fa-right-from-bracket"></i>
 
-                </a>
+Cerrar Sesión
 
-            </nav>
+</a>
 
-        </aside>
+</nav>
 
-        <section class="section">
+</aside>
 
-            <div class="contenedor tarjeta-agenda">
+<section class="contenido-principal">
 
-                <h2>Agenda de Eventos</h2>
+<h2>Consultar Agenda</h2>
 
-                <div class="barra-superior">
+<p class="descripcion">
 
-                    <button class="boton-cambio">
+Seleccione el evento cuya agenda desea consultar.
 
-                        <i class="fa-solid fa-chevron-left"></i>
+</p>
 
-                    </button>
+<div class="contenedor-tarjetas">
 
-                    <h3>Septiembre 2026</h3>
+<div class="tarjeta-evento">
 
-                    <button class="boton-cambio">
+<i class="fa-solid fa-calendar-days icono"></i>
 
-                        <i class="fa-solid fa-chevron-right"></i>
+<h3>Innovate 2026</h3>
 
-                    </button>
+<p>
 
-                </div>
+5 al 8 de Septiembre
 
-                <table class="calendario">
+</p>
 
-                    <thead>
+<p>
 
-                        <tr>
+Campus Central
 
-                            <th>Dom</th>
-                            <th>Lu</th>
-                            <th>Ma</th>
-                            <th>Mi</th>
-                            <th>Ju</th>
-                            <th>Vi</th>
-                            <th>Sá</th>
+</p>
 
-                        </tr>
+<a href="agenda.html" class="boton">
 
-                    </thead>
+Ver Agenda
 
-                    <tbody>
+</a>
 
-                        <tr>
+</div>
 
-                            <td class="otro-mes">30</td>
+<div class="tarjeta-evento">
 
-                            <td class="otro-mes">31</td>
+<i class="fa-solid fa-calendar-days icono"></i>
 
-                            <td>
+<h3>Expo Tecnología</h3>
 
-                                <span class="dia">1</span>
+<p>
 
-                            </td>
+15 al 18 de Octubre
 
-                            <td>
+</p>
 
-                                <span class="dia">2</span>
+<p>
 
-                            </td>
+Campus San Pedro
 
-                            <td>
+</p>
 
-                                <span class="dia">3</span>
+<a href="agenda.html" class="boton">
 
-                            </td>
+Ver Agenda
 
-                            <td>
+</a>
 
-                                <span class="dia">4</span>
+</div>
 
-                            </td>
+<div class="tarjeta-evento">
 
-                            <td>
+<i class="fa-solid fa-calendar-days icono"></i>
 
-                                <span class="dia">5</span>
+<h3>Feria Cultural</h3>
 
-                            </td>
+<p>
 
-                        </tr>
+20 al 22 de Noviembre
 
-                        <tr>
+</p>
 
-                            <td>
+<p>
 
-                                <span class="dia">6</span>
+Campus Central
 
-                            </td>
+</p>
 
-                            <td>
+<a href="agenda.html" class="boton">
 
-                                <span class="dia">7</span>
+Ver Agenda
 
-                                <div class="evento tecnologia">
+</a>
 
-                                    Taller IA
+</div>
 
-                                </div>
+</div>
 
-                            </td>
+</section>
 
-                            <td>
+</main>
 
-                                <span class="dia">8</span>
+<footer>
 
-                            </td>
+<h2>Somos lo que sabemos</h2>
 
-                            <td>
+<p>&copy; 2026 Universidad Cenfotec</p>
 
-                                <span class="dia">9</span>
-
-                                <div class="evento cultural">
-
-                                    Concierto
-
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">10</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">11</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">12</span>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-
-                                <span class="dia">13</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">14</span>
-
-                                <div class="evento deportiva">
-
-                                    Taller Programación
-
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">15</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">16</span>
-
-                                <div class="evento artistica">
-
-                                    Conferencia 
-
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">17</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">18</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">19</span>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-
-                                <span class="dia">20</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">21</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">22</span>
-
-                                <div class="evento voluntariado">
-
-                                    Conferencia
-
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">23</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">24</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">25</span>
-
-                                <div class="evento tecnologia">
-
-                                    Torneo Robótica
-
-                                </div>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">26</span>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>
-
-                                <span class="dia">27</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">28</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">29</span>
-
-                            </td>
-
-                            <td>
-
-                                <span class="dia">30</span>
-
-                            </td>
-
-                            <td class="otro-mes">1</td>
-
-                            <td class="otro-mes">2</td>
-
-                            <td class="otro-mes">3</td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <h2>Somos lo que sabemos</h2>
-
-        <p>&copy; 2026 Universidad CENFOTEC</p>
-
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/cerrarSesion.js"></script>
+</footer>
 
 </body>
 
