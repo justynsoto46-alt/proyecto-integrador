@@ -1,137 +1,69 @@
-.tarjeta-agenda{
-    margin-top: 30px;
-    width: 900px;
+.tarjeta-opcion{
+    width: 420px;
     background-color: white;
-    padding: 35px;
     border: 2px solid #ddd;
     border-radius: 10px;
+    padding: 35px;
+    text-align: center;
     box-shadow: 0 3px 8px rgba(0,0,0,.12);
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: top;
 }
 
-.tarjeta-agenda h2{
+.tarjeta-opcion i{
+    font-size: 48px;
     color: var(--color-azulOscuro);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.barra-superior{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.tarjeta-opcion h3{
+    color: var(--color-azulOscuro);
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.tarjeta-opcion p{
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
-.barra-superior h3{
-    color: var(--color-azulOscuro);
-    font-size: 24px;
-}
-
-.boton-cambio{
-    width: 40px;
-    height: 40px;
+.boton{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
     border: none;
-    border-radius: 50%;
-    background-color: var(--color-azulClaro);
-    color: white;
+    border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
     transition: .3s;
 }
 
-.boton-cambio:hover{
-    background-color: var(--color-azulOscuro);
-}
-
-.calendario{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.calendario th{
-    background-color: var(--color-azulOscuro);
+.boton-primario{
+    background-color: var(--color-azulClaro);
     color: white;
-    padding: 15px;
-    border: 1px solid var(--color-grisClaro);
-    text-align: center;
 }
 
-.calendario td{
-    height: 110px;
-    border: 1px solid var(--color-grisClaro);
-    vertical-align: top;
-    padding: 8px;
-    background-color: white;
+.boton-primario:hover{
+    background-color: var(--color-azulOscuro);
 }
 
-.calendario td:hover{
-    background-color: #f3f8ff;
+.opciones{
+    margin-top: 35px;
 }
 
-.dia{
-    font-weight: bold;
+.contenido-principal h2{
     color: var(--color-azulOscuro);
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.otro-mes{
-    color: #a0a0a0;
-    background-color: #f5f5f5 !important;
-}
-
-.evento{
-    margin-top: 8px;
-    padding: 5px 8px;
-    border-radius: 5px;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.tecnologia{
-    background-color: #1976d2;
-}
-
-.cultural{
-    background-color: #ff9800;
-}
-
-.deportiva{
-    background-color: #4caf50;
-}
-
-.artistica{
-    background-color: #8e44ad;
-}
-
-.voluntariado{
-    background-color: #e53935;
-}
-
-@media (max-width: 1200px){
-
-    .tarjeta-agenda{
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 900px){
-
-    .calendario th,
-    .calendario td{
-
-        font-size: 12px;
-    }
-
-    .calendario td{
-
-        height: 90px;
-    }
-
-    .evento{
-
-        font-size: 10px;
-        padding: 3px;
-    }
-
+.contenido-principal p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
 }
