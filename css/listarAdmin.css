@@ -189,7 +189,7 @@ body {
 }
 
 /* Tabla de responsables */
-.tabla-responsables {
+.tabla-admin {
     width: 100%;
     border-collapse: collapse;
     margin-top: 5px;
@@ -200,8 +200,8 @@ body {
 }
 
 /* Encabezados y celdas */
-.tabla-responsables th,
-.tabla-responsables td {
+.tabla-admin th,
+.tabla-admin td {
     border:1px solid var(--color-grisClaro);
     padding: 16px 18px;
     text-align: left;
@@ -209,7 +209,7 @@ body {
 }
 
 /* Encabezado de tabla */
-.tabla-responsables th {
+.tabla-admin th {
     background-color: var(--color-azulOscuro);
     color:white;
     padding: 18px;
@@ -217,12 +217,12 @@ body {
 }
 
 /* Filas pares de la tabla */
-.tabla-responsables tr:nth-child(even) {
+.tabla-admin tr:nth-child(even) {
     background-color: var(--color-grisClaro);
 }
 
 /* Efecto al pasar el mouse por una fila */
-.tabla-responsables tbody tr:hover {
+.tabla-admin tbody tr:hover {
     background-color: var(--color-celesteClaro);
 }
 

@@ -95,102 +95,92 @@
             <h2>Administrador</h2>
 
             <p class="descripcion">
-                Consulte, busque, modifique o elimine los participantes registrados.
+                Consulte, busque, modifique o elimine los Administradores registrados.
             </p>
 
             <!-- Buscador -->
             <div class="buscador">
 
-                <label for="buscarResponsable">Buscar Responsables</label>
+                <label for="buscarAdmin">Buscar Administradores</label>
 
-                <input type="search" id="buscarResponsable" placeholder="Nombre, telefono o area">
+                <input type="search" id="buscarAdmin" placeholder="Nombre, telefono o area">
 
-                <button id="btnBuscarResponsable" class="boton" type="button">Buscar</button>
+                <button id="btnBuscarAdmin" class="boton" type="button">Buscar</button>
 
                 <select class="selector-estado">
                 <option value="todos">Estado: Todos</option>
                 <option value="activo">Activo</option>
             </select>
-            <a href="/pages/registrarResponsables.html" class="boton"> + Nuevo Responsable </a>
+            <a href="/pages/registrarAdministrador.html" class="boton"> + Nuevo Administrador </a>
             </div>
 
             <!-- Tabla -->
-            <table class="tabla-responsables">
+            <table class="tabla-admin">
                 <thead>
                         <tr>
-                            <th>Imagen</th>
+                            <th>imagen</th>
                             <th>Nombre Completo</th>
-                            <th>Telefono</th>
-                            <th>Institucion</th>
-                            <th>Area</th>
-                            <th>Estado</th>
+                            <th>Correo Electronico</th>
+                            <th>Rol</th>
                             <th>Acciones</th>
                         </tr>
-                    </thead>
+                </thead>
 
                 <tbody>
-                    <tr>
+                        <tr>
                             <td>
                             </td>
-                            <td>👤Carlos Mendoza</td>
-                            <td>8832-1459</td>
-                            <td>TechSolutions S.A.</td>
-                            <td>Desarrollador Backend</td>
-                            <td>12/08/2025</td>
+                            <td>👤Elena Torres</td>
+                            <td>elena.torres@empresa.com</td>
+                            <td>Administradora</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
 
-                    <tr>
+                        <tr>
                             <td>
                             </td>
-                            <td>👤Laura Vargas</td>
-                            <td>6021-9874</td>
-                            <td>InnovaCorp</td>
-                            <td>Gerente de Proyectos</td>
-                            <td>03/11/2026</td>
+                            <td>👤Miguel Soto</td>
+                            <td>msoto@innovacion.cr</td>
+                            <td>Soporte Técnico</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
 
-                    <tr>
+                        <tr>
                             <td>
                             </td>
-                            <td>👤Andrés Rojas</td>
-                            <td>7145-3320</td>
-                            <td>Banco Nacional</td>
-                            <td>Analista de Datos</td>
-                            <td>25/01/2026</td>
+                            <td>👤Valeria Navarro</td>
+                            <td>valeria.n@tech.com</td>
+                            <td>Analista Financiero</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Sofía Castro</td>
-                            <td>8910-4455</td>
-                            <td>Creativa Digital</td>
-                            <td>Diseñadora UX/UI</td>
-                            <td>17/09/2025</td>
+                            <td>👤Roberto Mora</td>
+                            <td>roberto.mora@logistica.com</td>
+                            <td>Supervisor</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
                             </td>
                         </tr>
+
                         <tr>
                             <td>
                             </td>
-                            <td>👤Diego Aguilar</td>
-                            <td>6223-8891</td>
-                            <td>Logística CR</td>
-                            <td>Especialista en Redes</td>
-                            <td>04/05/2026</td>
+                            <td>👤Daniela Quirós</td>
+                            <td>dquiros@banco.fi.cr</td>
+                            <td>Auditora</td>
                             <td class="celda-acciones">
                                 <button class="btn-icono boton-modificar" class="">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
@@ -220,6 +210,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/listarResponsables.js"></script>
+    <script src="/js/listarAdmin.js"></script>
 </body>
 </html>

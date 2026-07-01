@@ -1,28 +1,28 @@
-// Se obtienen los elementos necesarios para buscar, modificar y eliminar participantes
+// Se obtienen los elementos necesarios para buscar, modificar y eliminar administradores
 
 // Se obtiene el campo para buscar participantes
-let inputBuscarResponsable = document.getElementById("buscarResponsable");
+let inputBuscarAdmin = document.getElementById("buscarAdmin");
 // Se obtiene el botón de Buscar
-let btnBuscarResponsable = document.getElementById("btnBuscarResponsable");
+let btnBuscarAdmin = document.getElementById("btnBuscarAdmin");
 // Se obtienen todos los botones Modificar
 let botonesModificar = document.querySelectorAll(".boton-modificar");
 // Se obtienen todos los botones Eliminar
 let botonesEliminar = document.querySelectorAll(".boton-eliminar");
 // Se obtienen todas las filas de la tabla
-let filasResponsables = document.querySelectorAll(".tabla-responsables tbody tr");
+let filasAdmin = document.querySelectorAll(".tabla-admin tbody tr");
 
 // Funciones
 
-// Función para redirigir al presionar modificar a la página modificarResponsable.html
-function modificarResponsableRetorno(){
-    window.location.href = "/pages/modificarResponsable.html";
+// Función para redirigir al presionar modificar a la página modificarAdministrador.html
+function modificarAdminRetorno(){
+    window.location.href = "/pages/modificarAdministrador.html";
 }
 
-//eFunción para confirmar la eliminación de un participante
-function eliminarResponsableRetorno(){
+// Función para confirmar la eliminación de un administrador
+function eliminarAdminRetorno(){
 
     Swal.fire({
-        title: "¿Eliminar Responsable?",
+        title: "¿Eliminar Administrador?",
         text: "Esta acción no se puede deshacer.",
         icon: "warning",
         showCancelButton: true,
@@ -33,8 +33,8 @@ function eliminarResponsableRetorno(){
         if(resultado.isConfirmed){
 
             Swal.fire({
-                title: "Responsable eliminado",
-                text: "El Responsable fue eliminado correctamente.",
+                title: "Administrador eliminado",
+                text: "El Administrador fue eliminado correctamente.",
                 icon: "success",
                 confirmButtonText: "Aceptar"
             });
@@ -42,11 +42,13 @@ function eliminarResponsableRetorno(){
     });
 }
 
-// Función para buscar Responsable
-function buscarResponsableRetorno(){
-    let textoBuscar = inputBuscarResponsable.value.trim().toLowerCase();
+// Función para buscar Administrador
+function buscarAdminRetorno(){
+    // Se corrigió para usar la variable correcta (inputBuscarAdmin)
+    let textoBuscar = inputBuscarAdmin.value.trim().toLowerCase();
 
-    filasResponsables.forEach(function(fila){
+    // Se corrigió para usar la variable correcta (filasAdmin)
+    filasAdmin.forEach(function(fila){
         
         let textoFila = fila.textContent.toLowerCase();
 
@@ -59,19 +61,17 @@ function buscarResponsableRetorno(){
     }); 
 }
 
-
-
 // Agrega el evento click a todos los botones Eliminar
 botonesEliminar.forEach(function(boton){
-    boton.addEventListener("click", eliminarResponsableRetorno);
+    boton.addEventListener("click", eliminarAdminRetorno); // Actualizado al nombre correcto
 });
 
 
 // Agrega el evento click a todos los botones Modificar
 botonesModificar.forEach(function(boton){
-    boton.addEventListener("click", modificarResponsableRetorno);
+    boton.addEventListener("click", modificarAdminRetorno); // Actualizado al nombre correcto
 });
 
 
 // Ejecuta la búsqueda cuando se presiona el botón Buscar
-btnBuscarResponsable.addEventListener("click", buscarResponsableRetorno);
+btnBuscarAdmin.addEventListener("click", buscarAdminRetorno); 

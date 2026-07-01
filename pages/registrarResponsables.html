@@ -90,16 +90,27 @@
 
             <div class="contenedor tarjeta-Inicio-Sesion">
                 <h2>Crear nuevo Responsable</h2>
-                <form class="formulario" action="#"  method="post">
+                <form id="formularioResponsable"class="formulario" action="#"  method="post" novalidate>
                     <label for="Nombre">Nombre Completo 
                         <input type="text" name="Nombre Completo" id="Nombre" placeholder="Juan Perez " required>
                     </label>
                     <label for="correo">Correo Electronico 
-                        <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
                     </label>
                     <label for="institución">institución
-                        <input type="institucion" name="institucion" id="institucion" placeholder="Microsoft" required>
+                        <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
                     </label>
+                    
+                <div id="contenedor-telefonos">
+                    <label>Teléfono
+                        <input type="tel" name="telefono" placeholder="8888-8888" required>
+                    </label>
+                </div>
+            
+                <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btn-mastef">
+                + Agregar otro teléfono
+                </button>
+                
                     <label for="biografia">
                         biografia
                         <textarea
@@ -133,5 +144,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/registrarResponsable.js"></script>
 </body>
 </html>
