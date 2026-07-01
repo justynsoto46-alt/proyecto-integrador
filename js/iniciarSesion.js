@@ -1,7 +1,7 @@
 // Para obtener los elementos del formulario de inicio de sesión
-let formulario = document.getElementById("formulario");
-let inputCorreo = document.getElementById("correo");
-let inputContrasenia = document.getElementById("contrasenia");
+const formulario = document.getElementById("formulario");
+const inputCorreo = document.getElementById("correo");
+const inputContrasenia = document.getElementById("contrasenia");
 
 // Administrador temporal para pruebas de la primera iteración
 const correoAdministrador = "admin@ucenfotec.ac.cr";
@@ -37,7 +37,7 @@ function validarCamposVacios(){
 function validarCorreo(){
 
     let error = false;
-    let correo = inputCorreo.value.trim();
+    const correo = inputCorreo.value.trim();
 
     if(correo.includes("@") && correo.includes(".")){
         inputCorreo.classList.remove("input-error");
@@ -53,7 +53,7 @@ function validarCorreo(){
 function validarContrasenia(){
     
     let error = false;
-    let contrasenia = inputContrasenia.value.trim();
+    const contrasenia = inputContrasenia.value.trim();
 
     // Mínimo 8 caracteres
     if(contrasenia.length < 8){
@@ -102,7 +102,7 @@ function validarContrasenia(){
 function validarCredenciales(){
 
     let correo = inputCorreo.value.trim();
-    let contrasenia = inputContrasenia.value.trim();
+    const contrasenia = inputContrasenia.value.trim();
 
     if(correo === correoAdministrador && contrasenia === contraseniaAdministrador){
         inputCorreo.classList.remove("input-error");

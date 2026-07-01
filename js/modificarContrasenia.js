@@ -1,17 +1,17 @@
 // Variables para obtener los elementos del formulario de inicio de sesión
-let formulario = document.getElementById("formulario");
-let inputCorreo = document.getElementById("correo");
-let inputNuevaContrasenia = document.getElementById("nuevaContrasenia");
-let inputConfirmarContrasenia = document.getElementById("confirmarContrasenia");
+const formulario = document.getElementById("formulario");
+const inputCorreo = document.getElementById("correo");
+const inputNuevaContrasenia = document.getElementById("nuevaContrasenia");
+const inputConfirmarContrasenia = document.getElementById("confirmarContrasenia");
 
 // Funciones
 
 // Validar campos vacíos
 function validarCamposVacios(){
 
-    let correo = inputCorreo.value.trim();
-    let nuevaContrasenia = inputNuevaContrasenia.value.trim();
-    let confirmarContrasenia = inputConfirmarContrasenia.value.trim();
+    const correo = inputCorreo.value.trim();
+    const nuevaContrasenia = inputNuevaContrasenia.value.trim();
+    const confirmarContrasenia = inputConfirmarContrasenia.value.trim();
 
     let error = false;
 
@@ -46,7 +46,7 @@ function validarCamposVacios(){
 function validarCorreo(){
 
     let error = false;
-    let correo = inputCorreo.value.trim();
+    const correo = inputCorreo.value.trim();
 
     if(correo.includes("@") && correo.includes(".")){
         inputCorreo.classList.remove("input-error");
@@ -62,7 +62,7 @@ function validarCorreo(){
 function validarContrasenia(){
     
     let error = false;
-    let contrasenia = inputNuevaContrasenia.value.trim();
+    const contrasenia = inputNuevaContrasenia.value.trim();
 
     // Mínimo 8 caracteres
     if(contrasenia.length < 8){
@@ -111,7 +111,7 @@ function validarContrasenia(){
 function validarConfirmacionContrasenia(){
 
     let contrasenia = inputNuevaContrasenia.value.trim();
-    let confirmarContrasenia = inputConfirmarContrasenia.value.trim();
+    const confirmarContrasenia = inputConfirmarContrasenia.value.trim();
 
     error = false;
 

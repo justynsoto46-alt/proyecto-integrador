@@ -1,10 +1,10 @@
 const formularioResponsable = document.getElementById("formularioResponsable");
-const inputNombre = document.getElementById("Nombre");
+const inputNombre = document.getElementById("nombre");
 const inputCorreo = document.getElementById("correo");
 const inputInstitucion = document.getElementById("institucion");
 const inputBiografia = document.getElementById("biografia");
 
-const btnAgregarTelefono = document.getElementById("btn-mastef");
+const btnAgregarTelefono = document.getElementById("btnAgregarTelefono");
 const contenedorTelefonos = document.getElementById("contenedor-telefonos");
 
 function validarCamposVacios() {
@@ -43,7 +43,7 @@ function validarTelefonos() {
 
 function validarCorreo() {
     let error = false;
-    let correo = inputCorreo.value.trim();
+    const correo = inputCorreo.value.trim();
 
     if(correo.includes("@") && correo.includes(".")) {
         inputCorreo.classList.remove("input-error");
@@ -65,7 +65,7 @@ function registrarResponsableRetorno() {
         
         Swal.fire({
             title: "Datos incompletos o inválidos",
-            text: "Por favor revise los datos requeridos.",
+            text: "Por favor revise los campos marcados.",
             icon: "warning",
             confirmButtonText: "Aceptar"
         });
@@ -100,7 +100,7 @@ btnAgregarTelefono.addEventListener("click", function() {
     const nuevoInput = document.createElement("input");
     nuevoInput.type = "tel";
     nuevoInput.name = "telefono[]"; // Usamos [] por si el backend necesita un array
-    nuevoInput.placeholder = "8888-8888";
+    nuevoInput.placeholder = "88888888";
     
     // c. (Opcional) Podemos hacer que los adicionales no sean estrictamente obligatorios
     // Si quieres que sí lo sean, descomenta la siguiente línea:

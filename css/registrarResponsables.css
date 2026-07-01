@@ -208,3 +208,8 @@ line-height: 1.4;
     display: inline-block;
 }
 
+/* Campos con error */
+.input-error {
+    border: 2px solid #fcc2c2 !important;
+    background-color: #ffe5e5;
+}

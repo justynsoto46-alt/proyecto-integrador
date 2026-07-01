@@ -53,7 +53,7 @@ function validarCamposVacios(){
 function validarCorreo(){
 
     let error = false;
-    let correo = inputCorreo.value.trim();
+    const correo = inputCorreo.value.trim();
 
     if(correo.includes("@") && correo.includes(".")){
         inputCorreo.classList.remove("input-error");
@@ -69,7 +69,7 @@ function validarCorreo(){
 function validarTelefono(){
 
     let error = false;
-    let telefono = inputTelefono.value.trim();
+    const telefono = inputTelefono.value.trim();
 
     // Debe contener únicamente números
     if(isNaN(telefono)){
@@ -94,7 +94,7 @@ function validarTelefono(){
 function validarEdad(){
 
     let error = false;
-    let edad = inputEdad.value.trim();
+    const edad = inputEdad.value.trim();
 
     // La edad es opcional, pero si se ingresa debe ser válida
     if(edad !== ""){
