@@ -1,15 +1,15 @@
 // Se obtienen los elementos necesarios para buscar, modificar y eliminar administradores
 
-// Se obtiene el campo para buscar participantes
-let inputBuscarAdmin = document.getElementById("buscarAdmin");
+// Se obtiene el campo para buscar administrador
+const inputBuscarAdmin = document.getElementById("buscarAdmin");
 // Se obtiene el botón de Buscar
-let btnBuscarAdmin = document.getElementById("btnBuscarAdmin");
+const btnBuscarAdmin = document.getElementById("btnBuscarAdmin");
 // Se obtienen todos los botones Modificar
-let botonesModificar = document.querySelectorAll(".boton-modificar");
+const botonesModificar = document.querySelectorAll(".boton-modificar");
 // Se obtienen todos los botones Eliminar
-let botonesEliminar = document.querySelectorAll(".boton-eliminar");
+const botonesEliminar = document.querySelectorAll(".boton-eliminar");
 // Se obtienen todas las filas de la tabla
-let filasAdmin = document.querySelectorAll(".tabla-admin tbody tr");
+const filasAdmin = document.querySelectorAll(".tabla-admin tbody tr");
 
 // Funciones
 
@@ -42,15 +42,20 @@ function eliminarAdminRetorno(){
     });
 }
 
+// Función para eliminar las tildes de un texto
+function quitarTildes(texto){
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 // Función para buscar Administrador
 function buscarAdminRetorno(){
     // Se corrigió para usar la variable correcta (inputBuscarAdmin)
-    let textoBuscar = inputBuscarAdmin.value.trim().toLowerCase();
+    const textoBuscar = quitarTildes(inputBuscarAdmin.value.trim().toLowerCase());
 
     // Se corrigió para usar la variable correcta (filasAdmin)
     filasAdmin.forEach(function(fila){
         
-        let textoFila = fila.textContent.toLowerCase();
+        const textoFila = quitarTildes(fila.textContent.toLowerCase());
 
         if(textoFila.includes(textoBuscar)){
             fila.style.display = "";

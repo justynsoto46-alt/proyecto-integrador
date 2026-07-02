@@ -4,7 +4,7 @@ if(sessionStorage.getItem("sesionActiva") !== "true"){
 }
 
 // Se obtiene el enlace de cerrar sesión
-let cerrarSesion = document.getElementById("cerrarSesion");
+const cerrarSesion = document.getElementById("cerrarSesion");
 
 // Función para cerrar la sesión del administrador
 function cerrarSesionRetorno(){

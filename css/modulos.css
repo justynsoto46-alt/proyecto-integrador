@@ -132,7 +132,7 @@ body {
 /* Texto descriptivo bajo el título */
 .descripcion {
     font-size: 18px;
-    color: var(--color-grisOscuro);
+    color: var(--color-azulOscuro);
     margin-bottom: 25px;
 }
 

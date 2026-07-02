@@ -1,15 +1,15 @@
 // Se obtienen los elementos necesarios para buscar, modificar y eliminar participantes
 
 // Se obtiene el campo para buscar participantes
-let inputBuscarParticipante = document.getElementById("buscarParticipante");
+const inputBuscarParticipante = document.getElementById("buscarParticipante");
 // Se obtiene el botón de Buscar
-let btnBuscarParticipante = document.getElementById("btnBuscarParticipante");
+const btnBuscarParticipante = document.getElementById("btnBuscarParticipante");
 // Se obtienen todos los botones Modificar
-let botonesModificar = document.querySelectorAll(".boton-modificar");
+const botonesModificar = document.querySelectorAll(".boton-modificar");
 // Se obtienen todos los botones Eliminar
-let botonesEliminar = document.querySelectorAll(".boton-eliminar");
+const botonesEliminar = document.querySelectorAll(".boton-eliminar");
 // Se obtienen todas las filas de la tabla
-let filasParticipantes = document.querySelectorAll(".tabla-participantes tbody tr");
+const filasParticipantes = document.querySelectorAll(".tabla-participantes tbody tr");
 
 // Funciones
 
@@ -50,13 +50,13 @@ function quitarTildes(texto){
 // Función para buscar participantes
 function buscarParticipanteRetorno(){
 
-    let textoBuscar = quitarTildes(
+    const textoBuscar = quitarTildes(
     inputBuscarParticipante.value.trim().toLowerCase());
 
     // Recorre todas las filas de la tabla
     filasParticipantes.forEach(function(fila){
 
-        let textoFila = quitarTildes(
+        const textoFila = quitarTildes(
             fila.textContent.toLowerCase());
 
         // Verifica si el texto buscado se encuentra dentro de la fila

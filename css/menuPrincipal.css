@@ -173,39 +173,3 @@ footer {
     margin-top: 30px;
     text-align: center;
 }
-
-
-
-/* TABLAS */
-.tabla-responsables{
-    width: 100%;
-
-    border-collapse: collapse;
-    margin-top: 25px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-}
-
-.tabla-responsables th, .tabla-responsables td {
-    border:1px solid var(--color-grisClaro);
-    padding: 16px 18px;
-    text-align: left;
-    vertical-align: middle;
-}
-
-.tabla-responsables th {
-    background-color: var(--color-azulOscuro);
-    color:white;
-    padding: 18px;
-    font-size: 15px;
-}
-
-.tabla-responsables tr:nth-child(even){
-    background-color: var(--color-gris);
-}
-
-.tabla-responsables tbody tr:hover {
-    background-color: var(--color-celesteClaro);
-}

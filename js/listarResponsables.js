@@ -1,15 +1,15 @@
 // Se obtienen los elementos necesarios para buscar, modificar y eliminar participantes
 
 // Se obtiene el campo para buscar participantes
-let inputBuscarResponsable = document.getElementById("buscarResponsable");
+const inputBuscarResponsable = document.getElementById("buscarResponsable");
 // Se obtiene el botón de Buscar
-let btnBuscarResponsable = document.getElementById("btnBuscarResponsable");
+const btnBuscarResponsable = document.getElementById("btnBuscarResponsable");
 // Se obtienen todos los botones Modificar
-let botonesModificar = document.querySelectorAll(".boton-modificar");
+const botonesModificar = document.querySelectorAll(".boton-modificar");
 // Se obtienen todos los botones Eliminar
-let botonesEliminar = document.querySelectorAll(".boton-eliminar");
+const botonesEliminar = document.querySelectorAll(".boton-eliminar");
 // Se obtienen todas las filas de la tabla
-let filasResponsables = document.querySelectorAll(".tabla-responsables tbody tr");
+const filasResponsables = document.querySelectorAll(".tabla-responsables tbody tr");
 
 // Funciones
 
@@ -18,7 +18,7 @@ function modificarResponsableRetorno(){
     window.location.href = "/pages/modificarResponsable.html";
 }
 
-//eFunción para confirmar la eliminación de un participante
+//Función para confirmar la eliminación de un responsable
 function eliminarResponsableRetorno(){
 
     Swal.fire({
@@ -42,13 +42,18 @@ function eliminarResponsableRetorno(){
     });
 }
 
+// Función para eliminar las tildes de un texto
+function quitarTildes(texto){
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 // Función para buscar Responsable
 function buscarResponsableRetorno(){
-    let textoBuscar = inputBuscarResponsable.value.trim().toLowerCase();
+    const textoBuscar = quitarTildes(inputBuscarResponsable.value.trim().toLowerCase());
 
     filasResponsables.forEach(function(fila){
         
-        let textoFila = fila.textContent.toLowerCase();
+        const textoFila = quitarTildes(fila.textContent.toLowerCase());
 
         if(textoFila.includes(textoBuscar)){
             fila.style.display = "";

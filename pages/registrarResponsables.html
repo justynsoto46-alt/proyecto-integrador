@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/menuPrincipal.css">
-    <link rel = "Stylesheet" href = "/css/registrarResponsables.css">
+    <link rel = "stylesheet" href = "/css/registrarResponsables.css">
 </head>
 <body>
     <header class="encabezado">
@@ -90,47 +90,47 @@
 
             <div class="contenedor tarjeta-Inicio-Sesion">
                 <h2>Crear nuevo Responsable</h2>
-                <form id="formularioResponsable"class="formulario" action="#"  method="post" novalidate>
+                <form id="formularioResponsable" class="formulario" action="#"  method="post" novalidate>
                     <label for="Nombre">Nombre Completo 
-                        <input type="text" name="Nombre Completo" id="Nombre" placeholder="Juan Perez " required>
+                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Juan Perez " required>
                     </label>
                     <label for="correo">Correo Electronico 
                         <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
                     </label>
-                    <label for="institución">institución
+                    <label for="institucion">Institución
                         <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
                     </label>
                     
-                <div id="contenedor-telefonos">
-                    <label>Teléfono
-                        <input type="tel" name="telefono" placeholder="8888-8888" required>
-                    </label>
-                </div>
+                    <div id="contenedor-telefonos">
+                        <label>Teléfono
+                            <input type="tel" name="telefono" placeholder="88888888" required>
+                        </label>
+                    </div>
             
-                <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btn-mastef">
-                + Agregar otro teléfono
-                </button>
+                    <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btnAgregarTelefono">
+                    + Agregar otro teléfono
+                    </button>
                 
                     <label for="biografia">
-                        biografia
+                        Biografía
                         <textarea
                         id="biografia"
                         name="biografia"
                         rows="5"
-                        placeholder="Ingrese la biografia del Responsable"
+                        placeholder="Ingrese la biografía del Responsable"
                         required></textarea>
                     </label>
                     
                     <label for="subirImagen" class="btn-subir-archivo">
-    <i class="fa-solid fa-upload"></i> Seleccionar Imagen
-</label>
+                        <i class="fa-solid fa-upload"></i> Seleccionar Imagen
+                    </label>
 
-<!-- Ocultamos el input real -->
-<input type="file" id="subirImagen" accept="image/*" style="display: none;">
+                    <!-- Ocultamos el input real -->
+                    <input type="file" id="subirImagen" accept="image/*" style="display: none;">
 
 
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
-                        Crear Usuario</button>
+                        Crear Responsable</button>
                 </form>
             </div>
         </section>
