@@ -1,3 +1,15 @@
+/* Paleta de colores institucionales */
+:root {
+    --color-azulOscuro: #164a98;
+    --color-azulClaro: #006AEA;
+    --color-celesteClaro: #9CC8FF;
+    --color-grisClaro: #d2d2d2;
+    --color-grisOscuro: #7c7b75;
+    --color-amarilloClaro: #fff200;
+    --color-amarilloOscuro: #ffc63e;
+    --color-grisMasClaro: #eef5ff;
+}
+
 /* Contenedor del formulario */
 .formulario-contenedor {
     width: 700px;
@@ -16,7 +28,7 @@
 
 /* Mensaje de restricción */
 .nota-restriccion {
-    background-color: #eef5ff;
+    background-color: var(--color-grisMasClaro);
     border-left: 5px solid var(--color-azulClaro);
     color: var(--color-azulOscuro);
     padding: 12px;
