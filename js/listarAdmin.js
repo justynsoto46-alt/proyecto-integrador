@@ -15,7 +15,7 @@ const filasAdmin = document.querySelectorAll(".tabla-admin tbody tr");
 
 // Función para redirigir al presionar modificar a la página modificarAdministrador.html
 function modificarAdminRetorno(){
-    window.location.href = "/pages/modificarAdministrador.html";
+    window.location.href = "/pages/Administrador/modificarAdministrador.html";
 }
 
 // Función para confirmar la eliminación de un administrador

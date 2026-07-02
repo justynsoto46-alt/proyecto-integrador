@@ -9,29 +9,29 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/menuPrincipal.css">
-    <link rel="stylesheet" href="../css/modificarActividad.css">
+    <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/css/modificarActividad.css">
 </head>
 <body>
     <header class="encabezado">
 
-    <div class="contenedor">
+        <div class="contenedor">
 
-        <img src="../img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
 
-        <h1>CENFOTEC Página Web Eventos</h1>
+            <h1>CENFOTEC Página Web Eventos</h1>
 
-        <div class="usuario">
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-user"></i>
-            <span>Administrador</span>
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
+
         </div>
 
-    </div>
+    </header>
 
-</header>
-
-<main>
+    <main>
 
         <aside class="menu-lateral">
             <nav>
@@ -60,7 +60,7 @@
                     Stands
                 </a>
 
-                <a href="/pages/Participantes/listarParticipantes.html">
+                <a href="/pages/Participantes/participantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
@@ -80,13 +80,12 @@
                     Responsables
                 </a>
 
-                <a href="/pages/pagoSimulado.html">
+                <a href="/pages/DashBoard/pagoSimulado.html">
                     <i class="fa-solid fa-credit-card"></i>
                     Pagos
                 </a>
 
-
-                <a href="/pages/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
+                <a href="/pages/DashBoard/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Cerrar Sesión
                 </a>
@@ -94,175 +93,175 @@
         </aside>
     
 
-    <section class="section">
+        <section class="section">
 
-        <div class="contenedor tarjeta-evento">
+            <div class="contenedor tarjeta-evento">
 
-            <h2>Modificar Actividad</h2>
+                <h2>Modificar Actividad</h2>
 
-            <form class="formulario" action="#" method="post">
+                <form class="formulario" action="#" method="post">
 
-                <label for="idActividad">
-                    ID de la Actividad
-                </label>
+                    <label for="idActividad">
+                        ID de la Actividad
+                    </label>
 
-                <input
-                    type="text"
-                    id="idActividad"
-                    name="idActividad"
-                    value="ACT-001"
-                    readonly>
+                    <input
+                        type="text"
+                        id="idActividad"
+                        name="idActividad"
+                        value="ACT-001"
+                        readonly>
 
-                <label for="nombreActividad">
-                    Nombre de la Actividad
-                </label>
+                    <label for="nombreActividad">
+                        Nombre de la Actividad
+                    </label>
 
-                <input
-                    type="text"
-                    id="nombreActividad"
-                    name="nombreActividad"
-                    value="Conferencia de Inteligencia Artificial"
-                    required>
+                    <input
+                        type="text"
+                        id="nombreActividad"
+                        name="nombreActividad"
+                        value="Conferencia de Inteligencia Artificial"
+                        required>
 
-                <label for="categoria">
-                    Categoría
-                </label>
+                    <label for="categoria">
+                        Categoría
+                    </label>
 
-                <select
-                    id="categoria"
-                    name="categoria"
-                    required>
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required>
 
-                    <option value="Tecnológica" selected>Tecnológica</option>
-                    <option value="Cultural">Cultural</option>
-                    <option value="Deportiva">Deportiva</option>
-                    <option value="Artística">Artística</option>
-                    <option value="Recreación">Recreación</option>
-                    <option value="Voluntariado">Voluntariado</option>
+                        <option value="Tecnológica" selected>Tecnológica</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Deportiva">Deportiva</option>
+                        <option value="Artística">Artística</option>
+                        <option value="Recreación">Recreación</option>
+                        <option value="Voluntariado">Voluntariado</option>
 
-                </select>
+                    </select>
 
-                <label for="descripcion">
-                    Descripción
-                </label>
+                    <label for="descripcion">
+                        Descripción
+                    </label>
 
-                <textarea
-                    id="descripcion"
-                    name="descripcion"
-                    rows="5"
-                    required>Actividad enfocada en tendencias actuales de IA.</textarea>
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        required>Actividad enfocada en tendencias actuales de IA.</textarea>
 
-                <label for="fecha">
-                    Fecha
-                </label>
+                    <label for="fecha">
+                        Fecha
+                    </label>
 
-                <input
-                    type="date"
-                    id="fecha"
-                    name="fecha"
-                    value="2026-08-15"
-                    required>
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        value="2026-08-15"
+                        required>
 
-                <label for="horaInicio">
-                    Hora de Inicio
-                </label>
+                    <label for="horaInicio">
+                        Hora de Inicio
+                    </label>
 
-                <input
-                    type="time"
-                    id="horaInicio"
-                    name="horaInicio"
-                    value="09:00"
-                    required>
+                    <input
+                        type="time"
+                        id="horaInicio"
+                        name="horaInicio"
+                        value="09:00"
+                        required>
 
-                <label for="horaFin">
-                    Hora de Finalización
-                </label>
+                    <label for="horaFin">
+                        Hora de Finalización
+                    </label>
 
-                <input
-                    type="time"
-                    id="horaFin"
-                    name="horaFin"
-                    value="11:00"
-                    required>
+                    <input
+                        type="time"
+                        id="horaFin"
+                        name="horaFin"
+                        value="11:00"
+                        required>
 
-                <label for="espacio">
-                    Espacio o Sede
-                </label>
+                    <label for="espacio">
+                        Espacio o Sede
+                    </label>
 
-                <input
-                    type="text"
-                    id="espacio"
-                    name="espacio"
-                    value="Auditorio Principal"
-                    required>
+                    <input
+                        type="text"
+                        id="espacio"
+                        name="espacio"
+                        value="Auditorio Principal"
+                        required>
 
-                <label for="cupo">
-                    Cupo Máximo
-                </label>
+                    <label for="cupo">
+                        Cupo Máximo
+                    </label>
 
-                <input
-                    type="number"
-                    id="cupo"
-                    name="cupo"
-                    value="100"
-                    min="1"
-                    required>
+                    <input
+                        type="number"
+                        id="cupo"
+                        name="cupo"
+                        value="100"
+                        min="1"
+                        required>
 
-                <label for="responsable">
-                    Responsable
-                </label>
+                    <label for="responsable">
+                        Responsable
+                    </label>
 
-                <select
-                    id="responsable"
-                    name="responsable"
-                    required>
+                    <select
+                        id="responsable"
+                        name="responsable"
+                        required>
 
-                    <option value="Juan Pérez" selected>Juan Pérez</option>
-                    <option value="María Gómez">María Gómez</option>
-                    <option value="Carlos Mora">Carlos Mora</option>
+                        <option value="Juan Pérez" selected>Juan Pérez</option>
+                        <option value="María Gómez">María Gómez</option>
+                        <option value="Carlos Mora">Carlos Mora</option>
 
-                </select>
+                    </select>
 
-                <label for="estado">
-                    Estado
-                </label>
+                    <label for="estado">
+                        Estado
+                    </label>
 
-                <select
-                    id="estado"
-                    name="estado"
-                    required>
+                    <select
+                        id="estado"
+                        name="estado"
+                        required>
 
-                    <option value="Activo" selected>Activo</option>
-                    <option value="Suspendido">Suspendido</option>
+                        <option value="Activo" selected>Activo</option>
+                        <option value="Suspendido">Suspendido</option>
 
-                </select>
+                    </select>
 
-                <button
-                    type="submit"
-                    class="boton boton-primario">
+                    <button
+                        type="submit"
+                        class="boton boton-primario">
 
-                    Guardar Cambios
+                        Guardar Cambios
 
-                </button>
+                    </button>
 
-            </form>
+                </form>
 
-        </div>
+            </div>
 
-    </section>
+        </section>
 
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-    <h2>Somos lo que sabemos</h2>
+        <h2>Somos lo que sabemos</h2>
 
-    <p>&copy; 2026 Universidad CENFOTEC</p>
+        <p>&copy; 2026 Universidad CENFOTEC</p>
 
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="/js/cerrarSesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/cerrarSesion.js"></script>
 
 </body>
 </html>

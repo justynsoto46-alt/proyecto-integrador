@@ -15,7 +15,7 @@ const filasResponsables = document.querySelectorAll(".tabla-responsables tbody t
 
 // Función para redirigir al presionar modificar a la página modificarResponsable.html
 function modificarResponsableRetorno(){
-    window.location.href = "/pages/modificarResponsable.html";
+    window.location.href = "/pages/Responsables/modificarResponsable.html";
 }
 
 //Función para confirmar la eliminación de un responsable

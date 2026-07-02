@@ -15,7 +15,7 @@ const filasParticipantes = document.querySelectorAll(".tabla-participantes tbody
 
 // Función para redirigir al presionar modificar a la página modificarParticipante.html
 function modificarParticipanteRetorno(){
-    window.location.href = "/pages/modificarParticipante.html";
+    window.location.href = "/pages/Participantes/modificarParticipante.html";
 }
 
 // Función para confirmar la eliminación de un participante

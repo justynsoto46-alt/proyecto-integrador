@@ -9,56 +9,55 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="../css/menuPrincipal.css">
-<link rel="stylesheet" href="../css/modificarEvento.css">
+<link rel="stylesheet" href="/css/menuPrincipal.css">
+<link rel="stylesheet" href="/css/modificarEvento.css">
 </head>
 
 <body>
 
-<header class="encabezado">
-    <div class="contenedor">
-        <img src="../img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
 
-        <h1>CENFOTEC Página Web Eventos</h1>
+            <h1>CENFOTEC Página Web Eventos</h1>
 
-        <div class="usuario">
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-user"></i>
-            <span>Administrador</span>
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<main>
-
+    <main>
         <aside class="menu-lateral">
             <nav>
-                <a href="/pages/menuPrincipal.html">
+                <a href="/pages/DashBoard/menuPrincipal.html">
                     <i class="fa-solid fa-location-dot"></i>
                     Dashboard
                 </a>
 
-                <a href="/pages/listarAdmin.html">
+                <a href="/pages/Administrador/listarAdmin.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
 
-                <a href="/pages/registrarEvento.html">
+                <a href="/pages/Evento/registrarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
 
-                <a href="/pages/registrarActividad.html">
+                <a href="/pages/Actividad/registrarActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
 
-                <a href="/pages/listarStands.html">
+                <a href="/pages/Stands/listarStands.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
 
-                <a href="/pages/participantes.html">
+                <a href="/pages/Participantes/participantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
@@ -68,136 +67,132 @@
                     Inscripciones
                 </a>
 
-                <a href="/pages/consultarAgenda.html">
+                <a href="/pages/Agenda/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
                     Agenda
                 </a>
 
-                <a href="/pages/listarResponsables.html">
+                <a href="/pages/Responsables/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
 
-                <a href="/pages/pagoSimulado.html">
+                <a href="/pages/DashBoard/pagoSimulado.html">
                     <i class="fa-solid fa-credit-card"></i>
                     Pagos
                 </a>
 
 
-                <a href="/pages/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
+                <a href="/pages/DashBoard/iniciarSesion.html" id="cerrarSesion" class="cerrar-sesion">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Cerrar Sesión
                 </a>
             </nav>
         </aside>
-    
 
+        <section class="section">
 
-    </aside>
+            <div class="contenedor tarjeta-evento">
 
-    <section class="section">
+                <h2>Modificar Evento</h2>
 
-        <div class="contenedor tarjeta-evento">
+                <form class="formulario">
 
-            <h2>Modificar Evento</h2>
+                    <label for="nombreEvento">
+                        Nombre del Evento
+                    </label>
 
-            <form class="formulario">
+                    <input
+                    type="text"
+                    id="nombreEvento"
+                    name="nombreEvento"
+                    value="Feria Tecnológica 2026"
+                    required>
 
-                <label for="nombreEvento">
-                    Nombre del Evento
-                </label>
+                    <label for="descripcion">
+                        Descripción
+                    </label>
 
-                <input
-                type="text"
-                id="nombreEvento"
-                name="nombreEvento"
-                value="Feria Tecnológica 2026"
-                required>
+                    <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    required>Evento de innovación tecnológica organizado por Universidad CENFOTEC.</textarea>
 
-                <label for="descripcion">
-                    Descripción
-                </label>
+                    <label for="fechaInicio">
+                        Fecha de inicio
+                    </label>
 
-                <textarea
-                id="descripcion"
-                name="descripcion"
-                required>Evento de innovación tecnológica organizado por Universidad CENFOTEC.</textarea>
+                    <input
+                    type="date"
+                    id="fechaInicio"
+                    name="fechaInicio"
+                    value="2026-09-15">
 
-                <label for="fechaInicio">
-                    Fecha de inicio
-                </label>
+                    <label for="fechaFinal">
+                        Fecha de finalización
+                    </label>
 
-                <input
-                type="date"
-                id="fechaInicio"
-                name="fechaInicio"
-                value="2026-09-15">
+                    <input
+                    type="date"
+                    id="fechaFinal"
+                    name="fechaFinal"
+                    value="2026-09-17">
 
-                <label for="fechaFinal">
-                    Fecha de finalización
-                </label>
+                    <label for="ubicacion">
+                        Ubicación
+                    </label>
 
-                <input
-                type="date"
-                id="fechaFinal"
-                name="fechaFinal"
-                value="2026-09-17">
+                    <input
+                    type="text"
+                    id="ubicacion"
+                    name="ubicacion"
+                    value="Universidad CENFOTEC">
 
-                <label for="ubicacion">
-                    Ubicación
-                </label>
+                    <label for="estado">
+                        Estado
+                    </label>
 
-                <input
-                type="text"
-                id="ubicacion"
-                name="ubicacion"
-                value="Universidad CENFOTEC">
+                    <select
+                    id="estado"
+                    name="estado">
 
-                <label for="estado">
-                    Estado
-                </label>
+                        <option value="activo" selected>
+                            Activo
+                        </option>
 
-                <select
-                id="estado"
-                name="estado">
+                        <option value="cancelado">
+                            Cancelado
+                        </option>
 
-                    <option value="activo" selected>
-                        Activo
-                    </option>
+                        <option value="finalizado">
+                            Finalizado
+                        </option>
 
-                    <option value="cancelado">
-                        Cancelado
-                    </option>
+                    </select>
 
-                    <option value="finalizado">
-                        Finalizado
-                    </option>
+                    <button
+                    type="submit"
+                    class="boton boton-primario boton-bloque boton-lg">
 
-                </select>
+                        Guardar Cambios
 
-                <button
-                type="submit"
-                class="boton boton-primario boton-bloque boton-lg">
+                    </button>
 
-                    Guardar Cambios
+                </form>
 
-                </button>
+            </div>
 
-            </form>
+        </section>
 
-        </div>
+    </main>
 
-    </section>
+    <footer>
 
-</main>
+        <h2>Somos lo que sabemos</h2>
 
-<footer>
+        <p>&copy; 2026 Universidad CENFOTEC</p>
 
-    <h2>Somos lo que sabemos</h2>
-
-    <p>&copy; 2026 Universidad CENFOTEC</p>
-
-</footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
