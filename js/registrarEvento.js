@@ -1,4 +1,4 @@
-
+console.log("JS cargado correctamente");
 
 const formulario = document.getElementById("formularioEvento");
 
