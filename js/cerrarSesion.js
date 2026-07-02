@@ -24,7 +24,7 @@ function cerrarSesionRetorno(){
             sessionStorage.removeItem("sesionActiva");
 
             // Redirige al inicio de sesión
-            window.location.href = "/pages/iniciarSesion.html";
+            window.location.href = "/pages/DashBoard/iniciarSesion.html";
         }
 
     });
