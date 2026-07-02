@@ -139,7 +139,7 @@ function iniciarSesionRetorno(){
                 sessionStorage.setItem("sesionActiva", "true");
 
                 // Redirecciona al menú principal del sistema
-                window.location.href = "/pages/menuPrincipal.html";
+                window.location.href = "/pages/DashBoard/menuPrincipal.html";
         }
         else{
             Swal.fire({
