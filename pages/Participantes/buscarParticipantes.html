@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Participantes</title>
+    <title>CENFOTEC Página Web Eventos - Participantes por Actividad</title>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/css/buscarParticipantes.css">
 </head>
 
 <body>
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
-                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                <span>Administrador</span>
+                Administrador
             </div>
         </div>
     </header>
@@ -38,7 +38,7 @@
                     Administradores
                 </a>
 
-                <a href="/pages/Evento/registrarEvento.html">
+                <a href="/pages/Evento/consultarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
@@ -58,7 +58,7 @@
                     Participantes
                 </a>
 
-                <a href="/pages/gestionarInscripciones.html">
+                <a href="/pages/Inscripciones/gestionarInscripciones.html">
                     <i class="fa-solid fa-clipboard"></i>
                     Inscripciones
                 </a>
@@ -84,18 +84,118 @@
                 </a>
             </nav>
         </aside>
-    
-        <section class="contenido-principal">
-            <h2>Menú Principal</h2>
 
-            <div class="tarjeta-bienvenida">
-                <h3>Bienvenido al sistema administrativo</h3>
-                <p>Seleccione una opción del menú lateral para gestionar la información de eventos institucionales de la Universidad CENFOTEC.</p>
+        <section class="section">
+            <div class="contenedor formulario-contenedor">
+                <h2>Consultar Participantes por Actividad</h2>
+
+                <p class="descripcion">
+                    Seleccione una actividad para visualizar los participantes inscritos y controlar el aforo.
+                </p>
+
+                <div class="buscador">
+                    <label for="actividad">Actividad</label>
+
+                    <select id="actividad" name="actividad">
+                        <option value="">Seleccione una actividad</option>
+                        <option value="conferenciaIA">Conferencia de Inteligencia Artificial</option>
+                        <option value="tallerRobotica">Taller de Robótica</option>
+                        <option value="exposicionProyectos">Exposición de Proyectos</option>
+                    </select>
+
+                    <button type="button" id="btnConsultar" class="boton">
+                        Consultar
+                    </button>
+                </div>
+
+                <table class="tabla-participantes" id="tablaParticipantes">
+                    <thead>
+                        <tr>
+                            <th>Nombre completo</th>
+                            <th>Identificación</th>
+                            <th>Correo electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Profesión</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="fila-actividad conferenciaIA">
+                            <td>María José Rodríguez Alvarado</td>
+                            <td>123456789</td>
+                            <td>mrodrigueza@ucenfotec.ac.cr</td>
+                            <td>88888888</td>
+                            <td>Estudiante</td>
+                        </tr>
+
+                        <tr class="fila-actividad tallerRobotica">
+                            <td>Carlos Miranda Pérez</td>
+                            <td>287654321</td>
+                            <td>cmirandap@ucenfotec.ac.cr</td>
+                            <td>87777777</td>
+                            <td>Estudiante</td>
+                        </tr>
+
+                        <tr class="fila-actividad exposicionProyectos">
+                            <td>José Alejandro Quirós Méndez</td>
+                            <td>456789123</td>
+                            <td>jquirosm@ucenfotec.ac.cr</td>
+                            <td>86666666</td>
+                            <td>Estudiante</td>
+                        </tr>
+
+                        <tr class="fila-actividad conferenciaIA">
+                            <td>Amanda Álvarez Quesada</td>
+                            <td>189123456</td>
+                            <td>aalvarezq@gmail.com</td>
+                            <td>85555555</td>
+                            <td>Diseñadora</td>
+                        </tr>
+
+                        <tr class="fila-actividad tallerRobotica">
+                            <td>Mario Hidalgo Hidalgo</td>
+                            <td>109860455</td>
+                            <td>mhidalgoh@gmail.com</td>
+                            <td>82222222</td>
+                            <td>Arquitecto</td>
+                        </tr>
+
+                        <tr class="fila-actividad exposicionProyectos">
+                            <td>Francisco Molina Navarro</td>
+                            <td>378290736</td>
+                            <td>fmolinan@ucenfotec.ac.cr</td>
+                            <td>84444444</td>
+                            <td>Estudiante</td>
+                        </tr>
+
+                        <tr class="fila-actividad conferenciaIA">
+                            <td>David Cordero Barrantes</td>
+                            <td>226870652</td>
+                            <td>dcorderob@ucenfotec.ac.cr</td>
+                            <td>81111111</td>
+                            <td>Estudiante</td>
+                        </tr>
+
+                        <tr class="fila-actividad tallerRobotica">
+                            <td>Samantha Bogantes Oviedo</td>
+                            <td>318670321</td>
+                            <td>sboganteso@gmail.com</td>
+                            <td>88008888</td>
+                            <td>Desarrolladora de Software</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 
+    <footer>
+        <h2>Somos lo que sabemos</h2>
+        <p>&copy; 2026 Universidad Cenfotec</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/buscarParticipantes.js"></script>
 </body>
 </html>

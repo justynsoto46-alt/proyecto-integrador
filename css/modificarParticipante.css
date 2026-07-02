@@ -23,6 +23,7 @@
 /* Descripción */
 .descripcion {
     margin-bottom: 12px;
+    margin-top: 12px;
     color: var(--color-azulOscuro);
 }
 
