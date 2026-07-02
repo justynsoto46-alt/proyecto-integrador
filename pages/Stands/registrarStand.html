@@ -47,7 +47,7 @@
                     Actividades
                 </a>
 
-                <a href="/pages/registrarStand.html">
+                <a href="/pages/listarStands.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
@@ -85,22 +85,32 @@
             </nav>
         </aside>
 
-
         <section class="section">
-
             <div class="contenedor tarjeta-Inicio-Sesion">
-                <h2>Crear nuevo Responsable</h2>
+                <h2>Crear nuevo Stands</h2>
                 <form id="formularioResponsable" class="formulario" action="#"  method="post" novalidate>
-                    <label for="Nombre">Nombre Completo 
-                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Juan Perez " required>
+                    <label>
+                        <select name="evento" id="evento">
+                            <option value="defecto">Seleccione una Opcion</option>
+                            <option value="Maker Faire">
+                            Maker Faire
+                            </option>
+                        </select>
+                    </label>
+                    <label for="Nombre">Nombre 
+                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Taller Maker Faire " required>
+                    </label>
+                    <label>
+                        <select name="persona" id="rol">
+                            <option value="defecto">Seleccione una Opcion</option>
+                            <option value="juanito">
+                            juanito
+                            </option>
+                        </select>
                     </label>
                     <label for="correo">Correo Electronico 
                         <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
                     </label>
-                    <label for="institucion">Institución
-                        <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
-                    </label>
-                    
                     <div id="contenedor-telefonos">
                         <label>Teléfono
                             <input type="tel" name="telefono" placeholder="88888888" required>
@@ -110,27 +120,19 @@
                     <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btnAgregarTelefono">
                     + Agregar otro teléfono
                     </button>
-                
-                    <label for="biografia">
-                        Biografía
+
+                    <label for="descripcion">
+                        Descripcion
                         <textarea
-                        id="biografia"
-                        name="biografia"
+                        id="descripcion"
+                        name="descripcion"
                         rows="5"
-                        placeholder="Ingrese la biografía del Responsable"
+                        placeholder="Ingrese la descripcion del stand"
                         required></textarea>
                     </label>
-                    
-                    <label for="subirImagen" class="btn-subir-archivo">
-                        <i class="fa-solid fa-upload"></i> Seleccionar Imagen
-                    </label>
-
-                    <!-- Ocultamos el input real -->
-                    <input type="file" id="subirImagen" accept="image/*" style="display: none;">
-
 
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
-                        Crear Responsable</button>
+                        Crear Stand</button>
                 </form>
             </div>
         </section>
@@ -144,6 +146,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/registrarResponsable.js"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Participantes</title>
+    <title>Registrar Admin</title>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel = "Stylesheet" href = "/css/registrarAdmin.css">
 </head>
-
 <body>
     <header class="encabezado">
         <div class="contenedor">
@@ -24,36 +24,35 @@
             </div>
         </div>
     </header>
-
     <main>
         <aside class="menu-lateral">
             <nav>
-                <a href="/pages/menuPrincipal.html">
+                <a href="/pages/DashBoard/menuPrincipal.html">
                     <i class="fa-solid fa-location-dot"></i>
                     Dashboard
                 </a>
 
-                <a href="/pages/listarAdmin.html">
+                <a href="/pages/Administrador/listarAdmin.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
 
-                <a href="/pages/registrarEvento.html">
+                <a href="/pages/Evento/registrarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
 
-                <a href="/pages/registrarActividad.html">
+                <a href="/pages/Actividad/registrarActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
 
-                <a href="/pages/listarStands.html">
+                <a href="/pages/Stands/listarStands.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
 
-                <a href="/pages/participantes.html">
+                <a href="/pages/Participantes/listarParticipantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
@@ -63,12 +62,12 @@
                     Inscripciones
                 </a>
 
-                <a href="/pages/consultarAgenda.html">
+                <a href="/pages/Agenda/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
                     Agenda
                 </a>
 
-                <a href="/pages/listarResponsables.html">
+                <a href="/pages/Responsables/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
@@ -88,15 +87,42 @@
     
 
 
-        <section class="contenido-principal">
-            <h2>Menú Principal</h2>
+        <section class="section">
 
-            <div class="tarjeta-bienvenida">
-                <h3>Bienvenido al sistema administrativo</h3>
-                <p>Seleccione una opción del menú lateral para gestionar la información de eventos institucionales de la Universidad CENFOTEC.</p>
+            <div class="contenedor tarjeta-Inicio-Sesion">
+                <h2>Crear nuevo administrador</h2>
+
+                <form class="formulario" action="#"  method="post">
+
+                    <label for="correo">Nombre </label>
+                        <input type="text" name="Nombre Completo" id="correo"correo placeholder="Nombre Completo " required>
+
+                    <label for="correo">Correo Electronico </label>
+
+                        <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
+                    <label for="clave">Contraseña
+                        <input type="password" name="clave" id="clave" placeholder="******" required>
+                    </label>
+                    <label for="rol">Seleccione un Rol</label>
+                    <select name="rol" id="rol">
+                        <option value="defecto">Seleccione una Opcion</option>
+                        <option value="administrador">
+                        Administrador
+                        </option>
+                    </select>
+                    <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
+
+                        Crear Usuario</button>
+                </form>
             </div>
         </section>
     </main>
+
+
+    <footer>
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad Cenfotec </p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>

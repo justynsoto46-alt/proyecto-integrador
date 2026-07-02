@@ -88,16 +88,16 @@
         <!-- Contenido principal -->
         <section class="contenido-principal">
 
-            <h2>Responsables</h2>
+            <h2>Stands</h2>
 
             <p class="descripcion">
-                Consulte, busque, modifique o elimine los participantes registrados.
+                Consulte, busque, modifique o elimine los Stands registrados.
             </p>
 
             <!-- Buscador -->
             <div class="buscador">
 
-                <label for="buscarResponsable">Buscar Responsables</label>
+                <label for="buscarResponsable">Buscar Stands</label>
 
                 <input type="search" id="buscarResponsable" placeholder="Nombre, telefono o area">
 
@@ -107,91 +107,89 @@
                 <option value="todos">Estado: Todos</option>
                 <option value="activo">Activo</option>
             </select>
-            <a href="/pages/registrarResponsables.html" class="boton"> + Nuevo Responsable </a>
+            <a href="/pages/registrarStand.html" class="boton"> + Nuevo Stand </a>
             </div>
 
             <!-- Tabla -->
             <table class="tabla-responsables">
                 <thead>
                         <tr>
-                            <th>Imagen</th>
-                            <th>Nombre Completo</th>
-                            <th>Telefono</th>
-                            <th>Institucion</th>
-                            <th>Area</th>
-                            <th>Estado</th>
+                            <th>Evento</th>
+                            <th>Nombre</th>
+                            <th>Encargado</th>
+                            <th>Correo</th>
+                            <th>telefono</th>
                             <th>Acciones</th>
                         </tr>
-                    </thead>
+                </thead>
 
                 <tbody>
+                <tr>
+                        <td>Conferencia Tech</td>
+                        <td>Stand A1 - TechSolutions S.A.</td>
+                        <td>María Salas</td>
+                        <td>msalas@empresa.com</td>
+                        <td>8832-1459</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
+                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                        </td>
+                    </tr>
                     <tr>
-                            <td>
-                            </td>
-                            <td>👤Carlos Mendoza</td>
-                            <td>8832-1459</td>
-                            <td>TechSolutions S.A.</td>
-                            <td>Desarrollador Backend</td>
-                            <td>12/08/2025</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
+                        <td>Taller UX/UI</td>
+                        <td>Stand Interactivo - InnovaCorp</td>
+                        <td>Diego Aguilar</td>
+                        <td>daguilar@innovacion.cr</td>
+                        <td>6021-9874</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-
+                        </td>
+                    </tr>
                     <tr>
-                            <td>
-                            </td>
-                            <td>👤Laura Vargas</td>
-                            <td>6021-9874</td>
-                            <td>InnovaCorp</td>
-                            <td>Gerente de Proyectos</td>
-                            <td>03/11/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
+                        <td>Seminario Datos</td>
+                        <td>Pabellón B - Banco Nacional</td>
+                        <td>Sofía Castro</td>
+                        <td>scastro@banco.fi.cr</td>
+                        <td>7145-3320</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-
+                        </td>
+                    </tr>
                     <tr>
-                            <td>
-                            </td>
-                            <td>👤Andrés Rojas</td>
-                            <td>7145-3320</td>
-                            <td>Banco Nacional</td>
-                            <td>Analista de Datos</td>
-                            <td>25/01/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
+                        <td>Charla Liderazgo</td>
+                        <td>Stand Oro - Logística CR</td>
+                        <td>Roberto Mora</td>
+                        <td>rmora@logistica.com</td>
+                        <td>8910-4455</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Sofía Castro</td>
-                            <td>8910-4455</td>
-                            <td>Creativa Digital</td>
-                            <td>Diseñadora UX/UI</td>
-                            <td>17/09/2025</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feria Emprendedores</td>
+                        <td>Kiosko 5 - EcoTech</td>
+                        <td>Valeria Navarro</td>
+                        <td>valeria.n@tech.com</td>
+                        <td>6223-8891</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Diego Aguilar</td>
-                            <td>6223-8891</td>
-                            <td>Logística CR</td>
-                            <td>Especialista en Redes</td>
-                            <td>04/05/2026</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Congreso Redes</td>
+                        <td>Stand VIP - Cisco Systems</td>
+                        <td>Juan Pérez</td>
+                        <td>jperez@ejemplo.com</td>
+                        <td>8888-8888</td>
+                        <td class="celda-acciones">
+                                <button class="btn-icono boton-modificar" type="button">✏️</button>
                                 <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -216,5 +214,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/listarStands.js"></script>
 </body>
 </html>

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagos</title>
+    <title>Registrar Responsables</title>
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/pagoSimulado.css">
     <link rel="stylesheet" href="/css/menuPrincipal.css">
+    <link rel = "stylesheet" href = "/css/registrarResponsables.css">
 </head>
+<body>
     <header class="encabezado">
         <div class="contenedor">
             <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
@@ -24,32 +27,32 @@
     <main>
         <aside class="menu-lateral">
             <nav>
-                <a href="/pages/menuPrincipal.html">
+                <a href="/pages/DashBoard/menuPrincipal.html">
                     <i class="fa-solid fa-location-dot"></i>
                     Dashboard
                 </a>
 
-                <a href="/pages/listarAdmin.html">
+                <a href="/pages/Administrador/listarAdmin.html">
                     <i class="fa-solid fa-user-plus"></i>
                     Administradores
                 </a>
 
-                <a href="/pages/registrarEvento.html">
+                <a href="/pages/Evento/registrarEvento.html">
                     <i class="fa-solid fa-award"></i>
                     Eventos
                 </a>
 
-                <a href="/pages/registrarActividad.html">
+                <a href="/pages/Actividad/registrarActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
 
-                <a href="/pages/listarStands.html">
+                <a href="/pages/Stands/listarStands.html">
                     <i class="fa-solid fa-cube"></i>
                     Stands
                 </a>
 
-                <a href="/pages/participantes.html">
+                <a href="/pages/Participantes/listarParticipantes.html">
                     <i class="fa-solid fa-users"></i>
                     Participantes
                 </a>
@@ -59,12 +62,12 @@
                     Inscripciones
                 </a>
 
-                <a href="/pages/consultarAgenda.html">
+                <a href="/pages/Agenda/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
                     Agenda
                 </a>
 
-                <a href="/pages/listarResponsables.html">
+                <a href="/pages/Responsables/listarResponsables.html">
                     <i class="fa-solid fa-user-tie"></i>
                     Responsables
                 </a>
@@ -81,33 +84,51 @@
                 </a>
             </nav>
         </aside>
-    
+
+
         <section class="section">
 
             <div class="contenedor tarjeta-Inicio-Sesion">
-                <h2>Configurar Pago actividad</h2>
-
-                <form class="formulario" action="#"  method="post">
-
-                    <label for="rol">Seleccione una Actividad</label>
-                    <select name="rol" id="rol">
-                        <option value="defecto">Seleccione una Opcion</option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                        <option value="">
-                        </option>
-                    </select>
-
-                    <label for="precio">Precio de la actividad
-                        <span class="currency-symbol">&#8353;</span>
-                        <input type="number" name="PrecioActividad" id="precio" placeholder="500" required>
+                <h2>Crear nuevo Responsable</h2>
+                <form id="formularioResponsable" class="formulario" action="#"  method="post" novalidate>
+                    <label for="Nombre">Nombre Completo 
+                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Juan Perez " required>
                     </label>
+                    <label for="correo">Correo Electronico 
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+                    </label>
+                    <label for="institucion">Institución
+                        <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
+                    </label>
+                    
+                    <div id="contenedor-telefonos">
+                        <label>Teléfono
+                            <input type="tel" name="telefono" placeholder="88888888" required>
+                        </label>
+                    </div>
+            
+                    <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btnAgregarTelefono">
+                    + Agregar otro teléfono
+                    </button>
+                
+                    <label for="biografia">
+                        Biografía
+                        <textarea
+                        id="biografia"
+                        name="biografia"
+                        rows="5"
+                        placeholder="Ingrese la biografía del Responsable"
+                        required></textarea>
+                    </label>
+                    
+                    <label for="subirImagen" class="btn-subir-archivo">
+                        <i class="fa-solid fa-upload"></i> Seleccionar Imagen
+                    </label>
+
+                    <!-- Ocultamos el input real -->
+                    <input type="file" id="subirImagen" accept="image/*" style="display: none;">
                     <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
-                        Guardar Precio</button>
+                        Crear Responsable</button>
                 </form>
             </div>
         </section>
@@ -121,4 +142,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/registrarResponsable.js"></script>
+</body>
 </html>
