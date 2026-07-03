@@ -133,11 +133,11 @@ h2{
 
 /* Mensaje de requisitos de contraseña */
 .ayuda-contrasenia {
-    color: var(--color-azulOscuro);
-    background-color: var(--color-celesteClaro);
+    color: black;
+    background-color: var(--color-amarilloOscuro);
     margin-top: 5px;
     margin-bottom: 30px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
 }
 
