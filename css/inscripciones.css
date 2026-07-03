@@ -16,7 +16,7 @@
     --color-amarilloOscuro: #ffc63e;
 }
 
-/* Estilos generales del cuerpo de la página */
+/* Estilos generales */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-celesteClaro);
@@ -28,7 +28,7 @@ body {
 .encabezado {
     background-color: var(--color-azulOscuro);
     color: white;
-    padding: 20px 0;
+    padding: 18px 0;
     border-bottom: 6px solid var(--color-amarilloOscuro);
 }
 
@@ -38,7 +38,7 @@ body {
     margin: 0 auto;
 }
 
-/* Contenedor del encabezado */
+/* Contenedor del encabezado alineado a la izquierda */
 .encabezado .contenedor {
     width: 100%;
     margin: 0;
@@ -47,11 +47,11 @@ body {
 
 /* Logo */
 .logo {
-    width: 80px;
+    width: 125px;
     vertical-align: middle;
 }
 
-/* Título principal */
+/* Título del encabezado */
 .encabezado h1 {
     display: inline-block;
     vertical-align: middle;
@@ -60,13 +60,9 @@ body {
     font-weight: normal;
 }
 
-/* Sección principal */
-.seccion-registro {
-    padding: 45px 0;
-}
-
-/* Contenedor del enlace volver */
+/* Contenedor para la sección que contiene el enlace volver */
 .contenedor-volver {
+    margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 30px;
     padding-left: 20px;
@@ -80,95 +76,85 @@ body {
     font-weight: bold;
 }
 
-/* Hover enlace volver */
 .enlace-volver:hover {
     color: var(--color-azulClaro);
     text-decoration: underline;
 }
 
-/* Título del formulario */
-.seccion-registro h2 {
-    color: var(--color-azulOscuro);
-    font-size: 30px;
+/* Contenedor principal de la página */
+.contenido-inscripciones{
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
 }
 
-/* Subtítulo */
-.subtitulo {
-    text-align: center;
-    margin-bottom: 20px;
+/* Título principal */
+.contenido-principal h2 {
     color: var(--color-azulOscuro);
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-/* Contenedor del formulario */
-.formulario-contenedor {
-    width: 700px;
+/* Texto descriptivo bajo el título */
+.descripcion {
+    font-size: 18px;
+    color: var(--color-azulOscuro);
+    margin-bottom: 25px;
+}
+
+/* Tarjetas de opciones */
+.tarjeta-opcion {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    min-height: 310px;
     background-color: white;
-    padding: 35px;
+    padding: 25px;
+    margin: 15px 18px 20px 0;
     border: 2px solid var(--color-grisClaro);
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    margin: 0 auto;
-}
-
-/* Etiquetas */
-.formulario label {
-    display: block;
-    margin-top: 18px;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: var(--color-azulOscuro);
-}
-
-/* Campos de texto */
-/* Selecciona solo los campos de texto, correo y número para aplicar el mismo estilo */
-.formulario input {
-    display: block;
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-/* Efecto al seleccionar un campo */
-.formulario input:focus {
-    outline: none;
-    border-color: var(--color-azulClaro);
-}
-/* Campo del botón */
-.campo-boton {
-    max-width: 300px;
-    margin: 0 auto;
-    margin-top: 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
     text-align: center;
 }
 
-/* Botón principal */
+/* Iconos de las tarjetas */
+.tarjeta-opcion i {
+    font-size: 42px;
+    color: var(--color-azulOscuro);
+    margin-bottom: 20px;
+}
+
+/* Títulos de las tarjetas */
+.tarjeta-opcion h3 {
+    color: var(--color-azulOscuro);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Texto de las tarjetas */
+.tarjeta-opcion p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* Botón general */
 .boton {
+    display: inline-block;
     background-color: var(--color-azulClaro);
     color: white;
+    text-decoration: none;
     border: none;
-    padding: 12px 28px;
+    padding: 10px 22px;
     border-radius: 6px;
-    font-size: 17px;
+    font-size: 15px;
     cursor: pointer;
-    margin-right: 15px;
     transition: transform 0.3s;
 }
 
-/* Hover botón principal */
-.boton-principal:hover {
+/* Efecto del botón */
+.boton:hover {
     background-color: var(--color-azulOscuro);
     transform: scale(1.05);
-}
-
-/* Texto de campos obligatorios */
-.campos-obligatorios {
-    width: 700px;
-    margin: 10px auto 0 auto;
-    font-size: 13px;
-    color: var(--color-azulOscuro);
 }
 
 /* Pie de página */
@@ -178,10 +164,4 @@ footer {
     padding: 18px;
     margin-top: 30px;
     text-align: center;
-}
-
-/* Campos con error */
-.input-error {
-    border: 2px solid #fcc2c2 !important;
-    background-color: #ffe5e5;
 }

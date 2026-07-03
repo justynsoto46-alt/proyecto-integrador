@@ -7,8 +7,6 @@ const inputTelefono = document.getElementById("telefono");
 const inputEdad = document.getElementById("edad");
 const inputProfesion = document.getElementById("profesion");
 
-const checkboxesActividades = document.querySelectorAll("input[name='actividades']");
-
 // Función para validar los campos obligatorios
 function validarCamposVacios(){
 
@@ -114,45 +112,21 @@ function validarEdad(){
 
 }
 
-// Función para validar que el participante seleccione al menos una actividad
-function validarActividades(){
-
-    let error = true;
-
-    checkboxesActividades.forEach(function(actividad){
-
-        if(actividad.checked){
-            error = false;
-        }
-    });
-
-    if(error){
-        Swal.fire({
-            title: "Debe seleccionar una actividad",
-            text: "Seleccione al menos una actividad para completar el registro.",
-            icon: "warning",
-            confirmButtonText: "Aceptar"
-        });
-    }
-
-    return error;
-}
-
 // Función principal
 function registrarParticipanteRetorno(){
 
     if(validarCamposVacios() === false &&
        validarCorreo() === false &&
        validarTelefono() === false &&
-       validarEdad() === false &&
-       validarActividades() === false){
+       validarEdad() === false){
 
         Swal.fire({
-            title: "Registro exitoso",
-            text: "Su inscripción fue registrada correctamente.",
+            title: "Datos registrados correctamente.",
+            text: "Ahora seleccione las actividades a las que desea inscribirse.",
             icon: "success",
             confirmButtonText: "Aceptar"
         }).then(() => {
+            window.location.href = "/pages/Inscripciones/gestionarInscripcionUsuario.html";
 
         limpiarFormulario();
 
@@ -179,12 +153,6 @@ function limpiarFormulario(){
     inputEdad.value = "";
     inputProfesion.value = "";
 
-    // Desmarca todas las actividades
-    checkboxesActividades.forEach(function(actividad){
-
-        actividad.checked = false;
-
-    });
 
     // Elimina el estilo de error de los campos
     inputNombreCompleto.classList.remove("input-error");
