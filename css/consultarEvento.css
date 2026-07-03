@@ -13,30 +13,23 @@
 
 }
 
-.tarjeta-evento{
+.tarjeta-evento,
+.tarjeta-actividad{
 
     width:850px;
-
     margin-top:30px;
-
     background:white;
-
     padding:40px;
-
     border:2px solid var(--color-grisClaro);
-
     border-radius:10px;
-
     box-shadow:0 3px 8px rgba(0,0,0,.12);
 
 }
 
-.tarjeta-evento h2{
-
-    color:var(--color-AzulOscuro);
-
+.tarjeta-evento h2,
+.tarjeta-actividad h2{
+    color: var(--color-AzulOscuro);
     margin-bottom:25px;
-
 }
 
 .informacion p{
@@ -47,14 +40,11 @@
 
 }
 
-.tarjeta-evento h3{
-
+.tarjeta-evento h3,
+.tarjeta-actividad h3{
     margin-top:35px;
-
     margin-bottom:15px;
-
-    color:var(--color-AzulOscuro);
-
+    color: var(--color-AzulOscuro);
 }
 
 .tabla-evento{
