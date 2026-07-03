@@ -1,0 +1,65 @@
+.contenido-principal{
+    flex: 1;
+    padding: 45px 40px;
+}
+
+.contenido-principal h2{
+    font-size: 32px;
+    color: var(--color-azulOscuro);
+    margin-bottom: 20px;
+}
+
+.descripcion{
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-opcion{
+    width: 400px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
+}
+
+.tarjeta-opcion i{
+    font-size: 48px;
+    color: var(--color-azulOscuro);
+    margin-bottom: 20px;
+}
+
+.tarjeta-opcion h3{
+    color: var(--color-azulOscuro);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tarjeta-opcion p{
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.boton{
+    display: inline-block;
+    background: var(--color-azulClaro);
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton:hover{
+    background: var(--color-azulOscuro);
+}
