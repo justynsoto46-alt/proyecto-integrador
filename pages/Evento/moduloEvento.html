@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Módulo Eventos</title>
+    <title>Eventos</title>
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/menuPrincipal.css">
     <link rel="stylesheet" href="/css/moduloEvento.css">
@@ -23,7 +23,8 @@
     <div class="contenedor">
 
         <img src="/img/LogoBlanco.png"
-        class="logo">
+             alt="Logo"
+             class="logo">
 
         <h1>CENFOTEC Página Web Eventos</h1>
 
@@ -107,61 +108,47 @@ Cerrar Sesión
 
 <section class="contenido-principal">
 
-<h2>Módulo de Eventos</h2>
+    <h2>Eventos</h2>
 
-<p class="descripcion">
+    <p class="descripcion">
+        Seleccione la acción que desea realizar.
+    </p>
 
-Seleccione la acción que desea realizar.
+    <div class="contenedor-tarjetas">
 
-</p>
+        <div class="tarjeta-opcion">
 
-<div class="opciones">
+            <i class="fa-solid fa-calendar-plus"></i>
 
-<div class="tarjeta-opcion">
+            <h3>Registrar Evento</h3>
 
-<i class="fa-solid fa-calendar-plus"></i>
+            <p>
+                Permite registrar un nuevo evento en el sistema.
+            </p>
 
-<h3>Registrar Evento</h3>
+            <a href="registrarEvento.html" class="boton">
+                Acceder
+            </a>
 
-<p>
+        </div>
 
-Crear un nuevo evento institucional.
+        <div class="tarjeta-opcion">
 
-</p>
+            <i class="fa-solid fa-calendar-check"></i>
 
-<a
-href="/pages/Evento/registrarEvento.html"
-class="boton boton-primario">
+            <h3>Consultar Eventos</h3>
 
-Ingresar
+            <p>
+                Visualice la información de los eventos registrados.
+            </p>
 
-</a>
+            <a href="consultarEvento.html" class="boton">
+                Acceder
+            </a>
 
-</div>
+        </div>
 
-<div class="tarjeta-opcion">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-<h3>Consultar Eventos</h3>
-
-<p>
-
-Consultar la información de los eventos registrados y modificarlos.
-
-</p>
-
-<a
-href="/pages/Evento/consultarEvento.html"
-class="boton boton-primario">
-
-Ingresar
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -174,6 +161,9 @@ Ingresar
 <p>&copy; 2026 Universidad CENFOTEC</p>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/cerrarSesion.js"></script>
 
 </body>
 
