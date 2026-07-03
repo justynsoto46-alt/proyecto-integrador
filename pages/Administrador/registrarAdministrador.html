@@ -90,16 +90,16 @@
             <div class="contenedor tarjeta-Inicio-Sesion">
                 <h2>Crear nuevo administrador</h2>
 
-                <form class="formulario" action="#"  method="post">
+                <form id ="formulario" class="formulario" action="#"  method="post" novalidate>
 
-                    <label for="correo">Nombre </label>
-                        <input type="text" name="Nombre Completo" id="correo"correo placeholder="Nombre Completo " required>
+                    <label for="nombre">Nombre </label>
+                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Nombre Completo " required>
 
                     <label for="correo">Correo Electronico </label>
 
-                        <input type="email" name="correo" id="correo"correo placeholder="ejemplo@correo.com" required>
-                    <label for="clave">Contraseña
-                        <input type="password" name="clave" id="clave" placeholder="******" required>
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+                    <label for="contrasena">Contraseña
+                        <input type="password" name="contrasena" id="contrasena" placeholder="******" required>
                     </label>
                     <label for="rol">Seleccione un Rol</label>
                     <select name="rol" id="rol">
@@ -124,5 +124,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/registrarAdministrador.js"></script>
 </body>
 </html>

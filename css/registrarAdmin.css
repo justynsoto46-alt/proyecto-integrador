@@ -179,3 +179,10 @@ line-height: 1.4;
     color: white;
     cursor: pointer;
 }
+
+/* CAMPOS ERROR */
+
+.input-error {
+    border: 2px solid #fcc2c2 !important;
+    background-color: #ffe5e5;
+}
