@@ -68,6 +68,7 @@ body {
 /* Contenedor para la sección que contiene el enlace volver */
 .contenedor-volver {
     margin-bottom: 20px;
+    margin-left: 25px;
     padding-left: 20px;
 }
 
