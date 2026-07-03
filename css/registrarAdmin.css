@@ -186,3 +186,15 @@ line-height: 1.4;
     border: 2px solid #fcc2c2 !important;
     background-color: #ffe5e5;
 }
+
+.formulario h4 {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: var(--color-amarilloOscuro);
+    color: black;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0,0.12);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
