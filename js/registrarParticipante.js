@@ -126,7 +126,7 @@ function registrarParticipanteRetorno(){
             icon: "success",
             confirmButtonText: "Aceptar"
         }).then(() => {
-            window.location.href = "/pages/Inscripciones/gestionarInscripcionUsuario.html";
+            window.location.href = "/pages/Actividad/seleccionarActividades.html";
 
         limpiarFormulario();
 
