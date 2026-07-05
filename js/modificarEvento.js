@@ -37,11 +37,16 @@ function validarImagen(){
     }
 
     const nombreArchivo = inputImagen.files[0].name.toLowerCase();
+
+    console.log("Archivo seleccionado:", nombreArchivo);
+
     const formatosValidos = [".jpg", ".jpeg", ".png"];
 
     const esValido = formatosValidos.some(function(formato){
         return nombreArchivo.endsWith(formato);
     });
+
+    console.log("¿Es válido?:", esValido);
 
     if(!esValido){
 
