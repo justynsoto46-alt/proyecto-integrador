@@ -53,12 +53,12 @@
                     Administradores
                 </a>
 
-<a href="/pages/Evento/moduloEvento.html">
-    <i class="fa-solid fa-award"></i>
-    Eventos
-</a>
+                <a href="/pages/Evento/moduloEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
 
-                <a href="/pages/Actividad/registrarActividad.html">
+                <a href="/pages/Actividad/moduloActividad.html">
                     <i class="fa-solid fa-book-open"></i>
                     Actividades
                 </a>
@@ -100,40 +100,54 @@
                 </a>
             </nav>
         </aside>
-    
+
         <section class="section">
 
             <div class="contenedor tarjeta-evento">
 
-                <h2>Consultar Evento</h2>
+                <div class="encabezado-listado">
 
-                <div class="informacion">
+                    <h2>Eventos Registrados</h2>
 
-                    <p><strong>Nombre:</strong> Feria Tecnológica 2026</p>
-
-                    <p><strong>Descripción:</strong> Evento dedicado a la innovación, emprendimiento y desarrollo tecnológico organizado por la Universidad CENFOTEC.</p>
-
-                    <p><strong>Fecha de inicio:</strong> 15/09/2026</p>
-
-                    <p><strong>Fecha de finalización:</strong> 17/09/2026</p>
-
-                    <p><strong>Ubicación:</strong> Universidad CENFOTEC</p>
-
-                    <p><strong>Estado:</strong> Activo</p>
+                    <a href="registrarEvento.html" class="boton boton-primario">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Nuevo Evento
+                    </a>
 
                 </div>
 
-                <h3>Actividades asociadas</h3>
+                <div class="barra-filtros">
 
-                <table class="tabla-evento">
+                    <div class="campo-busqueda">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="buscarEvento"
+                            name="buscarEvento"
+                            placeholder="Buscar por nombre del evento...">
+                    </div>
+
+                    <select id="filtroEstado" name="filtroEstado">
+                        <option value="">Estado: Todos</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Cancelado">Cancelado</option>
+                        <option value="Finalizado">Finalizado</option>
+                    </select>
+
+                </div>
+
+                <table class="tabla-evento" id="tablaEventos">
 
                     <thead>
 
                         <tr>
 
-                            <th>Actividad</th>
-                            <th>Horario</th>
-                            <th>Responsable</th>
+                            <th>Nombre</th>
+                            <th>Fecha inicio</th>
+                            <th>Fecha finalización</th>
+                            <th>Ubicación</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
 
                         </tr>
 
@@ -141,40 +155,88 @@
 
                     <tbody>
 
-                        <tr>
+                        <tr data-estado="Activo">
 
-                            <td>Taller de IA</td>
-                            <td>9:00 AM</td>
-                            <td>María Rodríguez</td>
+                            <td>Feria Tecnológica 2026</td>
+                            <td>15/09/2026</td>
+                            <td>17/09/2026</td>
+                            <td>Universidad CENFOTEC</td>
+                            <td><span class="badge badge-activo">Activo</span></td>
+                            <td class="celda-acciones">
+
+                                <a href="verEvento.html" class="btn-accion" title="Ver detalle">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+
+                                <a href="modificarEvento.html" class="btn-accion" title="Modificar Evento">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+
+                                <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento">
+                                    <i class="fa-solid fa-ban"></i>
+                                </button>
+
+                            </td>
 
                         </tr>
 
-                        <tr>
+                        <tr data-estado="Activo">
 
-                            <td>Conferencia de Ciberseguridad</td>
-                            <td>11:00 AM</td>
-                            <td>Carlos Mora</td>
+                            <td>Maker Fair 2026</td>
+                            <td>20/10/2026</td>
+                            <td>21/10/2026</td>
+                            <td>Universidad CENFOTEC</td>
+                            <td><span class="badge badge-activo">Activo</span></td>
+                            <td class="acciones">
+
+                                <a href="verEvento.html" class="btn-accion" title="Ver detalle">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+
+                                <a href="modificarEvento.html" class="btn-accion" title="Modificar Evento">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+
+                                <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento">
+                                    <i class="fa-solid fa-ban"></i>
+                                </button>
+
+                            </td>
 
                         </tr>
 
-                        <tr>
+                        <tr data-estado="Finalizado">
 
-                            <td>Expo de Startups</td>
-                            <td>2:00 PM</td>
-                            <td>Ana Solís</td>
+                            <td>Semana de Bienestar Estudiantil</td>
+                            <td>01/05/2026</td>
+                            <td>03/05/2026</td>
+                            <td>Hotel Presidente</td>
+                            <td><span class="badge badge-finalizado">Finalizado</span></td>
+                            <td class="acciones">
+
+                                <a href="verEvento.html" class="btn-accion" title="Ver detalle">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+
+                                <a href="modificarEvento.html" class="btn-accion" title="Modificar Evento">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+
+                                <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento" disabled>
+                                    <i class="fa-solid fa-ban"></i>
+                                </button>
+
+                            </td>
 
                         </tr>
 
                     </tbody>
 
                 </table>
-<div class="acciones">
 
-    <a href="modificarEvento.html" class="btn-accion" title="Modificar Evento">
-        <i class="fa-solid fa-pen"></i>
-    </a>
-
-</div>
+                <p id="sinResultados" class="sin-resultados" style="display: none;">
+                    No se encontraron eventos que coincidan con la búsqueda.
+                </p>
 
             </div>
 
@@ -192,5 +254,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/consultarEvento.js"></script>
 </body>
 </html>

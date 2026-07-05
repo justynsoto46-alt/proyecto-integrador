@@ -115,3 +115,134 @@
     color: white;
     transform: scale(1.08);
 }
+
+/* ===== Listado de eventos (consultarEvento.html) ===== */
+
+.encabezado-listado{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.boton-primario{
+    background:var(--color-AzulOscuro);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:15px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.boton-primario:hover{
+    background:var(--color-AzulClaro);
+}
+
+.barra-filtros{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.campo-busqueda{
+    flex:1;
+    min-width:220px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--color-grisClaro);
+    border-radius:8px;
+    padding:10px 15px;
+    background:white;
+}
+
+.campo-busqueda i{
+    color:#888;
+}
+
+.campo-busqueda input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+#filtroEstado{
+    border:1px solid var(--color-grisClaro);
+    border-radius:8px;
+    padding:10px 15px;
+    font-size:15px;
+    background:white;
+    cursor:pointer;
+}
+
+.badge{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    color:white;
+    display:inline-block;
+}
+
+.badge-activo{
+    background:#27ae60;
+}
+
+.badge-cancelado{
+    background:#e74c3c;
+}
+
+.badge-finalizado{
+    background:#7c7b75;
+}
+
+.celda-acciones{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+
+.celda-acciones .btn-accion{
+    width:42px;
+    height:42px;
+    font-size:16px;
+}
+
+.btn-cancelar{
+    border:1px solid #d8d8d8;
+    background:white;
+    color:#e74c3c;
+    cursor:pointer;
+}
+
+.btn-cancelar:hover{
+    background:#e74c3c;
+    color:white;
+    transform:scale(1.08);
+}
+
+.btn-cancelar:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.btn-cancelar:disabled:hover{
+    background:white;
+    color:#e74c3c;
+}
+
+.sin-resultados{
+    text-align:center;
+    padding:20px;
+    color:#888;
+    font-style:italic;
+}
