@@ -10,6 +10,44 @@ const inputUbicacion = document.getElementById("ubicacion");
 const inputEstado = document.getElementById("estado");
 
 
+function validarNombre(){
+
+    console.log("Validando nombre:", inputNombre.value, "longitud:", inputNombre.value.trim().length);
+
+    if(inputNombre.value.trim().length < 5){
+
+        Swal.fire({
+            icon:"error",
+            title:"Nombre inválido",
+            text:"Ingrese el nombre del evento. (Mínimo 5 caracteres)."
+        });
+
+        return false;
+    }
+
+    return true;
+}
+
+
+function validarDescripcion(){
+
+    const longitud = inputDescripcion.value.trim().length;
+
+    if(longitud < 10 || longitud > 1000){
+
+        Swal.fire({
+            icon:"error",
+            title:"Descripción inválida",
+            text:"La descripción debe contener entre 10 y 1000 caracteres."
+        });
+
+        return false;
+    }
+
+    return true;
+}
+
+
 function validarFechas(){
 
     if(inputFechaFin.value < inputFechaInicio.value){
@@ -35,7 +73,7 @@ function limpiarFormulario(){
 
 function registrarEvento(){
 
-    if(validarFechas()){
+    if(validarNombre() && validarDescripcion() && validarFechas()){
 
         Swal.fire({
 

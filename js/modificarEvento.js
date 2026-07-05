@@ -8,6 +8,7 @@ const inputFechaInicio = document.getElementById("fechaInicio");
 const inputFechaFinal = document.getElementById("fechaFinal");
 const inputUbicacion = document.getElementById("ubicacion");
 const inputEstado = document.getElementById("estado");
+const inputImagen = document.getElementById("imagenEvento");
 
 
 function validarFechas(){
@@ -27,9 +28,39 @@ function validarFechas(){
 }
 
 
+function validarImagen(){
+
+    if(inputImagen.files.length === 0){
+
+        return true;
+
+    }
+
+    const nombreArchivo = inputImagen.files[0].name.toLowerCase();
+    const formatosValidos = [".jpg", ".jpeg", ".png"];
+
+    const esValido = formatosValidos.some(function(formato){
+        return nombreArchivo.endsWith(formato);
+    });
+
+    if(!esValido){
+
+        Swal.fire({
+            icon:"error",
+            title:"Formato inválido",
+            text:"Seleccione una imagen en formato JPG, JPEG o PNG."
+        });
+
+        return false;
+    }
+
+    return true;
+}
+
+
 function guardarCambios(){
 
-    if(validarFechas()){
+    if(validarFechas() && validarImagen()){
 
         Swal.fire({
 
