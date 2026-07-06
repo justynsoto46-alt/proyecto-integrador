@@ -23,7 +23,7 @@ function eliminarParticipanteRetorno(){
 
     Swal.fire({
         title: "¿Eliminar participante?",
-        text: "Esta acción no se puede deshacer.",
+        text: "El participante podría tener inscripciones activas. Esta acción no se puede deshacer.",
         icon: "warning",
         showCancelButton: true,
         confirmButtonText: "Sí, eliminar",
