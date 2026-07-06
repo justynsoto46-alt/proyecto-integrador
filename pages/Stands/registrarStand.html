@@ -87,7 +87,7 @@
         <section class="section">
             <div class="contenedor tarjeta-Inicio-Sesion">
                 <h2>Crear nuevo Stands</h2>
-                <form id="formularioResponsable" class="formulario" action="#"  method="post" novalidate>
+                <form id="formularioStand" class="formulario" action="#"  method="post" novalidate>
                     <label>
                         <select name="evento" id="evento">
                             <option value="defecto">Seleccione una Opcion</option>
@@ -100,7 +100,7 @@
                         <input type="text" name="Nombre Completo" id="nombre" placeholder="Taller Maker Faire " required>
                     </label>
                     <label>
-                        <select name="persona" id="rol">
+                        <select name="Responsable" id="responsable">
                             <option value="defecto">Seleccione una Opcion</option>
                             <option value="juanito">
                             juanito
@@ -110,15 +110,11 @@
                     <label for="correo">Correo Electronico 
                         <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
                     </label>
-                    <div id="contenedor-telefonos">
+                    <div>
                         <label>Teléfono
-                            <input type="tel" name="telefono" placeholder="88888888" required>
+                            <input id ="telefono" type="tel" name="telefono" placeholder="88888888" required>
                         </label>
                     </div>
-            
-                    <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btnAgregarTelefono">
-                    + Agregar otro teléfono
-                    </button>
 
                     <label for="descripcion">
                         Descripcion
@@ -145,5 +141,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/registrarStand.js"></script>
 </body>
 </html>

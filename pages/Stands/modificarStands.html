@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Responsables</title>
+    <title>CENFOTEC Página Web Eventos - Modificar  Administrador</title>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Estilos generales -->
     <link rel="stylesheet" href="/css/menuPrincipal.css">
-    <link rel = "stylesheet" href = "/css/registrarResponsables.css">
+
+    <!-- Estilos propios de la pantalla -->
+    <link rel="stylesheet" href="/css//modificarAdmin.css">
 </head>
+
 <body>
+
+    <!-- Encabezado -->
     <header class="encabezado">
         <div class="contenedor">
-            <img src="/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+
+            <img src="/img/LogoBlanco.png"
+                alt="Logo Universidad CENFOTEC"
+                class="logo">
+
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
-                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                <span>Administrador</span>
+                Administrador
             </div>
         </div>
+
     </header>
     <main>
+        <!-- Menú lateral -->
         <aside class="menu-lateral">
             <nav>
                 <a href="/pages/DashBoard/menuPrincipal.html">
@@ -84,66 +97,84 @@
             </nav>
         </aside>
 
+        <!-- Contenido principal -->
         <section class="section">
+            <div class="contenedor formulario-contenedor">
 
-            <div class="contenedor tarjeta-Inicio-Sesion">
-                <h2>Crear nuevo Responsable</h2>
-                <form id="formularioResponsable" class="formulario" action="#"  method="post" novalidate>
-                    <label for="Nombre">Nombre Completo 
-                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Juan Perez " required>
+                <h2>Modificar Stand</h2>
+
+                <p class="descripcion">
+                    Actualice la información  del Stand seleccionado.
+                </p>
+
+                <form id="formularioStand" class="formulario" action="#" method="post" novalidate>
+                    <label for="evento">
+                        Evento 
+                        <input type="text"
+                        id="evento"
+                        placeholder="Nombre del evento"
+                        value="Conferencia Tech" required>
                     </label>
-                    <label for="correo">Correo Electronico 
-                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+
+                    <label for="Nombre">
+                        Nombre 
+                        <input type="text"
+                        id="Nombre"
+                        placeholder="Nombre del Stands"
+                        value="Stand A1 - TechSolutions S.A." required>
                     </label>
-                    <label for="institucion">Institución
-                        <input type="text" name="institucion" id="institucion" placeholder="Microsoft" required>
+
+
+
+                    <label for="encargado">
+                        Encargado 
+                        <input type="text"
+                        id="encargado"
+                        placeholder="Nombre del Encargado"
+                        value="María Salas" required>
                     </label>
-                    
-                    <div id="contenedor-telefonos">
-                        <label>Teléfono
-                            <input type="tel" name="telefono" placeholder="88888888" required>
-                        </label>
+
+                    <label for="correo">
+                        Encargado 
+                        <input type="text"
+                        id="correo"
+                        placeholder="correo del Encargado"
+                        value="msalas@empresa.com" required>
+                    </label>
+
+                    <label for="telefono">
+                        Telefono 
+                        <input type="number"
+                        id="telefono"
+                        placeholder="Telefono"
+                        value="88321459" required>
+                    </label>
+
+                    <div class="botones">
+
+                        <button type="submit" class="boton-principal">
+                            Guardar cambios
+                        </button>
+
+                        <button type="button"
+                            id="btnCancelar"
+                            class="boton-secundario">
+                            Cancelar
+                        </button>
                     </div>
-            
-                    <button type="button" class="boton boton-primario boton-bloque boton-lg" id="btnAgregarTelefono">
-                    + Agregar otro teléfono
-                    </button>
-
-                    <label for="fechaRegistro"> Fecha De Registro
-                        <input type="date" id="fechaRegistro" name="fechaRegistro" readonly>
-                    </label>
-                
-                    <label for="biografia">
-                        Biografía
-                        <textarea
-                        id="biografia"
-                        name="biografia"
-                        rows="5"
-                        placeholder="Ingrese la biografía del Responsable"
-                        required></textarea>
-                    </label>
-                    
-                    <label for="subirImagen" class="btn-subir-archivo">
-                        <i class="fa-solid fa-upload"></i> Seleccionar Imagen
-                    </label>
-
-                    <!-- Ocultamos el input real -->
-                    <input type="file" id="subirImagen" accept="image/*" style="display: none;">
-                    <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
-                        Crear Responsable</button>
                 </form>
             </div>
         </section>
     </main>
 
-
+    <!-- Pie de página -->
     <footer>
-        <h2>Somos lo que sabemos </h2>
-        <p>&copy; 2026 Universidad Cenfotec </p>
+        <h2>Somos lo que sabemos</h2>
+        <p>&copy; 2026 Universidad Cenfotec</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/registrarResponsable.js"></script>
+    <script src="/js/modificarStands.js"></script>
 </body>
 </html>

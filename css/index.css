@@ -226,14 +226,28 @@ body {
 
 /* Botón de tarjeta */
 .boton-tarjeta {
-    display: inline-block;
+    width: 80%;
+    display: block;
     background-color: var(--color-azulClaro);
     color: white;
     text-decoration: none;
     padding: 8px 18px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
     font-size: 14px;
+}
+
+.boton-pago {
+    width: 80%;
+    display: block;
+    background-color: var(--color-azulClaro);
+    color: white;
+    margin: 10px auto 0 auto;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor:pointer;
 }
 
 /* Hover del botón de tarjeta */

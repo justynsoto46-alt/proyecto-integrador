@@ -95,23 +95,20 @@
 
             <!-- Buscador -->
             <div class="buscador">
+    <label for="buscarStand">Buscar Stands</label>
+    <input type="search" id="buscarStand" placeholder="Nombre, telefono o area">
 
-                <label for="buscarResponsable">Buscar Stands</label>
+    <button id="btnBuscarStand" class="boton" type="button">Buscar</button>
 
-                <input type="search" id="buscarResponsable" placeholder="Nombre, telefono o area">
+    <select class="selector-estado">
+        <option value="todos">Estado: Todos</option>
+        <option value="activo">Activo</option>
+    </select>
+    <a href="/pages/Stands/registrarStand.html" class="boton"> + Nuevo Stand </a>
+</div>
 
-                <button id="btnBuscarResponsable" class="boton" type="button">Buscar</button>
-
-                <select class="selector-estado">
-                <option value="todos">Estado: Todos</option>
-                <option value="activo">Activo</option>
-            </select>
-            <a href="/pages/Stands/registrarStand.html" class="boton"> + Nuevo Stand </a>
-            </div>
-
-            <!-- Tabla -->
-            <table class="tabla-responsables">
-                <thead>
+<table class="tabla-Stands">
+    <thead>
                         <tr>
                             <th>Evento</th>
                             <th>Nombre</th>

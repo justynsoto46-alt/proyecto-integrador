@@ -54,6 +54,22 @@ function validarCorreo() {
     return error;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Buscamos el input oculto en el HTML
+    const inputFecha = document.getElementById('fechaRegistro');
+    
+    // 2. Obtenemos la fecha actual con el objeto Date de JS
+    const fechaHoy = new Date();
+    
+    // 3. Formateamos la fecha a un formato estándar de base de datos (YYYY-MM-DD)
+    // toISOString() devuelve algo como "2026-07-05T18:28:43.000Z"
+    // split('T')[0] corta el string en la 'T' y nos da solo la parte de la fecha
+    const fechaFormateada = fechaHoy.toISOString().split('T')[0];
+    
+    // 4. Asignamos esa fecha al valor del input oculto
+    inputFecha.value = fechaFormateada;
+});
+
 function registrarResponsableRetorno() {
     // Ejecutamos todas las validaciones y guardamos sus resultados
     let errorVacios = validarCamposVacios();

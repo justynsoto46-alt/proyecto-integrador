@@ -27,32 +27,24 @@
     color: var(--color-azulOscuro);
 }
 
-/* Mensaje de restricción */
-.nota-restriccion {
-    background-color: var(--color-grisMasClaro);
-    border-left: 5px solid var(--color-azulClaro);
-    color: var(--color-azulOscuro);
-    padding: 12px;
-    border-radius: 5px;
-    margin-bottom: 25px;
-    font-size: 15px;
-}
-
 .nota-restriccion i {
     margin-right: 8px;
 }
 
 /* Etiquetas */
-.formulario label {
-    display: block;
-    margin-top: 18px;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: var(--color-azulOscuro);
+.formulario{
+    margin-top:20px;
 }
 
-/* Campos de texto */
-.formulario input{
+.formulario label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2d2a5f
+}
+
+.formulario input {
     display: block;
     width: 100%;
     padding: 11px;
@@ -60,18 +52,36 @@
     border-radius: 5px;
     font-size: 15px;
 }
-
-/* Aplica un estilo diferente a los campos restringidos */
-.formulario input:disabled {
-    background-color: #f1f1f1;
-    color: var(--color-grisOscuro);
-    cursor: not-allowed;
+.formulario select {
+    margin-bottom: 50;
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid var(--color-azulClaro);
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: var(--color-azulOscuro);
+    color: white;
+    cursor: pointer;
 }
+
 
 /* Efecto al seleccionar un campo (Focus: Es el elemento sobre el que el usuario está escribiendo o interactuando) */
 .formulario input:focus {
     outline: none; /* No muestre el borde de enfoque que el navegador agrega automáticamente cuando el usuario selecciona un campo */
     border-color: var(--color-azulClaro);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-grisClaro);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Contenedor de botones */
@@ -123,15 +133,3 @@
     background-color: #ffe5e5;
 }
 
-.formulario select {
-    margin-bottom: 50;
-    display: block;
-    width: 100%;
-    padding: 11px;
-    border: 1px solid var(--color-AzulClaro);
-    border-radius: 15px;
-    font-size: 15px;
-    background-color: var(--color-AzulOscuro);
-    color: black;
-    cursor: pointer;
-}
