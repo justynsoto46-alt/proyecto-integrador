@@ -116,8 +116,6 @@
     transform: scale(1.08);
 }
 
-/* ===== Listado de eventos (consultarEvento.html) ===== */
-
 .encabezado-listado{
     display:flex;
     justify-content:space-between;
