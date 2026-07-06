@@ -47,17 +47,115 @@ function validarCamposVacios(){
     return error;
 }
 
+// Función para validar el nombre completo
+function validarNombreCompleto(){
+
+    let error = false;
+    const nombreCompleto = inputNombreCompleto.value.trim();
+
+    // Valida que el nombre no esté vacío
+    if(nombreCompleto === ""){
+        error = true;
+    }
+
+    // Valida que tenga mínimo 3 caracteres
+    if(nombreCompleto.length < 3){
+        error = true;
+    }
+
+    // Valida que no contenga números
+    if(/\d/.test(nombreCompleto)){
+        error = true;
+    }
+
+    if(error){
+        inputNombreCompleto.classList.add("input-error");
+
+        Swal.fire({
+            title: "Nombre inválido",
+            text: "Ingrese un nombre válido. Mínimo 3 caracteres, no se permiten números.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
+    } else{
+        inputNombreCompleto.classList.remove("input-error");
+    }
+
+    return error;
+}
+
+// Función para validar la identificación
+function validarIdentificacion(){
+
+    let error = false;
+    const identificacion = inputIdentificacion.value.trim();
+
+    // Valida que la identificación no esté vacía
+    if(identificacion === ""){
+        error = true;
+    }
+
+    // Valida que contenga únicamente números
+    if(isNaN(identificacion)){
+        error = true;
+    }
+
+    // Valida que tenga mínimo 9 dígitos
+    if(identificacion.length < 9){
+        error = true;
+    }
+
+    // Valida que no tenga más de 15 dígitos
+    if(identificacion.length > 15){
+        error = true;
+    }
+
+    if(error){
+        inputIdentificacion.classList.add("input-error");
+
+        Swal.fire({
+            title: "Identificación inválida",
+            text: "Ingrese una identificación válida. Debe contener solo números y tener entre 9 y 15 dígitos.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
+    } else{
+        inputIdentificacion.classList.remove("input-error");
+    }
+
+    return error;
+}
+
 // Función para validar el formato del correo electrónico
 function validarCorreo(){
 
     let error = false;
     const correo = inputCorreo.value.trim();
 
-    if(correo.includes("@") && correo.includes(".")){
-        inputCorreo.classList.remove("input-error");
-    } else{
-        inputCorreo.classList.add("input-error");
+    // El correo no debe contener espacios
+    if(correo.includes(" ")){
         error = true;
+    }
+
+    // Debe contener @ y .
+    if(!correo.includes("@") || !correo.includes(".")){
+        error = true;
+    }
+
+    if(error){
+        inputCorreo.classList.add("input-error");
+
+        Swal.fire({
+            title: "Correo electrónico inválido",
+            text: "Ingrese un correo electrónico válido. No se permiten espacios.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
+    } else{
+        inputCorreo.classList.remove("input-error");
     }
 
     return error;
@@ -80,15 +178,26 @@ function validarTelefono(){
     }
 
     if(error){
+
         inputTelefono.classList.add("input-error");
+
+        Swal.fire({
+            title: "Teléfono inválido",
+            text: "Ingrese un número de teléfono válido. Debe contener únicamente números y exactamente 8 dígitos.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
     } else{
+
         inputTelefono.classList.remove("input-error");
+
     }
 
     return error;
 }
 
-// Función para validar la edad mínima del participante
+// Función para validar la edad del participante
 function validarEdad(){
 
     let error = false;
@@ -97,28 +206,88 @@ function validarEdad(){
     // La edad es opcional, pero si se ingresa debe ser válida
     if(edad !== ""){
 
-        if(isNaN(edad) || Number(edad) < 16){
+        if(isNaN(edad) || Number(edad) < 16 || Number(edad) > 120){
+
             inputEdad.classList.add("input-error");
             error = true;
+
+            Swal.fire({
+                title: "Edad inválida",
+                text: "La edad debe ser un número entre 16 y 120 años.",
+                icon: "warning",
+                confirmButtonText: "Aceptar"
+            });
+
         } else{
+
             inputEdad.classList.remove("input-error");
+
         }
 
     } else{
+
         inputEdad.classList.remove("input-error");
+
     }
 
     return error;
+}
 
+// Función para validar la profesión
+function validarProfesion(){
+
+    let error = false;
+    const profesion = inputProfesion.value.trim();
+
+    // La profesión es opcional, pero si se ingresa debe ser válida
+    if(profesion !== ""){
+
+        // Valida que tenga mínimo 3 caracteres
+        if(profesion.length < 3){
+            error = true;
+        }
+
+        // Valida que no sea solo numérica
+        if(!isNaN(profesion)){
+            error = true;
+        }
+
+        if(error){
+
+            inputProfesion.classList.add("input-error");
+
+            Swal.fire({
+                title: "Profesión inválida",
+                text: "Ingrese una profesión válida. Debe tener mínimo 3 caracteres y no puede ser solo numérica.",
+                icon: "warning",
+                confirmButtonText: "Aceptar"
+            });
+
+        } else{
+
+            inputProfesion.classList.remove("input-error");
+
+        }
+
+    } else{
+
+        inputProfesion.classList.remove("input-error");
+
+    }
+
+    return error;
 }
 
 // Función principal
 function registrarParticipanteRetorno(){
 
     if(validarCamposVacios() === false &&
+       validarNombreCompleto() === false &&
+       validarIdentificacion() === false &&
        validarCorreo() === false &&
        validarTelefono() === false &&
-       validarEdad() === false){
+       validarEdad() === false &&
+       validarProfesion() === false){
 
         Swal.fire({
             title: "Datos registrados correctamente.",
@@ -132,14 +301,7 @@ function registrarParticipanteRetorno(){
 
         });
     }
-    else{
-        Swal.fire({
-            title: "No se puede realizar el registro",
-            text: "Por favor revise los campos marcados",
-            icon: "warning",
-            confirmButtonText: "Aceptar"
-        });
-    }
+
 }
 
 // Función para limpiar el formulario
@@ -159,6 +321,8 @@ function limpiarFormulario(){
     inputIdentificacion.classList.remove("input-error");
     inputCorreo.classList.remove("input-error");
     inputTelefono.classList.remove("input-error");
+    inputEdad.classList.remove("input-error");
+    inputProfesion.classList.remove("input-error");
 }
 
 // Evento que se ejecuta cuando el usuario intenta registrar el participante
