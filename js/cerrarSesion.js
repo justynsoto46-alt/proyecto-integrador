@@ -12,7 +12,6 @@ window.addEventListener("pageshow", function(){
 
 // Se obtiene el enlace de cerrar sesión
 const cerrarSesion = document.getElementById("cerrarSesion");
-console.log(cerrarSesion);
 
 if(cerrarSesion !== null){
 
