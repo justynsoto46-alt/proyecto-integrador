@@ -102,7 +102,7 @@
 
                 <h2>Registrar Actividad</h2>
 
-                <form class="formulario" action="#" method="post">
+<form id="formularioActividad" class="formulario" action="#" method="post" novalidate>
 
                     <label for="nombreActividad">
                         Nombre de la Actividad
@@ -113,6 +113,17 @@
                         id="nombreActividad"
                         name="nombreActividad"
                         placeholder="Ingrese el nombre de la actividad"
+                        required>
+
+                    <label for="eventoAsociado">
+                        Evento Asociado
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventoAsociado"
+                        name="eventoAsociado"
+                        placeholder="Ej. Maker Fair 2026"
                         required>
 
                     <label for="categoria">
@@ -195,16 +206,36 @@
                         name="horaFin"
                         required>
 
-                    <label for="espacio">
-                        Espacio o Sede
+                    <label for="ubicacion">
+                        Ubicación
                     </label>
 
-                    <input
-                        type="text"
-                        id="espacio"
-                        name="espacio"
-                        placeholder="Ej. Auditorio Principal"
+                    <select
+                        id="ubicacion"
+                        name="ubicacion"
                         required>
+
+                        <option value="">
+                            Seleccionar Ubicación
+                        </option>
+
+                        <option value="Auditorio Principal">
+                            Auditorio Principal
+                        </option>
+
+                        <option value="Laboratorio 1">
+                            Laboratorio 1
+                        </option>
+
+                        <option value="Parqueo">
+                            Parqueo
+                        </option>
+
+                        <option value="Externo">
+                            Externo (fuera del campus)
+                        </option>
+
+                    </select>
 
                     <label for="cupo">
                         Cupo Máximo
@@ -247,36 +278,6 @@
 
                     <label for="estado">
                         Estado
-                    </label>
-
-                    <select
-                        id="estado"
-                        name="estado"
-                        required>
-
-                        <option value="">
-                            Seleccione un estado
-                        </option>
-
-                        <option value="Activo">
-                            Activo
-                        </option>
-
-                        <option value="Suspendido">
-                            Suspendido
-                        </option>
-
-                    </select>
-
-                    <button
-                        type="submit"
-                        class="boton boton-primario boton-bloque boton-lg">
-
-                        Guardar Actividad
-
-                    </button>
-
-                </form>
 
             </div>
 
