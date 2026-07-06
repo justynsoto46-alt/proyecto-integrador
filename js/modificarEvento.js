@@ -32,7 +32,13 @@ function validarImagen(){
 
     if(inputImagen.files.length === 0){
 
-        return true;
+        Swal.fire({
+            icon:"error",
+            title:"Imagen requerida",
+            text:"Seleccione una imagen en formato JPG, JPEG o PNG."
+        });
+
+        return false;
 
     }
 
