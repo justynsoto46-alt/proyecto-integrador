@@ -15,6 +15,14 @@ function validarCamposVacios(){
     // Nombre completo
     if(inputNombreCompleto.value.trim() === ""){
         inputNombreCompleto.classList.add("input-error");
+
+        Swal.fire({
+            title: "Nombre incompleto",
+            text: "Ingrese un nombre válido para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
         error = true;
     } else{
         inputNombreCompleto.classList.remove("input-error");
@@ -23,6 +31,14 @@ function validarCamposVacios(){
     // Identificación
     if(inputIdentificacion.value.trim() === ""){
         inputIdentificacion.classList.add("input-error");
+
+        Swal.fire({
+            title: "Identificación incompleta",
+            text: "Ingrese una identificación válida para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
         error = true;
     } else{
         inputIdentificacion.classList.remove("input-error");
@@ -31,6 +47,14 @@ function validarCamposVacios(){
     // Correo electrónico
     if(inputCorreo.value.trim() === ""){
         inputCorreo.classList.add("input-error");
+
+        Swal.fire({
+            title: "Correo electrónico incompleto",
+            text: "Ingrese un correo electrónico válido para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
         error = true;
     } else{
         inputCorreo.classList.remove("input-error");
@@ -39,6 +63,14 @@ function validarCamposVacios(){
     // Teléfono
     if(inputTelefono.value.trim() === ""){
         inputTelefono.classList.add("input-error");
+
+        Swal.fire({
+            title: "Teléfono incompleto",
+            text: "Ingrese un número telefónico válido para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
         error = true;
     } else{
         inputTelefono.classList.remove("input-error");
@@ -189,11 +221,8 @@ function validarTelefono(){
         });
 
     } else{
-
         inputTelefono.classList.remove("input-error");
-
     }
-
     return error;
 }
 
@@ -219,15 +248,10 @@ function validarEdad(){
             });
 
         } else{
-
             inputEdad.classList.remove("input-error");
-
         }
-
     } else{
-
         inputEdad.classList.remove("input-error");
-
     }
 
     return error;
@@ -262,17 +286,11 @@ function validarProfesion(){
                 icon: "warning",
                 confirmButtonText: "Aceptar"
             });
-
         } else{
-
             inputProfesion.classList.remove("input-error");
-
         }
-
     } else{
-
         inputProfesion.classList.remove("input-error");
-
     }
 
     return error;

@@ -15,19 +15,42 @@ mensajeSinInscripciones.style.display = "none";
 // Función para buscar las inscripciones del participante
 function buscarInscripcionesRetorno(){
 
-    let cedula = inputCedula.value.trim();
+    let error = false;
+    let identificacion = inputCedula.value.trim();
 
-    if(cedula === ""){
+    if(identificacion === ""){
+        error = true;
+    }
+
+    // Valida que contenga únicamente números
+    if(isNaN(identificacion)){
+        error = true;
+    }
+
+    // Valida que tenga mínimo 9 dígitos
+    if(identificacion.length < 9){
+        error = true;
+    }
+
+    // Valida que no tenga más de 15 dígitos
+    if(identificacion.length > 15){
+        error = true;
+    }
+
+    if(error){
+        inputCedula.classList.add("input-error");
 
         Swal.fire({
-            title: "Ingrese la cédula",
-            text: "Debe digitar su número de cédula para consultar sus inscripciones.",
+            title: "Identificación inválida",
+            text: "Ingrese una identificación válida. Debe contener solo números y tener entre 9 y 15 dígitos.",
             icon: "warning",
             confirmButtonText: "Aceptar"
         });
 
-        return;
+    } else{
+        inputCedula.classList.remove("input-error");
     }
+    return error;
 
     // Muestra las tarjetas de inscripciones quemadas en el HTML
     contenedorInscripciones.style.display = "block";
