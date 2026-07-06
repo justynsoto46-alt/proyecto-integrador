@@ -70,3 +70,13 @@
 .boton:hover{
     background:var(--color-azulOscuro);
 }
+
+.badge-finalizada{
+    background:#7f8c8d;
+    color:white;
+}
+
+.badge-cancelada{
+    background:#e74c3c;
+    color:white;
+}

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultar Actividad</title>
 
-    <!-- FontAwesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -155,81 +154,208 @@
 
                     </thead>
 
-                    <tbody>
+<tbody>
 
-                        <tr
-                            data-estado="Activo"
-                            data-descripcion="actividad enfocada en tendencias actuales de inteligencia artificial">
+    <tr
+        data-estado="Activo"
+        data-descripcion="actividad enfocada en tendencias actuales de inteligencia artificial">
 
-                            <td>Conferencia de Inteligencia Artificial</td>
-                            <td>9:00 AM - 11:00 AM</td>
-                            <td>100</td>
-                            <td>82</td>
-                            <td>Juan Pérez</td>
-                            <td><span class="badge badge-activo">Activo</span></td>
-                            <td class="celda-acciones">
+        <td>Conferencia de Inteligencia Artificial</td>
+        <td>9:00 AM - 11:00 AM</td>
+        <td>100</td>
+        <td>82</td>
+        <td>Juan Pérez</td>
 
-                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
+        <td>
+            <span class="badge badge-activo">
+                Activo
+            </span>
+        </td>
 
-                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
+        <td class="celda-acciones">
 
-                            </td>
+            <a href="modificarActividad.html"
+                class="btn-accion btn-editar"
+                title="Modificar Actividad">
 
-                        </tr>
+                <i class="fa-solid fa-pen"></i>
 
-                        <tr
-                            data-estado="Activo"
-                            data-descripcion="taller práctico de armado y programación de robots">
+            </a>
 
-                            <td>Taller de Robótica</td>
-                            <td>10:00 AM - 12:00 PM</td>
-                            <td>30</td>
-                            <td>24</td>
-                            <td>María Rodríguez</td>
-                            <td><span class="badge badge-activo">Activo</span></td>
-                            <td class="celda-acciones">
+            <button
+                type="button"
+                class="btn-accion btn-eliminar"
+                title="Eliminar Actividad">
 
-                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
+                <i class="fa-solid fa-trash"></i>
 
-                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
+            </button>
 
-                            </td>
+        </td>
 
-                        </tr>
+    </tr>
 
-                        <tr
-                            data-estado="Suspendido"
-                            data-descripcion="charla sobre buenas practicas de seguridad informatica">
 
-                            <td>Conferencia de Ciberseguridad</td>
-                            <td>1:00 PM - 3:00 PM</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>Carlos Mora</td>
-                            <td><span class="badge badge-suspendido">Suspendido</span></td>
-                            <td class="celda-acciones">
+    <tr
+        data-estado="Activo"
+        data-descripcion="taller práctico de armado y programación de robots">
 
-                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
+        <td>Taller de Robótica</td>
+        <td>10:00 AM - 12:00 PM</td>
+        <td>30</td>
+        <td>24</td>
+        <td>María Rodríguez</td>
 
-                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
+        <td>
 
-                            </td>
+            <span class="badge badge-activo">
+                Activo
+            </span>
 
-                        </tr>
+        </td>
 
-                    </tbody>
+        <td class="celda-acciones">
+
+            <a href="modificarActividad.html"
+                class="btn-accion btn-editar"
+                title="Modificar Actividad">
+
+                <i class="fa-solid fa-pen"></i>
+
+            </a>
+
+            <button
+                type="button"
+                class="btn-accion btn-eliminar">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+    <tr
+        data-estado="Suspendido"
+        data-descripcion="charla sobre buenas practicas de seguridad informatica">
+
+        <td>Conferencia de Ciberseguridad</td>
+        <td>1:00 PM - 3:00 PM</td>
+        <td>50</td>
+        <td>50</td>
+        <td>Carlos Mora</td>
+
+        <td>
+
+            <span class="badge badge-suspendido">
+                Suspendido
+            </span>
+
+        </td>
+
+        <td class="celda-acciones">
+
+            <a href="modificarActividad.html"
+                class="btn-accion btn-editar">
+
+                <i class="fa-solid fa-pen"></i>
+
+            </a>
+
+            <button
+                type="button"
+                class="btn-accion btn-eliminar">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+
+    <tr
+        data-estado="Finalizada"
+        data-descripcion="actividad realizada durante la feria tecnológica">
+
+        <td>Hackathon CENFOTEC</td>
+        <td>8:00 AM - 5:00 PM</td>
+        <td>120</td>
+        <td>0</td>
+        <td>Laura Gómez</td>
+
+        <td>
+
+            <span class="badge badge-finalizada">
+                Finalizada
+            </span>
+
+        </td>
+
+        <td class="celda-acciones">
+
+            <a href="modificarActividad.html"
+                class="btn-accion btn-editar">
+
+                <i class="fa-solid fa-pen"></i>
+
+            </a>
+
+            <button
+                type="button"
+                class="btn-accion btn-eliminar">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+
+    <tr
+        data-estado="Cancelada"
+        data-descripcion="actividad cancelada por condiciones climáticas">
+
+        <td>Festival Cultural</td>
+        <td>3:00 PM - 6:00 PM</td>
+        <td>80</td>
+        <td>80</td>
+        <td>Ana Solís</td>
+
+        <td>
+
+            <span class="badge badge-cancelada">
+                Cancelada
+            </span>
+
+        </td>
+
+        <td class="celda-acciones">
+
+            <a href="modificarActividad.html"
+                class="btn-accion btn-editar">
+
+                <i class="fa-solid fa-pen"></i>
+
+            </a>
+
+            <button
+                type="button"
+                class="btn-accion btn-eliminar">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+</tbody>
 
                 </table>
 
