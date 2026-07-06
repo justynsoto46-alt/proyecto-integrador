@@ -53,6 +53,29 @@ function buscarParticipanteRetorno(){
     const textoBuscar = quitarTildes(
     inputBuscarParticipante.value.trim().toLowerCase());
 
+    // Si el campo está vacío, muestra nuevamente todos los participantes
+    if(textoBuscar === ""){
+
+        filasParticipantes.forEach(function(fila){
+            fila.style.display = "";
+        });
+
+        return;
+    }
+
+    // Valida que el texto de búsqueda tenga al menos 3 caracteres
+    if(textoBuscar.length < 3){
+
+        Swal.fire({
+            title: "Búsqueda inválida",
+            text: "Ingrese al menos 3 caracteres para realizar la búsqueda.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
+        return;
+    }
+
     // Recorre todas las filas de la tabla
     filasParticipantes.forEach(function(fila){
 
