@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --color-AzulOscuro:#164a98;
+    --color-AzulClaro:#006AEA;
+    --color-celesteClaro:#9CC8FF;
+    --color-grisClaro:#d2d2d2;
+
+}
+
+.tarjeta-actividad{
+
+    width:1000px;
+    margin-top:30px;
+    background:white;
+    padding:40px;
+    border:2px solid var(--color-grisClaro);
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.12);
+
+}
+
+.tarjeta-actividad h2{
+    color: var(--color-AzulOscuro);
+    margin-bottom:25px;
+}
+
+.encabezado-listado{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.boton-primario{
+    background:var(--color-AzulOscuro);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:15px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.boton-primario:hover{
+    background:var(--color-AzulClaro);
+}
+
+.barra-filtros{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.campo-busqueda{
+    flex:1;
+    min-width:220px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--color-grisClaro);
+    border-radius:8px;
+    padding:10px 15px;
+    background:white;
+}
+
+.campo-busqueda i{
+    color:#888;
+}
+
+.campo-busqueda input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+#filtroEstado{
+    border:1px solid var(--color-grisClaro);
+    border-radius:8px;
+    padding:10px 15px;
+    font-size:15px;
+    background:white;
+    cursor:pointer;
+}
+
+.tabla-actividad{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.tabla-actividad th{
+
+    background:var(--color-AzulOscuro);
+
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+.tabla-actividad td{
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+}
+
+.tabla-actividad tr:nth-child(even){
+
+    background:#f4f4f4;
+
+}
+
+.tabla-actividad tbody tr:hover{
+
+    background:var(--color-celesteClaro);
+
+}
+
+.badge{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    color:white;
+    display:inline-block;
+}
+
+.badge-activo{
+    background:#27ae60;
+}
+
+.badge-suspendido{
+    background:#e67e22;
+}
+
+.badge-finalizada{
+    background:#7c7b75;
+}
+
+.badge-cancelada{
+    background:#e74c3c;
+}
+
+.celda-acciones{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+
+.btn-accion{
+    width:42px;
+    height:42px;
+    border:1px solid #d8d8d8;
+    border-radius:50%;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#f39c12;
+    font-size:16px;
+    text-decoration:none;
+
+    transition:.3s;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+
+.btn-accion:hover{
+    background:#f39c12;
+    color:white;
+    transform:scale(1.08);
+}
+
+.btn-eliminar{
+    border:1px solid #d8d8d8;
+    background:white;
+    color:#e74c3c;
+    cursor:pointer;
+}
+
+.btn-eliminar:hover{
+    background:#e74c3c;
+    color:white;
+    transform:scale(1.08);
+}
+
+.sin-resultados{
+    text-align:center;
+    padding:20px;
+    color:#888;
+    font-style:italic;
+}

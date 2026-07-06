@@ -12,7 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <link rel="stylesheet" href="/css/menuPrincipal.css">
-<link rel="stylesheet" href="/css/consultarEvento.css">
+<link rel="stylesheet" href="/css/consultarActividad.css">
 
 </head>
 
@@ -53,10 +53,10 @@
                     Administradores
                 </a>
 
-<a href="/pages/Evento/moduloEvento.html">
-    <i class="fa-solid fa-award"></i>
-    Eventos
-</a>
+                <a href="/pages/Evento/moduloEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
 
                 <a href="/pages/Actividad/moduloActividad.html">
                     <i class="fa-solid fa-book-open"></i>
@@ -100,78 +100,146 @@
                 </a>
             </nav>
         </aside>
-    
-      <section class="section">
 
-    <div class="contenedor tarjeta-evento">
+        <section class="section">
 
-        <h2>Consultar Actividad</h2>
+            <div class="contenedor tarjeta-actividad">
 
-        <div class="informacion">
+                <div class="encabezado-listado">
 
-    <p><strong>Nombre:</strong> Conferencia de IA</p>
+                    <h2>Consultar Actividades</h2>
 
-    <p><strong>Categoría:</strong> Tecnológica</p>
+                    <a href="registrarActividad.html" class="boton boton-primario">
+                        <i class="fa-solid fa-book-medical"></i>
+                        Nueva Actividad
+                    </a>
 
-    <p><strong>Fecha:</strong> 15/09/2026</p>
+                </div>
 
-    <p><strong>Horario:</strong> 9:00 AM - 11:00 AM</p>
+                <div class="barra-filtros">
 
-    <p><strong>Espacio:</strong> Auditorio Principal</p>
+                    <div class="campo-busqueda">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="buscarActividad"
+                            name="buscarActividad"
+                            placeholder="Buscar por nombre, responsable o descripción...">
+                    </div>
 
-    <p><strong>Responsable:</strong> Juan Pérez</p>
+                    <select id="filtroEstado" name="filtroEstado">
+                        <option value="">Estado: Todos</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Suspendido">Suspendido</option>
+                        <option value="Finalizada">Finalizada</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
 
-    <p><strong>Estado:</strong> Activo</p>
+                </div>
 
- </div>
+                <table class="tabla-actividad" id="tablaActividades">
 
-        <h3>Participantes inscritos</h3>
+                    <thead>
 
-        <table class="tabla-evento">
+                        <tr>
 
-    <thead>
+                            <th>Nombre</th>
+                            <th>Horario</th>
+                            <th>Cupo máximo</th>
+                            <th>Cupos disponibles</th>
+                            <th>Responsable</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
 
-        <tr>
+                        </tr>
 
-            <th>Participante</th>
-            <th>Correo</th>
-            <th>Estado</th>
+                    </thead>
 
-        </tr>
+                    <tbody>
 
-    </thead>
+                        <tr
+                            data-estado="Activo"
+                            data-descripcion="actividad enfocada en tendencias actuales de inteligencia artificial">
 
-    <tbody>
+                            <td>Conferencia de Inteligencia Artificial</td>
+                            <td>9:00 AM - 11:00 AM</td>
+                            <td>100</td>
+                            <td>82</td>
+                            <td>Juan Pérez</td>
+                            <td><span class="badge badge-activo">Activo</span></td>
+                            <td class="celda-acciones">
 
-        <tr>
+                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
 
-            <td>Laura Gómez</td>
-            <td>laura@correo.com</td>
-            <td>Inscrito</td>
+                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
-        </tr>
+                            </td>
 
-        <tr>
+                        </tr>
 
-            <td>José Pérez</td>
-            <td>jose@correo.com</td>
-            <td>Inscrito</td>
+                        <tr
+                            data-estado="Activo"
+                            data-descripcion="taller práctico de armado y programación de robots">
 
-        </tr>
+                            <td>Taller de Robótica</td>
+                            <td>10:00 AM - 12:00 PM</td>
+                            <td>30</td>
+                            <td>24</td>
+                            <td>María Rodríguez</td>
+                            <td><span class="badge badge-activo">Activo</span></td>
+                            <td class="celda-acciones">
 
-    </tbody>
+                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
 
-</table>
+                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
-<div class="acciones">
+                            </td>
 
-    <a href="modificarActividad.html" class="btn-accion">
-        <i class="fa-solid fa-pen"></i>
-    </a>
+                        </tr>
 
-</div>
+                        <tr
+                            data-estado="Suspendido"
+                            data-descripcion="charla sobre buenas practicas de seguridad informatica">
 
-</section>
+                            <td>Conferencia de Ciberseguridad</td>
+                            <td>1:00 PM - 3:00 PM</td>
+                            <td>50</td>
+                            <td>50</td>
+                            <td>Carlos Mora</td>
+                            <td><span class="badge badge-suspendido">Suspendido</span></td>
+                            <td class="celda-acciones">
+
+                                <a href="modificarActividad.html" class="btn-accion" title="Modificar Actividad">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+
+                                <button type="button" class="btn-accion btn-eliminar" title="Eliminar Actividad">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p id="sinResultados" class="sin-resultados" style="display: none;">
+                    No se encontraron actividades que coincidan con la búsqueda.
+                </p>
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -185,5 +253,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/consultarActividad.js"></script>
 </body>
 </html>
