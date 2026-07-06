@@ -5,10 +5,6 @@ const selectEstado = document.getElementById("filtroEstado");
 const filasActividades = document.querySelectorAll("#tablaActividades tbody tr");
 const mensajeSinResultados = document.getElementById("sinResultados");
 
-/* ===========================
-   FILTROS
-=========================== */
-
 function aplicarFiltros() {
 
     const texto = inputBuscar.value.trim().toLowerCase();
@@ -52,10 +48,6 @@ function aplicarFiltros() {
 inputBuscar.addEventListener("input", aplicarFiltros);
 selectEstado.addEventListener("change", aplicarFiltros);
 
-/* ===========================
-   VALIDAR MODIFICAR
-=========================== */
-
 const botonesEditar = document.querySelectorAll(".btn-editar");
 
 botonesEditar.forEach(function (boton) {
@@ -80,10 +72,6 @@ botonesEditar.forEach(function (boton) {
     });
 
 });
-
-/* ===========================
-   ELIMINAR (opcional)
-=========================== */
 
 const botonesEliminar = document.querySelectorAll(".btn-eliminar");
 
