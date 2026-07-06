@@ -17,6 +17,14 @@ function validarCamposVacios(){
     // Si usuario está vacío
     if(inputCorreo.value.trim() === ""){
         inputCorreo.classList.add("input-error");
+
+        Swal.fire({
+            title: "Campo vacío",
+            text: "Ingrese un correo electrónico para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
         error = true;
     } else {
         inputCorreo.classList.remove("input-error");
@@ -25,6 +33,14 @@ function validarCamposVacios(){
     // Si contrasenia está vacía
     if(inputContrasenia.value.trim() === ""){
         inputContrasenia.classList.add("input-error");
+
+        Swal.fire({
+            title: "Campo vacío",
+            text: "Ingrese una contraseña para poder continuar.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+    
         error = true;
     } else {
         inputContrasenia.classList.remove("input-error");
@@ -39,12 +55,35 @@ function validarCorreo(){
     let error = false;
     const correo = inputCorreo.value.trim();
 
-    if(correo.includes("@") && correo.includes(".")){
-        inputCorreo.classList.remove("input-error");
-        error = false;
-    } else {
-        inputCorreo.classList.add("input-error");
+    // El correo no debe estar vacío
+    if(correo === ""){
         error = true;
+    }
+
+    // El correo no debe contener espacios
+    if(correo.includes(" ")){
+        error = true;
+    }
+
+    // El correo debe contener @ y .
+    if(!correo.includes("@") || !correo.includes(".")){
+        error = true;
+    }
+
+    if(error){
+
+        inputCorreo.classList.add("input-error");
+
+        Swal.fire({
+            title: "Correo inválido",
+            text: "Ingrese un correo electrónico válido y sin espacios.",
+            icon: "warning",
+            confirmButtonText: "Aceptar"
+        });
+
+    } else{
+
+        inputCorreo.classList.remove("input-error");
     }
     return error;
 }
@@ -92,6 +131,14 @@ function validarContrasenia(){
 
     if(error){
         inputContrasenia.classList.add("input-error");
+
+        Swal.fire({
+        title: "Contraseña inválida",
+        text: "La contraseña debe cumplir con los requisitos de seguridad establecidos.",
+        icon: "warning",
+        confirmButtonText: "Aceptar"
+        });
+
     } else {
         inputContrasenia.classList.remove("input-error");
     }
@@ -151,14 +198,6 @@ function iniciarSesionRetorno(){
 
             limpiarFormulario()
         }
-    }
-    else{
-        Swal.fire({
-            title: "No se puede iniciar sesión",
-            text: "Por favor revise los campos marcados",
-            icon: "warning",
-            confirmButtonText: "Aceptar"
-        });
     }
 }
 
