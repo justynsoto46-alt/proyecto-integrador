@@ -192,8 +192,6 @@
 }
 
 .btn-eliminar{
-    border:1px solid #d8d8d8;
-    background:white;
     color:#e74c3c;
     cursor:pointer;
 }
@@ -201,7 +199,6 @@
 .btn-eliminar:hover{
     background:#e74c3c;
     color:white;
-    transform:scale(1.08);
 }
 
 .sin-resultados{
@@ -209,4 +206,22 @@
     padding:20px;
     color:#888;
     font-style:italic;
+}
+
+.tabla-actividad td:last-child{
+    width:120px;
+    text-align:center;
+}
+
+.celda-acciones{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.celda-acciones .btn-accion{
+    width:42px;
+    height:42px;
+    font-size:16px;
 }
