@@ -65,7 +65,10 @@
                     Participantes
                 </a>
 
-
+                <a href="/pages/gestionarInscripciones.html">
+                    <i class="fa-solid fa-clipboard"></i>
+                    Inscripciones
+                </a>
 
                 <a href="/pages/Agenda/consultarAgenda.html">
                     <i class="fa-solid fa-table-columns"></i>
@@ -141,7 +144,12 @@
                             <td>
                                 <span class="numero">1</span>
 
-                                <div class="evento azul">
+                                <div class="evento azul"
+                                     data-actividad="Taller IA"
+                                     data-fecha="01/09/2026"
+                                     data-inicio="9:00 a.m."
+                                     data-fin="11:00 a.m."
+                                     data-responsable="Juan Pérez">
                                     Taller IA
                                 </div>
 
@@ -154,7 +162,12 @@
                             <td>
                                 <span class="numero">3</span>
 
-                                <div class="evento verde">
+                                <div class="evento verde"
+                                     data-actividad="Registro"
+                                     data-fecha="03/09/2026"
+                                     data-inicio="8:00 a.m."
+                                     data-fin="10:00 a.m."
+                                     data-responsable="María Rodríguez">
                                     Registro
                                 </div>
 
@@ -180,7 +193,12 @@
 
                                 <span class="numero">8</span>
 
-                                <div class="evento naranja">
+                                <div class="evento naranja"
+                                     data-actividad="Conferencia"
+                                     data-fecha="08/09/2026"
+                                     data-inicio="10:00 a.m."
+                                     data-fin="12:00 p.m."
+                                     data-responsable="Carlos Mora">
                                     Conferencia
                                 </div>
 
@@ -192,7 +210,12 @@
 
                                 <span class="numero">10</span>
 
-                                <div class="evento rojo">
+                                <div class="evento rojo"
+                                     data-actividad="Taller Desarrollo Software"
+                                     data-fecha="10/09/2026"
+                                     data-inicio="1:00 p.m."
+                                     data-fin="3:00 p.m."
+                                     data-responsable="Ana Solís">
                                     Taller Desarrollo Software
                                 </div>
 
@@ -212,7 +235,12 @@
 
                                 <span class="numero">14</span>
 
-                                <div class="evento morado">
+                                <div class="evento morado"
+                                     data-actividad="Torneo Robótica"
+                                     data-fecha="14/09/2026"
+                                     data-inicio="9:00 a.m."
+                                     data-fin="1:00 p.m."
+                                     data-responsable="Laura Gómez">
                                     Torneo Robótica
                                 </div>
 
@@ -226,7 +254,12 @@
 
                                 <span class="numero">17</span>
 
-                                <div class="evento azul">
+                                <div class="evento azul"
+                                     data-actividad="Clase de Datos"
+                                     data-fecha="17/09/2026"
+                                     data-inicio="2:00 p.m."
+                                     data-fin="4:00 p.m."
+                                     data-responsable="Juan Pérez">
                                     Clase de Datos
                                 </div>
 
@@ -267,19 +300,19 @@
 
                 </table>
 
-                <div class="detalle-evento">
+                <div class="detalle-evento" id="detalleEvento">
 
                     <h3>Detalle de la actividad seleccionada</h3>
 
-                    <p><strong>Actividad:</strong> Taller IA</p>
+                    <p><strong>Actividad:</strong> <span id="detalleActividad"></span></p>
 
-                    <p><strong>Fecha:</strong> 01/09/2026</p>
+                    <p><strong>Fecha:</strong> <span id="detalleFecha"></span></p>
 
-                    <p><strong>Hora inicio:</strong> 9:00 a.m.</p>
+                    <p><strong>Hora inicio:</strong> <span id="detalleInicio"></span></p>
 
-                    <p><strong>Hora final:</strong> 11:00 a.m.</p>
+                    <p><strong>Hora final:</strong> <span id="detalleFin"></span></p>
 
-                    <p><strong>Responsable:</strong> Juan Pérez</p>
+                    <p><strong>Responsable:</strong> <span id="detalleResponsable"></span></p>
 
                 </div>
 
@@ -297,9 +330,10 @@
 
     </footer>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/cerrarSesion.js"></script>
+    <script src="/js/agenda.js"></script>
 </body>
 
 </html>
