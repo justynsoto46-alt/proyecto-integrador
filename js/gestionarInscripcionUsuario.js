@@ -10,6 +10,7 @@ const btnAgregarActividades = document.getElementById("btnAgregarActividades");
 // Oculta las inscripciones y el mensaje al cargar la página
 contenedorInscripciones.style.display = "none";
 mensajeSinInscripciones.style.display = "none";
+btnAgregarActividades.style.display = "none";
 
 
 // Función para buscar las inscripciones del participante
@@ -47,10 +48,9 @@ function buscarInscripcionesRetorno(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
-        inputCedula.classList.remove("input-error");
+        return;
     }
-    return error;
+        inputCedula.classList.remove("input-error");
 
     // Muestra las tarjetas de inscripciones quemadas en el HTML
     contenedorInscripciones.style.display = "block";
@@ -64,6 +64,8 @@ function buscarInscripcionesRetorno(){
         icon: "success",
         confirmButtonText: "Aceptar"
     });
+
+    btnAgregarActividades.style.display = "inline-block";
 }
 
 
