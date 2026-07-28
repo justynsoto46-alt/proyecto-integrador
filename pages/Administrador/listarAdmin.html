@@ -1,210 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENFOTEC Página Web Eventos - Administradores</title>
 
-    <!-- FontAwesome -->
+    <title>Consultar Administradores</title>
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="/css/menuPrincipal.css">
     <link rel="stylesheet" href="/css/listarAdmin.css">
+
 </head>
 
 <body>
 
-    <header class="encabezado">
-        <div class="contenedor">
-            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
+<header class="encabezado">
 
-            <h1>CENFOTEC Página Web Eventos</h1>
+    <div class="contenedor">
 
-            <div class="usuario">
-                <i class="fa-solid fa-user"></i>
-                Administrador
-            </div>
+        <img src="/img/LogoBlanco.png"
+            alt="Logo CENFOTEC"
+            class="logo">
+
+        <h1>CENFOTEC Página Web Eventos</h1>
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
+
+            <span>Administrador</span>
+
         </div>
-    </header>
 
-    <main>
-        <!-- Menú lateral -->
-        <aside class="menu-lateral">
-            <nav>
-                <a href="/pages/DashBoard/menuPrincipal.html">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Dashboard
-                </a>
+    </div>
 
-                <a href="/pages/Administrador/listarAdmin.html">
-                    <i class="fa-solid fa-user-plus"></i>
-                    Administradores
-                </a>
+</header>
 
-                <a href="/pages/Evento/moduloEvento.html">
-                    <i class="fa-solid fa-award"></i>
-                    Eventos
-                </a>
+<main>
 
-                <a href="/pages/Actividad/moduloActividad.html">
-                    <i class="fa-solid fa-book-open"></i>
-                    Actividades
-                </a>
+<aside class="menu-lateral">
 
-                <a href="/pages/Stands/listarStands.html">
-                    <i class="fa-solid fa-cube"></i>
-                    Stands
-                </a>
+<nav>
 
-                <a href="/pages/Participantes/participantes.html">
-                    <i class="fa-solid fa-users"></i>
-                    Participantes
-                </a>
+<a href="/pages/DashBoard/menuPrincipal.html">
+<i class="fa-solid fa-location-dot"></i>
+Dashboard
+</a>
 
-                <a href="/pages/Agenda/consultarAgenda.html">
-                    <i class="fa-solid fa-table-columns"></i>
-                    Agenda
-                </a>
+<a href="/pages/Administrador/listarAdmin.html">
+<i class="fa-solid fa-user-plus"></i>
+Administradores
+</a>
 
-                <a href="/pages/Responsables/listarResponsables.html">
-                    <i class="fa-solid fa-user-tie"></i>
-                    Responsables
-                </a>
+<a href="/pages/Evento/moduloEvento.html">
+<i class="fa-solid fa-award"></i>
+Eventos
+</a>
 
-                <a href="/pages/DashBoard/pagoSimulado.html">
-                    <i class="fa-solid fa-credit-card"></i>
-                    Pagos
-                </a>
+<a href="/pages/Actividad/moduloActividad.html">
+<i class="fa-solid fa-book-open"></i>
+Actividades
+</a>
 
-                <a href="#" id="cerrarSesion" class="cerrar-sesion">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Cerrar Sesión
-                </a>
-            </nav>
-        </aside>
-    
+<a href="/pages/Stands/listarStands.html">
+<i class="fa-solid fa-cube"></i>
+Stands
+</a>
 
-        <!-- Contenido principal -->
-        <section class="contenido-principal">
+<a href="/pages/Participantes/participantes.html">
+<i class="fa-solid fa-users"></i>
+Participantes
+</a>
 
-            <h2>Administrador</h2>
+<a href="/pages/Agenda/consultarAgenda.html">
+<i class="fa-solid fa-table-columns"></i>
+Agenda
+</a>
 
-            <p class="descripcion">
-                Consulte, busque, modifique o elimine los Administradores registrados.
-            </p>
+<a href="/pages/Responsables/listarResponsables.html">
+<i class="fa-solid fa-user-tie"></i>
+Responsables
+</a>
 
-            <!-- Buscador -->
-            <div class="buscador">
+<a href="/pages/DashBoard/pagoSimulado.html">
+<i class="fa-solid fa-credit-card"></i>
+Pagos
+</a>
 
-                <label for="buscarAdmin">Buscar Administradores</label>
+<a href="#" id="cerrarSesion" class="cerrar-sesion">
+<i class="fa-solid fa-right-from-bracket"></i>
+Cerrar Sesión
+</a>
 
-                <input type="search" id="buscarAdmin" placeholder="Nombre, telefono o area">
+</nav>
 
-                <button id="btnBuscarAdmin" class="boton" type="button">Buscar</button>
+</aside>
 
-                <select class="selector-estado">
-                <option value="todos">Estado: Todos</option>
-                <option value="activo">Activo</option>
-            </select>
-            <a href="/pages/Administrador/registrarAdministrador.html" class="boton"> + Nuevo Administrador </a>
-            </div>
+<section class="contenido-principal">
 
-            <!-- Tabla -->
-            <table class="tabla-admin">
-                <thead>
+<div class="tarjeta-admin">
+
+<div class="encabezado-listado">
+
+<h2>Consultar Administradores</h2>
+
+<a href="/pages/Administrador/registrarAdministrador.html"
+class="boton">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Nuevo Administrador
+
+</a>
+
+</div>
+
+<div class="barra-filtros">
+
+<div class="campo-busqueda">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="buscarAdmin"
+placeholder="Buscar por nombre o correo electrónico...">
+
+</div>
+
+<select
+id="filtroEstado"
+class="selector-estado">
+
+<option value="">Estado: Todos</option>
+<option value="Administrador">Administrador</option>
+<option value="Supervisor">Supervisor</option>
+
+</select>
+
+</div>
+
+<table class="tabla-admin">
+
+<thead>
+
+<tr>
+
+<th>Imagen</th>
+<th>Nombre Completo</th>
+<th>Correo Electrónico</th>
+<th>Rol</th>
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody>
                         <tr>
-                            <th>imagen</th>
-                            <th>Nombre Completo</th>
-                            <th>Correo Electronico</th>
-                            <th>Rol</th>
-                            <th>Acciones</th>
-                        </tr>
-                </thead>
 
-                <tbody>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Elena Torres</td>
-                            <td>elena.torres@empresa.com</td>
-                            <td>Administrador</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+    <td class="celda-imagen">
+        <i class="fa-regular fa-image"></i>
+    </td>
 
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Miguel Soto</td>
-                            <td>msoto@innovacion.cr</td>
-                            <td>Administrador</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+    <td>Elena Torres</td>
 
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Valeria Navarro</td>
-                            <td>valeria.n@tech.com</td>
-                            <td>Administrador</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+    <td>elena.torres@empresa.com</td>
 
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Roberto Mora</td>
-                            <td>Administrador</td>
-                            <td>Supervisor</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
+    <td>Administrador</td>
 
-                        <tr>
-                            <td>
-                            </td>
-                            <td>👤Daniela Quirós</td>
-                            <td>dquiros@banco.fi.cr</td>
-                            <td>Administrador</td>
-                            <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" class="">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
+   <td class="celda-acciones">
 
-            <div class="paginacion">
-                <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
-                <div class="controles-paginacion">
-                    <button class="btn-pag">Anterior</button>
-                    <button class="btn-pag activo">1</button>
-                    <button class="btn-pag">2</button>
-                    <span>...</span>
-                    <button class="btn-pag">5</button>
-                    <button class="btn-pag">Siguiente</button>
-                </div>
-            </div>
-        </section>
-    </main>
+<a href="modificarAdministrador.html"
+class="btn-icono boton-modificar">
 
-    <footer>
-        <h2>Somos lo que sabemos </h2>
-        <p>&copy; 2026 Universidad Cenfotec </p>
-    </footer>
+<i class="fa-solid fa-pen"></i>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="/js/cerrarSesion.js"></script>
-    <script src="/js/listarAdmin.js"></script>
+</a>
+
+<button
+type="button"
+class="btn-icono boton-eliminar">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+    <td class="celda-imagen">
+        <i class="fa-regular fa-image"></i>
+    </td>
+
+    <td>Miguel Soto</td>
+
+    <td>msoto@innovacion.cr</td>
+
+    <td>Administrador</td>
+
+    <td class="celda-acciones">
+
+    <a href="modificarAdministrador.html"
+       class="btn-icono boton-modificar">
+        <i class="fa-solid fa-pen"></i>
+    </a>
+
+    <button type="button"
+            class="btn-icono boton-eliminar">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+    <td class="celda-imagen">
+        <i class="fa-regular fa-image"></i>
+    </td>
+
+    <td>Valeria Navarro</td>
+
+    <td>valeria.n@tech.com</td>
+
+    <td>Administrador</td>
+
+    <td class="celda-acciones">
+
+    <a href="modificarAdministrador.html"
+       class="btn-icono boton-modificar">
+        <i class="fa-solid fa-pen"></i>
+    </a>
+
+    <button type="button"
+            class="btn-icono boton-eliminar">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+    <td class="celda-imagen">
+        <i class="fa-regular fa-image"></i>
+    </td>
+
+    <td>Roberto Mora</td>
+
+    <td>roberto.mora@empresa.com</td>
+
+    <td>Supervisor</td>
+
+    <td class="celda-acciones">
+
+    <a href="modificarAdministrador.html"
+       class="btn-icono boton-modificar">
+        <i class="fa-solid fa-pen"></i>
+    </a>
+
+    <button type="button"
+            class="btn-icono boton-eliminar">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</td>
+
+</tr>
+
+
+<tr>
+
+    <td class="celda-imagen">
+        <i class="fa-regular fa-image"></i>
+    </td>
+
+    <td>Daniela Quirós</td>
+
+    <td>dquiros@banco.fi.cr</td>
+
+    <td>Administrador</td>
+
+    <td class="celda-acciones">
+
+    <a href="modificarAdministrador.html"
+       class="btn-icono boton-modificar">
+        <i class="fa-solid fa-pen"></i>
+    </a>
+
+    <button type="button"
+            class="btn-icono boton-eliminar">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p id="sinResultados" class="sin-resultados" style="display:none;">
+    No se encontraron administradores que coincidan con la búsqueda.
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<h2>Somos lo que sabemos</h2>
+
+<p>&copy; 2026 Universidad CENFOTEC</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/cerrarSesion.js"></script>
+<script src="/js/listarAdmin.js"></script>
+
 </body>
+
 </html>
