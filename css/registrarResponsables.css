@@ -197,19 +197,30 @@ line-height: 1.4;
     min-height: 120px;
 }
 
-
-
-.formulario .btn-subir-archivo {
-    color:white;
-    background-color: var(--color-AzulClaro);
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-}
-
 /* Campos con error */
 .input-error {
     border: 2px solid #fcc2c2 !important;
     background-color: #ffe5e5;
+}
+
+.formulario input[type="file"]{
+    padding:10px;
+    background:white;
+    cursor:pointer;
+}
+
+.formulario input[type="file"]::file-selector-button{
+    background:var(--color-AzulClaro);
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    margin-right:12px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.formulario input[type="file"]::file-selector-button:hover{
+    background:var(--color-AzulOscuro);
 }

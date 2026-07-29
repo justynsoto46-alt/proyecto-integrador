@@ -143,6 +143,11 @@ body{
     text-align:left;
 }
 
+.tabla-admin th:first-child{
+    text-align:center;
+    width:70px;
+}
+
 .tabla-admin th:last-child{
     text-align:center;
     width:120px;
@@ -155,7 +160,7 @@ body{
     color:#222;
 }
 
-.tabla-admin tbody tr:nth-child(even){
+.tabla-admin tr:nth-child(even){
     background:#f4f4f4;
 }
 
@@ -174,10 +179,29 @@ body{
 }
 
 .celda-acciones{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.acciones{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
+    gap:8px;
+}
+
+.btn-icono{
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #d8d8d8;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+    text-decoration:none;
+    transition:.3s;
 }
 
 .btn-icono{
