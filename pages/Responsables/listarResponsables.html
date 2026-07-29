@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENFOTEC Página Web Eventos - Participantes</title>
+    <title>CENFOTEC Página Web Eventos - Responsables</title>
 
     <!-- FontAwesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="/css/menuPrincipal.css">
     <link rel="stylesheet" href="/css/listarResponsables.css">
 </head>
 
@@ -21,14 +22,14 @@
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-user"></i>
-                Administrador
+                <span>Administrador</span>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Menú lateral -->
         <aside class="menu-lateral">
             <nav>
                 <a href="/pages/DashBoard/menuPrincipal.html">
@@ -83,130 +84,160 @@
             </nav>
         </aside>
 
-        <!-- Contenido principal -->
         <section class="contenido-principal">
 
-            <h2>Responsables</h2>
+            <div class="tarjeta-admin">
 
-            <p class="descripcion">
-                Consulte, busque, modifique o elimine los participantes registrados.
-            </p>
+                <div class="encabezado-listado">
+                    <h2>Responsables</h2>
+                    <a href="/pages/Responsables/registrarResponsables.html" class="boton">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Nuevo Responsable
+                    </a>
+                </div>
 
-            <!-- Buscador -->
-            <div class="buscador">
+                <div class="barra-filtros">
+                    <div class="campo-busqueda">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="buscarResponsable" placeholder="Buscar por nombre, teléfono o área...">
+                    </div>
 
-                <label for="buscarResponsable">Buscar Responsables</label>
+                    <select id="filtroEstado" class="selector-estado">
+                        <option value="todos">Estado: Todos</option>
+                        <option value="activo">Activo</option>
+                    </select>
+                </div>
 
-                <input type="search" id="buscarResponsable" placeholder="Nombre, telefono o area">
-
-                <button id="btnBuscarResponsable" class="boton" type="button">Buscar</button>
-
-                <select class="selector-estado">
-                <option value="todos">Estado: Todos</option>
-                <option value="activo">Activo</option>
-            </select>
-            <a href="/pages/Responsables/registrarResponsables.html" class="boton"> + Nuevo Responsable </a>
-            </div>
-
-            <!-- Tabla -->
-            <table class="tabla-responsables">
-                <thead>
+                <table class="tabla-admin">
+                    <thead>
                         <tr>
                             <th>Imagen</th>
                             <th>Nombre Completo</th>
-                            <th>Telefono</th>
-                            <th>Institucion</th>
-                            <th>Area</th>
-                            <th>Fecha De Registro</th>
+                            <th>Teléfono</th>
+                            <th>Institución</th>
+                            <th>Área</th>
+                            <th>Fecha de Registro</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
 
-                <tbody>
-                    <tr>
-                            <td>
+                    <tbody>
+                        <tr>
+                            <td class="celda-imagen">
+                                <i class="fa-regular fa-image"></i>
                             </td>
-                            <td>👤Carlos Mendoza</td>
-                            <td>88321459</td>
+                            <td>Carlos Mendoza</td>
+                            <td>8832-1459</td>
                             <td>TechSolutions S.A.</td>
                             <td>Desarrollador Backend</td>
                             <td>12/08/2025</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" type="button">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                                <a href="modificarResponsable.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
 
-                    <tr>
-                            <td>
+                        <tr>
+                            <td class="celda-imagen">
+                                <i class="fa-regular fa-image"></i>
                             </td>
-                            <td>👤Laura Vargas</td>
-                            <td>60219874</td>
+                            <td>Laura Vargas</td>
+                            <td>6021-9874</td>
                             <td>InnovaCorp</td>
                             <td>Gerente de Proyectos</td>
                             <td>03/11/2026</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" type="button">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                                <a href="modificarResponsable.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
 
-                    <tr>
-                            <td>
+                        <tr>
+                            <td class="celda-imagen">
+                                <i class="fa-regular fa-image"></i>
                             </td>
-                            <td>👤Andrés Rojas</td>
-                            <td>71453320</td>
+                            <td>Andrés Rojas</td>
+                            <td>7145-3320</td>
                             <td>Banco Nacional</td>
                             <td>Analista de Datos</td>
                             <td>25/01/2026</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" type="button">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                                <a href="modificarResponsable.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
+
                         <tr>
-                            <td>
+                            <td class="celda-imagen">
+                                <i class="fa-regular fa-image"></i>
                             </td>
-                            <td>👤Sofía Castro</td>
-                            <td>89104455</td>
+                            <td>Sofía Castro</td>
+                            <td>8910-4455</td>
                             <td>Creativa Digital</td>
                             <td>Diseñadora UX/UI</td>
                             <td>17/09/2025</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" type="button">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                                <a href="modificarResponsable.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
+
                         <tr>
-                            <td>
+                            <td class="celda-imagen">
+                                <i class="fa-regular fa-image"></i>
                             </td>
-                            <td>👤Diego Aguilar</td>
-                            <td>62238891</td>
+                            <td>Diego Aguilar</td>
+                            <td>6223-8891</td>
                             <td>Logística CR</td>
                             <td>Especialista en Redes</td>
                             <td>04/05/2026</td>
                             <td class="celda-acciones">
-                                <button class="btn-icono boton-modificar" type="button">✏️</button>
-                                <button class="btn-icono boton-eliminar" type="button">❌</button>
+                                <a href="modificarResponsable.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            <div class="paginacion">
-                <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
-                <div class="controles-paginacion">
-                    <button class="btn-pag">Anterior</button>
-                    <button class="btn-pag activo">1</button>
-                    <button class="btn-pag">2</button>
-                    <span>...</span>
-                    <button class="btn-pag">5</button>
-                    <button class="btn-pag">Siguiente</button>
+                <p id="sinResultados" class="sin-resultados" style="display:none;">
+                    No se encontraron responsables que coincidan con la búsqueda.
+                </p>
+
+                <div class="paginacion">
+                    <span class="texto-paginacion">Mostrando 1 a 6 (Filtrado de 5,000 total entradas)</span>
+                    <div class="controles-paginacion">
+                        <button class="btn-pag">Anterior</button>
+                        <button class="btn-pag activo">1</button>
+                        <button class="btn-pag">2</button>
+                        <span>...</span>
+                        <button class="btn-pag">5</button>
+                        <button class="btn-pag">Siguiente</button>
+                    </div>
                 </div>
+
             </div>
 
         </section>
-        
     </main>
 
     <footer>
