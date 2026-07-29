@@ -138,10 +138,9 @@ main {
 }
 
 /* Descripción */
-.descripcion {
-    font-size: 18px;
-    color: var(--color-azulOscuro);
-    margin-bottom: 25px;
+.descripcion{
+    color:#333;
+    margin-bottom:30px;
 }
 
 /* Buscador */
@@ -311,90 +310,241 @@ main {
     background-color: var(--color-azulOscuro);
 }
 
-/* Hover de botón secundario */
-.boton-secundario:hover {
-    background-color: var(--color-celesteClaro);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
-/* Pie de página */
-footer {
-    background-color: var(--color-azulClaro);
-    color: white;
-    padding: 18px;
-    margin-top: 30px;
-    text-align: center;
+:root{
+    --color-AzulOscuro:#164a98;
+    --color-AzulClaro:#006AEA;
+    --color-celesteClaro:#9CC8FF;
+    --color-grisClaro:#d2d2d2;
+    --color-grisOscuro:#7c7b75;
+    --color-amarilloClaro:#fff200;
+    --color-amarilloOscuro:#ffc63e;
 }
 
-/* Campos con error */
-.input-error {
-    border: 2px solid #e63946 !important;
-    background-color: #ffe5e5;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--color-celesteClaro);
+    color:var(--color-AzulOscuro);
 }
 
-.input-buscar {
-    margin-left: 30px;
-    padding: 15px;
-    flex-grow: 0;
-    width: 550px; 
-    border: 2px solid #ccc;
-    border-radius: 10px; 
-    outline: none;
+.contenido-principal{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    padding:30px;
 }
 
-.selector-estado {
-    padding: 15px 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: white;
-    cursor: pointer;
-    margin-right: 12px;
+.tarjeta-admin{
+    width:100%;
+    max-width:1080px;
+    background:white;
+    padding:40px;
+    border:2px solid var(--color-grisClaro);
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,.12);
 }
 
-
-.controles {
-    display: flex;
-    gap: 15px; 
-    align-items: center;
-    margin-bottom: 20px;
+.tarjeta-admin h2{
+    color:var(--color-AzulOscuro);
+    margin-bottom:8px;
 }
 
-/* --- BOTONES DE ACCIÓN (Iconos circulares) --- */
-.celda-acciones {
-    display: flex;
-    gap: 8px;
-    border-radius: 15px;
-}
-/* --- PAGINACIÓN --- */
-.paginacion {
-    margin-left: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    color: var(--color-azulOscuro);
-    margin-top: 25px;
+.descripcion{
+    color:#555;
+    margin-bottom:30px;
 }
 
-.controles-paginacion {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-right: 30px;
+.encabezado-listado{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
 
-.btn-pag {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #333;
+.boton{
+    background:var(--color-AzulOscuro);
+    color:white;
+    border:2px solid var(--color-AzulOscuro);
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
 }
 
-.btn-pag.activo {
-    background-color: var(--color-azulOscuro); /* Botón de página actual en oscuro */
-    color: white;
-    border-color: var(--color-grisOscuro);
+.boton:hover{
+    background:var(--color-AzulClaro);
+    border-color:var(--color-AzulClaro);
+    transform:translateY(-1px);
 }
 
+.boton:active{
+    transform:translateY(0);
+}
+
+.barra-filtros{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.campo-busqueda{
+    flex:1;
+    min-width:260px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid #aaa;
+    border-radius:5px;
+    padding:10px 15px;
+    background:white;
+    transition:.3s;
+}
+
+.campo-busqueda:focus-within{
+    border-color:var(--color-AzulClaro);
+    box-shadow:0 0 4px rgba(0,106,234,.25);
+}
+
+.campo-busqueda i{
+    color:#888;
+}
+
+.campo-busqueda input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+}
+
+.selector-estado{
+    border:1px solid #aaa;
+    border-radius:5px;
+    padding:10px 15px;
+    background:white;
+    color:#333;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.selector-estado:focus{
+    outline:none;
+    border-color:var(--color-AzulClaro);
+    box-shadow:0 0 4px rgba(0,106,234,.25);
+}
+
+.tabla-admin{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.tabla-admin th{
+    background:var(--color-AzulOscuro);
+    color:white;
+    padding:14px;
+    text-align:left;
+}
+
+.tabla-admin td{
+    padding:14px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    color:#222;
+}
+
+.tabla-admin tbody tr:nth-child(even){
+    background:#f4f4f4;
+}
+
+.tabla-admin tbody tr:hover{
+    background:var(--color-celesteClaro);
+}
+
+.celda-acciones{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-icono{
+    width:42px;
+    height:42px;
+    border:1px solid #d8d8d8;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+    font-size:16px;
+}
+
+.boton-modificar{
+    color:#f39c12;
+}
+
+.boton-modificar:hover{
+    background:#f39c12;
+    color:white;
+    transform:scale(1.08);
+}
+
+.boton-eliminar{
+    color:#e74c3c;
+}
+
+.boton-eliminar:hover{
+    background:#e74c3c;
+    color:white;
+    transform:scale(1.08);
+}
+
+.sin-resultados{
+    text-align:center;
+    color:#777;
+    padding:20px;
+}
+
+.paginacion{
+    margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.texto-paginacion{
+    color:#555;
+}
+
+.controles-paginacion{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.btn-pag{
+    background:white;
+    border:1px solid #ddd;
+    padding:6px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btn-pag.activo{
+    background:var(--color-AzulOscuro);
+    color:white;
+}
