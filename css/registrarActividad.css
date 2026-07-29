@@ -93,3 +93,25 @@
     }
 
 }
+
+.formulario input[type="file"]{
+    padding:10px;
+    background:white;
+    cursor:pointer;
+}
+
+.formulario input[type="file"]::file-selector-button{
+    background:var(--color-azulClaro);
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    margin-right:12px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.formulario input[type="file"]::file-selector-button:hover{
+    background:var(--color-azulOscuro);
+}

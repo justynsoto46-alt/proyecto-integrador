@@ -105,16 +105,24 @@
 
                 <form id="formularioAdministrador" class="formulario" action="#" method="post" novalidate>
                     <label for="nombreCompleto">
-                        Nombre completo *
-                    </label>
-                    <input type="text"
-                        id="nombreCompleto"
-                        placeholder="Nombre completo del participante"
-                        value="Ivannia Quesada" required>
+    Nombre completo *
+</label>
+<input type="text"
+    id="nombreCompleto"
+    placeholder="Nombre completo del participante"
+    value="Ivannia Quesada" required>
 
-                    <label for="correo">
-                        Correo electrónico *
-                    </label>
+<label for="fotoAdministrador">
+    Imagen del Administrador
+</label>
+<input type="file"
+    id="fotoAdministrador"
+    name="fotoAdministrador"
+    accept="image/*">
+
+<label for="correo">
+    Correo electrónico *
+</label>
 
                     <input type="email"
                         id="correo"
@@ -155,7 +163,7 @@
     <!-- Pie de página -->
     <footer>
         <h2>Somos lo que sabemos</h2>
-        <p>&copy; 2026 Universidad Cenfotec</p>
+        <p>&copy; 2026 Universidad CENFOTEC</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

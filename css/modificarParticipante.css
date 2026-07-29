@@ -135,3 +135,9 @@
     color: black;
     cursor: pointer;
 }
+
+.formulario-contenedor h2 {
+    color: var(--color-azulOscuro);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
