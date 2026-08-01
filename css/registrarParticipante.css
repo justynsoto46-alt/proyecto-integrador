@@ -22,6 +22,7 @@ body {
     background-color: var(--color-celesteClaro);
     color: #252525;
     line-height: 1.6;
+    overflow-y: auto; /* Permite el scroll vertical */
 }
 
 /* Encabezado */
@@ -34,7 +35,8 @@ body {
 
 /* Contenedor general */
 .contenedor {
-    width: 960px;
+    width: 90%;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -102,7 +104,8 @@ body {
 
 /* Contenedor del formulario */
 .formulario-contenedor {
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     background-color: white;
     padding: 35px;
     border: 2px solid var(--color-grisClaro);
@@ -165,7 +168,8 @@ body {
 
 /* Texto de campos obligatorios */
 .campos-obligatorios {
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     margin: 10px auto 0 auto;
     font-size: 13px;
     color: var(--color-azulOscuro);
