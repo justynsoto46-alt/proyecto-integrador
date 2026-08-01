@@ -10,29 +10,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/inscripciones.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
+    <!-- Encabezado -->
     <header class="encabezado">
-        <div class="contenedor">
-            <img src="/img/LogoBlanco.png"
-                 alt="Logo Universidad CENFOTEC"
-                 class="logo">
 
+        <div class="contenedor">
+            <img src="/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
             <h1>CENFOTEC Página Web Eventos</h1>
+
+            <nav class="menu">
+                <a href="/index.html">Inicio</a>
+                <a href="/index.html#eventos">Eventos</a>
+                <a href="/pages/Agenda/agendaPublica.html">Agenda</a>
+                <a href="/index.html#stands">Stands</a>
+                <a href="/pages/Inscripciones/inscripciones.html">Inscribirse</a>
+                <a href="/pages/DashBoard/iniciarSesion.html">Iniciar Sesión</a>
+            </nav>
         </div>
     </header>
 
     <main>
         <!-- Contenido -->
         <section class="contenido-principal">
-
-            <div class="contenedor-volver">
-                <a href="/index.html" class="enlace-volver"> 
-                    <i class="fa-solid fa-chevron-left"></i>
-                    Volver
-                </a>
-            </div>
 
             <div class="contenido-inscripciones">
                 <h2>Inscripciones</h2>
@@ -75,7 +77,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="piePagina">
         <h2>Somos lo que sabemos </h2>
         <p>&copy; 2026 Universidad Cenfotec </p>
     </footer>

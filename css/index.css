@@ -16,12 +16,24 @@
     --color-amarilloOscuro: #ffc63e;
 }
 
-/* Estilos generales del cuerpo de la página */
-body {
+/* Estructura principal de la página */
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-celesteClaro);
     color: #252525;
     line-height: 1.6;
+}
+
+main{
+    flex: 1;
 }
 
 /* Encabezado */
@@ -224,6 +236,11 @@ body {
     margin-bottom: 8px;
 }
 
+.tarjeta i{
+    color: var(--color-azulClaro);
+    margin-right: 8px;
+}
+
 /* Botón de tarjeta */
 .boton-tarjeta {
     width: 80%;
@@ -235,6 +252,19 @@ body {
     border-radius: 5px;
     margin: 10px auto 0 auto;
     font-size: 14px;
+}
+
+/* Botón para eventos próximos */
+.boton-proximamente{
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--color-grisOscuro);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: not-allowed;
 }
 
 .boton-pago {

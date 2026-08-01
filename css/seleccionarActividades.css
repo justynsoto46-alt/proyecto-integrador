@@ -16,12 +16,25 @@
     --color-amarilloOscuro: #ffc63e;
 }
 
-/* Estilos generales */
-body {
+/* Estructura principal de la página */
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-celesteClaro);
     color: #252525;
     line-height: 1.6;
+    overflow-y: auto; /* Permite el scroll vertical */
+}
+
+main{
+    flex: 1;
 }
 
 /* Encabezado */

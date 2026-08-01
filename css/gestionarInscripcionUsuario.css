@@ -16,12 +16,25 @@
     --color-amarilloOscuro: #ffc63e;
 }
 
-/* Estilos generales */
-body {
+/* Estructura principal de la página */
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-celesteClaro);
     color: #252525;
     line-height: 1.6;
+    overflow-y: auto; /* Permite el scroll vertical */
+}
+
+main{
+    flex: 1;
 }
 
 /* Encabezado */
@@ -38,13 +51,6 @@ body {
     margin: 0 auto;
 }
 
-/* Contenedor del encabezado alineado a la izquierda */
-.encabezado .contenedor {
-    width: 100%;
-    margin: 0;
-    padding-left: 30px;
-}
-
 /* Logo */
 .logo {
     width: 125px;
@@ -58,20 +64,6 @@ body {
     margin-left: 15px;
     font-size: 24px;
     font-weight: normal;
-}
-
-/* Enlace volver */
-.enlace-volver {
-    color: var(--color-azulOscuro);
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 50px;
-}
-
-.enlace-volver:hover {
-    color: var(--color-azulClaro);
-    text-decoration: underline;
 }
 
 /* Sección principal */

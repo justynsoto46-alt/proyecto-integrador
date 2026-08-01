@@ -16,12 +16,24 @@
     --color-amarilloOscuro: #ffc63e;
 }
 
-/* Estilos generales del cuerpo de la página */
-body {
+/* Estructura principal de la página */
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-celesteClaro);
     color: #252525;
     line-height: 1.6;
+}
+
+main{
+    flex: 1;
 }
 
 /* Encabezado */
@@ -36,13 +48,6 @@ body {
 .contenedor {
     width: 960px;
     margin: 0 auto;
-}
-
-/* Sobrescribe el contenedor solo dentro del encabezado, usando el 100% de la pantalla y los datos a la izquierda */
-.encabezado .contenedor {
-    width: 100%;
-    margin: 0;
-    padding-left: 30px;
 }
 
 /* Logo */
@@ -63,26 +68,6 @@ body {
 /* Sección principal del login */
 .seccion-login {
     padding: 45px 0;
-}
-
-/* Contenedor para la sección que contiene el enlace volver */
-.contenedor-volver {
-    margin-bottom: 20px;
-    margin-left: 25px;
-    padding-left: 20px;
-}
-
-/* Enlace volver */
-.enlace-volver {
-    color: var(--color-azulOscuro);
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.enlace-volver:hover {
-    color: var(--color-azulClaro);
-    text-decoration: underline;
 }
 
 /* Título del formulario */

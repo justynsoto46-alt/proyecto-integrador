@@ -22,15 +22,16 @@
             <h1>CENFOTEC Página Web Eventos</h1>
 
             <nav class="menu">
-                <a href="#">Eventos</a>
-                <a href="#">Agenda</a>
-                <a href="#">Stands</a>
+                <a href="/index.html">Inicio</a>
+                <a href="/index.html#eventos">Eventos</a>
+                <a href="/pages/Agenda/agendaPublica.html">Agenda</a>
+                <a href="/index.html#stands">Stands</a>
                 <a href="/pages/Inscripciones/inscripciones.html">Inscribirse</a>
                 <a href="/pages/DashBoard/iniciarSesion.html">Iniciar Sesión</a>
             </nav>
         </div>
-
     </header>
+
     <main>
         <!-- Evento destacado -->
         <section class="evento-principal">
@@ -52,7 +53,7 @@
                         para construir un futuro mejor.
                     </p>
 
-                    <a href="#" class="boton">Ver Agenda</a>
+                    <a href="/pages/Agenda/agendaPublica.html" class="boton">Ver Agenda</a>
 
                     <a href="/pages/Inscripciones/inscripciones.html" class="boton-secundario">
                         Inscribirse
@@ -67,11 +68,80 @@
             </div>
         </section>
 
+        <!-- Eventos institucionales -->
+        <section id="eventos" class="seccion">
+            <div class="contenedor">
+
+                <h2>Eventos Institucionales</h2>
+
+                <div class="tarjeta">
+                    <img src="/img/Maker Faire.png" alt="Maker Faire">
+
+                    <h3>Maker Faire</h3>
+
+                    <p>
+                        Evento tecnológico que reúne proyectos, talleres,
+                        conferencias y demostraciones desarrolladas por estudiantes,
+                        profesionales y empresas.
+                    </p>
+
+                    <p><i class="fa-solid fa-calendar-days"></i><strong>Fecha:</strong> 28 de junio de 2026</p>
+                    <p><i class="fa-solid fa-location-dot"></i><strong>Ubicación:</strong> Centro de Convenciones CIC ANDE</p>
+                    <p><i class="fa-solid fa-circle-check"></i><strong>Estado:</strong> Activo</p>
+
+                    <a href="/pages/Agenda/agendaPublica.html" class="boton-tarjeta">
+                        Ver agenda
+                    </a>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="/img/Evento Empleo.jpg" alt="Feria de Empleo Tecnológico">
+
+                    <h3>Feria de Empleo Tecnológico</h3>
+
+                    <p>
+                        Espacio de encuentro entre estudiantes, profesionales
+                        y empresas interesadas en contratar talento para el
+                        sector tecnológico.
+                    </p>
+
+                    <p><i class="fa-solid fa-calendar-days"></i><strong>Fecha:</strong> 15 de agosto de 2026</p>
+                    <p><i class="fa-solid fa-location-dot"></i><strong>Ubicación:</strong> Universidad CENFOTEC</p>
+                    <p><i class="fa-solid fa-clock"></i></i><strong>Estado:</strong> Próximamente</p>
+
+                    <button class="boton-proximamente" disabled>
+                        Próximamente
+                    </button>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="/img/Evento Innovacion.png" alt="Semana de Innovación">
+
+                    <h3>Semana de Innovación</h3>
+
+                    <p>
+                        Evento académico con actividades relacionadas con
+                        inteligencia artificial, desarrollo de software,
+                        ciberseguridad y emprendimiento.
+                    </p>
+
+                    <p><i class="fa-solid fa-calendar-days"></i><strong>Fecha:</strong> 3 al 7 de septiembre de 2026</p>
+                    <p><i class="fa-solid fa-location-dot"></i><strong>Ubicación:</strong> Universidad CENFOTEC</p>
+                    <p><i class="fa-solid fa-clock"></i><strong>Estado:</strong> Próximamente</p>
+
+                    <button class="boton-proximamente" disabled>
+                        Próximamente
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
         <!-- Actividades destacadas -->
         <section class="seccion">
             <div class="contenedor">
 
-                <h2>Actividades Destacadas</h2>
+                <h2>Actividades Destacadas del Maker Fair</h2>
 
                 <div class="tarjeta">
                     <img src="/img/Actividad 1.jpg" alt="Actividad">
@@ -79,7 +149,9 @@
                     <p>Domingo 28 de junio, 2026</p>
                     <p>9:30 am - 10:00 am</p>
                     <p>Charla.</p>
-                    <a href="#" class="boton-tarjeta">Ver actividad</a>
+                    <button type="button" class="boton-tarjeta btn-actividad-uno">
+                        Ver actividad
+                    </button>
 
                     <button id="btn-pago" class="boton-pago" onclick="window.location.href='/pages/DashBoard/pagoParticipante.html'"> &#128274;  Realizar Pago </button>
                 </div>
@@ -90,7 +162,9 @@
                     <p>Domingo 28 de junio, 2026</p>
                     <p>10:00 am - 12:00 pm</p>
                     <p>Taller.</p>
-                    <a href="#" class="boton-tarjeta">Ver actividad</a>
+                    <button type="button" class="boton-tarjeta btn-actividad-dos">
+                        Ver actividad
+                    </button>
                 </div>
 
                 <div class="tarjeta">
@@ -99,7 +173,9 @@
                     <p>Domingo 28 de junio, 2026</p>
                     <p>10:00 am - 12:00 pm</p>
                     <p>Taller.</p>
-                    <a href="#" class="boton-tarjeta">Ver actividad</a>
+                    <button type="button" class="boton-tarjeta btn-actividad-tres">
+                        Ver actividad
+                    </button>
                 </div>
 
             </div>
@@ -107,7 +183,7 @@
         </section>
 
         <!-- Stands -->
-        <section class="seccion">
+        <section id="stands" class="seccion">
             <div class="contenedor">
 
                 <h2>Stands Participantes</h2>
@@ -117,7 +193,9 @@
                     <h3>Microsoft Costa Rica</h3>
                     <p>Conozca las oportunidades de certificación, programas académicos y opciones de empleo 
                         para estudiantes interesados en tecnologías Microsoft y computación en la nube.</p>
-                    <a href="#" class="boton-tarjeta">Ver más</a>
+                    <button type="button" class="boton-tarjeta btn-stand-uno">
+                        Ver más
+                    </button>
                 </div>
 
                 <div class="tarjeta">
@@ -125,7 +203,9 @@
                     <h3>CINDE</h3>
                     <p>Información sobre oportunidades laborales, crecimiento profesional y empresas 
                         multinacionales que operan en Costa Rica dentro del sector tecnológico.</p>
-                    <a href="#" class="boton-tarjeta">Ver más</a>
+                    <button type="button" class="boton-tarjeta btn-stand-dos">
+                        Ver más
+                    </button>
                 </div>
 
                 <div class="tarjeta">
@@ -133,7 +213,9 @@
                     <h3>GBM Costa Rica</h3>
                     <p>Presentación de soluciones empresariales, infraestructura tecnológica, servicios en la nube 
                         y programas dirigidos a estudiantes y futuros profesionales..</p>
-                    <a href="#" class="boton-tarjeta">Ver más</a>
+                    <button type="button" class="boton-tarjeta btn-stand-tres">
+                        Ver más
+                    </button>
                 </div>
 
             </div>
@@ -175,8 +257,8 @@
             <div class="enlaces-footer">
                 <h3>Enlaces rápidos</h3>
                 <a href="/index.html">Inicio</a>
-                <a href="#">Agenda</a>
-                <a href="#">Stands</a>
+                <a href="/pages/Agenda/agendaPublica.html">Agenda</a>
+                <a href="/index.html#stands">Stands</a>
                 <a href="/pages/sobreNosotros.html">Sobre Nosotros</a>
             </div>
 
@@ -200,5 +282,7 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

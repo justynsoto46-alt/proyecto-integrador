@@ -94,7 +94,7 @@
 
 /* Filas pares */
 .tabla-participantes tr:nth-child(even) {
-    background-color: var(--color-grisClaro);
+    background-color: #f4f4f4;
 }
 
 /* Hover sobre las filas */
