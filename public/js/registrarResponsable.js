@@ -95,7 +95,7 @@ function registrarResponsableRetorno() {
             confirmButtonText: "Ir a la lista"
         }).then((resultado) => {
             if(resultado.isConfirmed) {
-                window.location.href = "/public/pages/Responsables/listarResponsables.html";
+                window.location.href = "/pages/Responsables/listarResponsables.html";
             }
         });
     }

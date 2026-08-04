@@ -68,7 +68,7 @@ function modificarStandRetorno() {
             confirmButtonText: "Aceptar"
         }).then(() => {
             // Redirige a la lista de stands
-            window.location.href = "/public/pages/Stands/listarStands.html";
+            window.location.href = "/pages/Stands/listarStands.html";
         });
 
     } else {
@@ -84,7 +84,7 @@ function modificarStandRetorno() {
 // 5. Función para cancelar la modificación y volver al listado
 function cancelarModificacionRetorno() {
     // Redirige a la lista de stands
-    window.location.href = "/public/pages/Stands/listarStands.html";
+    window.location.href = "/pages/Stands/listarStands.html";
 }
 
 // 6. Asignación de Eventos

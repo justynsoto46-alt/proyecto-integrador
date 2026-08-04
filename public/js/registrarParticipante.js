@@ -296,8 +296,8 @@ function validarProfesion(){
     return error;
 }
 
-// Función principal
-function registrarParticipanteRetorno(){
+// Función principal para registrar un participante
+async function registrarParticipanteRetorno(){
 
     if(validarCamposVacios() === false &&
        validarNombreCompleto() === false &&
@@ -307,19 +307,71 @@ function registrarParticipanteRetorno(){
        validarEdad() === false &&
        validarProfesion() === false){
 
-        Swal.fire({
-            title: "Datos registrados correctamente.",
-            text: "Ahora seleccione las actividades a las que desea inscribirse.",
-            icon: "success",
-            confirmButtonText: "Aceptar"
-        }).then(() => {
-            window.location.href = "/public/pages/Actividad/seleccionarActividades.html";
+        // Crea el objeto con los datos ingresados en el formulario
+        const participante = {
+            nombreCompleto: inputNombreCompleto.value.trim(),
+            identificacion: inputIdentificacion.value.trim(),
+            correoElectronico: inputCorreo.value.trim(),
+            telefono: inputTelefono.value.trim(),
+            edad: inputEdad.value.trim() === ""
+                ? null
+                : Number(inputEdad.value.trim()),
+            profesion: inputProfesion.value.trim()
+        };
 
-        limpiarFormulario();
+        try{
 
-        });
+            // Envía los datos del participante al backend
+            const respuesta = await fetch("/api/participantes", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(participante)
+            });
+
+            // Convierte la respuesta del backend a un objeto JavaScript
+            const datosRespuesta = await respuesta.json();
+
+            // Verifica si el backend respondió con un error
+            if(respuesta.ok === false){
+
+                Swal.fire({
+                    title: "No se pudo realizar el registro",
+                    text: datosRespuesta.mensaje,
+                    icon: "error",
+                    confirmButtonText: "Aceptar"
+                });
+
+                return;
+            }
+
+            // Muestra el mensaje cuando el participante fue guardado
+            Swal.fire({
+                title: "Datos registrados correctamente",
+                text: "Ahora seleccione las actividades a las que desea inscribirse.",
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            }).then(() => {
+
+                limpiarFormulario();
+
+                window.location.href =
+                    "/pages/Actividad/seleccionarActividades.html";
+            });
+
+        } catch(error){
+
+            console.error("Error al registrar participante:", error);
+
+            Swal.fire({
+                title: "Error de conexión",
+                text: "No fue posible comunicarse con el servidor.",
+                icon: "error",
+                confirmButtonText: "Aceptar"
+            });
+        }
     }
-
 }
 
 // Función para limpiar el formulario

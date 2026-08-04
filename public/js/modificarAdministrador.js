@@ -47,7 +47,7 @@ function modificarAdministradorRetorno(){
             confirmButtonText: "Aceptar"
         }).then(() => {
 
-            window.location.href = "/public/pages/Administrador/listarAdmin.html";
+            window.location.href = "/pages/Administrador/listarAdmin.html";
         });
 
     } else{
@@ -63,7 +63,7 @@ function modificarAdministradorRetorno(){
 
 // Función para cancelar la modificación y volver al listado
 function cancelarModificacionRetorno(){
-    window.location.href = "/public/pages/Administrador/listarAdmin.html";
+    window.location.href = "/pages/Administrador/listarAdmin.html";
 }
 
 // Evento que se ejecuta al enviar el formulario

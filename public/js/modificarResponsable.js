@@ -67,7 +67,7 @@ function modificarResponsableRetorno() {
             icon: "success",
             confirmButtonText: "Aceptar"
         }).then(() => {
-            window.location.href = "/public/pages/Responsables/listarResponsables.html";
+            window.location.href = "/pages/Responsables/listarResponsables.html";
         });
 
     } else {
@@ -82,7 +82,7 @@ function modificarResponsableRetorno() {
 
 // 5. Función para cancelar la modificación y volver al listado
 function cancelarModificacionRetorno() {
-    window.location.href = "/public/pages/Responsables/listarResponsables.html";
+    window.location.href = "/pages/Responsables/listarResponsables.html";
 }
 
 // 6. Asignación de Eventos

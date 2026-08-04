@@ -206,7 +206,7 @@ function modificarParticipanteRetorno(){
             confirmButtonText: "Aceptar"
         }).then(() => {
 
-            window.location.href = "/public/pages/Participantes/listarParticipantes.html";
+            window.location.href = "/pages/Participantes/listarParticipantes.html";
         });
 
     }
@@ -214,7 +214,7 @@ function modificarParticipanteRetorno(){
 
 // Función para cancelar la modificación y volver al listado
 function cancelarModificacionRetorno(){
-    window.location.href = "/public/pages/Participantes/listarParticipantes.html";
+    window.location.href = "/pages/Participantes/listarParticipantes.html";
 }
 
 // Evento que se ejecuta al enviar el formulario

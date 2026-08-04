@@ -186,7 +186,7 @@ function iniciarSesionRetorno(){
                 sessionStorage.setItem("sesionActiva", "true");
 
                 // Redirecciona al menú principal del sistema
-                window.location.replace("/public/pages/DashBoard/menuPrincipal.html");
+                window.location.replace("/pages/DashBoard/menuPrincipal.html");
         }
         else{
             Swal.fire({

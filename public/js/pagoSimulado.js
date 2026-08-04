@@ -33,7 +33,7 @@ function registrarPagoRetorno() {
             confirmButtonText: "Volver a pagos"
         }).then((resultado) => {
             if (resultado.isConfirmed) {
-                window.location.href = "/public/pages/DashBoard/pagoSimulado.html";
+                window.location.href = "/pages/DashBoard/pagoSimulado.html";
             }
         });
     }

@@ -131,7 +131,7 @@ function verificarInscripcionesVisibles(){
 // Función para redirigir a la pantalla de selección de actividades
 function agregarActividadesRetorno(){
 
-    window.location.href = "/public/pages/Actividad/seleccionarActividades.html";
+    window.location.href = "/pages/Actividad/seleccionarActividades.html";
 }
 
 

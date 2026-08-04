@@ -150,7 +150,7 @@ function modificarContraseniaRetorno(){
             limpiarFormulario();
 
             // Redirección al inicio de sesión
-            window.location.href = "/public/pages/DashBoard/iniciarSesion.html";
+            window.location.href = "/pages/DashBoard/iniciarSesion.html";
 
         });
 

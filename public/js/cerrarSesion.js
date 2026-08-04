@@ -1,12 +1,12 @@
 // Verifica si existe una sesión activa al cargar la página
 if(sessionStorage.getItem("sesionActiva") !== "true"){
-    window.location.replace("/public/pages/DashBoard/iniciarSesion.html");
+    window.location.replace("/pages/DashBoard/iniciarSesion.html");
 }
 
 // Verifica sesión cuando se vuelve con la flecha atrás del navegador
 window.addEventListener("pageshow", function(){
     if(sessionStorage.getItem("sesionActiva") !== "true"){
-        window.location.replace("/public/pages/DashBoard/iniciarSesion.html");
+        window.location.replace("/pages/DashBoard/iniciarSesion.html");
     }
 });
 
@@ -29,7 +29,7 @@ cerrarSesion.addEventListener("click", function(evento){
 
             if(resultado.isConfirmed){
                 sessionStorage.removeItem("sesionActiva");
-                window.location.replace("/public/pages/DashBoard/iniciarSesion.html");
+                window.location.replace("/pages/DashBoard/iniciarSesion.html");
             }
 
         });

@@ -1,0 +1,1 @@
+// Aquí definiremos cómo luce un participante.

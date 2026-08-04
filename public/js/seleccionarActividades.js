@@ -244,7 +244,7 @@ btnFinalizar.addEventListener("click", function(){
             confirmButtonText: "Volver al inicio"
         }).then(() => {
 
-            window.location.href = "/public/pages/Inscripciones/inscripciones.html";
+            window.location.href = "/pages/Inscripciones/inscripciones.html";
 
         });
     }
