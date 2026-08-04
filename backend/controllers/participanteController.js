@@ -5,6 +5,11 @@ const {
     insertarParticipante
 } = require("../services/participanteService");
 
+// Importa la función para crear el modelo de participante
+const {
+    crearParticipante
+} = require("../models/participante");
+
 
 // Función para registrar un participante
 async function registrarParticipante(req, res){
@@ -14,8 +19,8 @@ async function registrarParticipante(req, res){
         // Obtiene la base de datos guardada en Express
         const baseDatos = req.app.locals.baseDatos;
 
-        // Obtiene los datos enviados desde el formulario
-        const datosParticipante = req.body;
+        // Crea el participante utilizando la estructura del modelo
+        const datosParticipante = crearParticipante(req.body);
 
         // Envía los datos al servicio para guardarlos en MongoDB
         const resultado = await insertarParticipante(
@@ -36,7 +41,6 @@ async function registrarParticipante(req, res){
         res.status(500).json({
             mensaje: "No se pudo registrar el participante."
         });
-
     }
 }
 
