@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Evento</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/public/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/public/css/consultarEvento.css">
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="contenedor">
+
+            <img src="/public/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+
+            <h1>CENFOTEC Página Web Eventos</h1>
+
+            <div class="usuario">
+
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+
+                <span>Administrador</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <aside class="menu-lateral">
+            <nav>
+                <a href="/public/pages/DashBoard/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+
+                <a href="/public/pages/Administrador/listarAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/public/pages/Evento/moduloEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+
+                <a href="/public/pages/Actividad/moduloActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/public/pages/Stands/listarStands.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
+
+                <a href="/public/pages/Participantes/participantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+
+                <a href="/public/pages/Agenda/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+
+                <a href="/public/pages/Responsables/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/public/pages/DashBoard/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#" id="cerrarSesion" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <section class="section">
+
+            <div class="contenedor tarjeta-evento">
+
+                <div class="encabezado-listado">
+
+                    <h2>Consultar Eventos</h2>
+
+                    <a href="/public/pages/Evento/registrarEvento.html" class="boton boton-primario">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Nuevo Evento
+                    </a>
+
+                </div>
+
+                <div class="barra-filtros">
+
+                    <div class="campo-busqueda">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="buscarEvento" name="buscarEvento"
+                            placeholder="Buscar por nombre del evento...">
+                    </div>
+
+                    <select id="filtroEstado" name="filtroEstado">
+                        <option value="">Estado: Todos</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Cancelado">Cancelado</option>
+                        <option value="Finalizado">Finalizado</option>
+                    </select>
+
+                </div>
+
+                <table class="tabla-evento" id="tablaEventos">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Nombre</th>
+                            <th>Fecha inicio</th>
+                            <th>Fecha finalización</th>
+                            <th>Ubicación</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr data-estado="Activo">
+
+                            <td>Feria Tecnológica 2026</td>
+                            <td>15/09/2026</td>
+                            <td>17/09/2026</td>
+                            <td>Universidad CENFOTEC</td>
+
+                            <td>
+                                <span class="badge badge-activo">Activo</span>
+                            </td>
+
+                            <td>
+
+                                <div class="celda-acciones">
+
+                                    <a href="/public/pages/Evento/modificarEvento.html" class="btn-accion"
+                                        title="Modificar Evento">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+
+                                    <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr data-estado="Activo">
+
+                            <td>Maker Fair 2026</td>
+                            <td>20/10/2026</td>
+                            <td>21/10/2026</td>
+                            <td>Universidad CENFOTEC</td>
+
+                            <td>
+                                <span class="badge badge-activo">Activo</span>
+                            </td>
+
+                            <td>
+
+                                <div class="celda-acciones">
+
+                                    <a href="/public/pages/Evento/modificarEvento.html" class="btn-accion"
+                                        title="Modificar Evento">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+
+                                    <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr data-estado="Finalizado">
+
+                            <td>Semana de Bienestar Estudiantil</td>
+                            <td>01/05/2026</td>
+                            <td>03/05/2026</td>
+                            <td>Hotel Presidente</td>
+
+                            <td>
+                                <span class="badge badge-finalizado">Finalizado</span>
+                            </td>
+
+                            <td>
+
+                                <div class="celda-acciones">
+
+                                    <a href="/public/pages/Evento/modificarEvento.html" class="btn-accion"
+                                        title="Modificar Evento">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+
+                                    <button type="button" class="btn-accion btn-cancelar" title="Cancelar Evento"
+                                        disabled>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p id="sinResultados" class="sin-resultados" style="display: none;">
+                    No se encontraron eventos que coincidan con la búsqueda.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h2>Somos lo que sabemos</h2>
+
+        <p>&copy; 2026 Universidad CENFOTEC</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/public/js/cerrarSesion.js"></script>
+    <script src="/public/js/consultarEvento.js"></script>
+</body>
+
+</html>

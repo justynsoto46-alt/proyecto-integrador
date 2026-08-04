@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENFOTEC Página Web Eventos - Participantes</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/public/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/public/css/listarParticipantes.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/public/img/LogoBlanco.png" alt="Logo Universidad CENFOTEC" class="logo">
+
+            <h1>CENFOTEC Página Web Eventos</h1>
+
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside class="menu-lateral">
+            <nav>
+                <a href="/public/pages/DashBoard/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+
+                <a href="/public/pages/Administrador/listarAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/public/pages/Evento/moduloEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+
+                <a href="/public/pages/Actividad/moduloActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/public/pages/Stands/listarStands.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
+
+                <a href="/public/pages/Participantes/participantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+
+                <a href="/public/pages/Agenda/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+
+                <a href="/public/pages/Responsables/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/public/pages/DashBoard/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#" id="cerrarSesion" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <section class="contenido-principal">
+
+            <div class="tarjeta-admin">
+
+                <div class="encabezado-listado">
+                    <h2>Participantes</h2>
+                </div>
+
+                <div class="barra-filtros">
+                    <div class="campo-busqueda">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="buscarParticipante" placeholder="Buscar por nombre, identificación o correo...">
+                    </div>
+                </div>
+
+                <table class="tabla-admin">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Identificación</th>
+                            <th>Correo electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>María Fernanda López Rodríguez</td>
+                            <td>1-1745-0896</td>
+                            <td>mlopezb@ucenfotec.ac.cr</td>
+                            <td>87124589</td>
+                            <td class="celda-acciones">
+                                <a href="/public/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Andrés José Ramírez Vargas</td>
+                            <td>2-1538-4421</td>
+                            <td>aramirezv@ucenfotec.ac.cr</td>
+                            <td>88652314</td>
+                            <td class="celda-acciones">
+                                <a href="/public/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Sofía Valeria Chaves Solano</td>
+                            <td>1-1823-5510</td>
+                            <td>schavess@ucenfotec.ac.cr</td>
+                            <td>84217798</td>
+                            <td class="celda-acciones">
+                                <a href="/public/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Daniel Esteban Morales Castro</td>
+                            <td>3-1698-1147</td>
+                            <td>dmoralesc@ucenfotec.ac.cr</td>
+                            <td>89743652</td>
+                            <td class="celda-acciones">
+                                <a href="/public/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Valentina Jiménez Araya</td>
+                            <td>1-1902-6685</td>
+                            <td>vjimeneza@ucenfotec.ac.cr</td>
+                            <td>85391427</td>
+                            <td class="celda-acciones">
+                                <a href="/public/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                                <button type="button" class="btn-icono boton-eliminar">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <p id="sinResultados" class="sin-resultados" style="display:none;">
+                    No se encontraron participantes que coincidan con la búsqueda.
+                </p>
+
+                <div class="paginacion">
+                    <span class="texto-paginacion">
+                        Mostrando 1 a 6 (Filtrado de 5,000 total entradas)
+                    </span>
+
+                    <div class="controles-paginacion">
+                        <button class="btn-pag">Anterior</button>
+                        <button class="btn-pag activo">1</button>
+                        <button class="btn-pag">2</button>
+                        <span>...</span>
+                        <button class="btn-pag">5</button>
+                        <button class="btn-pag">Siguiente</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad CENFOTEC </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/public/js/cerrarSesion.js"></script>
+    <script src="/public/js/listarParticipantes.js"></script>
+</body>
+</html>

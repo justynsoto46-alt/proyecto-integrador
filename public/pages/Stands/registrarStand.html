@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Responsables</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/public/css/menuPrincipal.css">
+    <link rel="stylesheet" href="/public/css/registrarResponsables.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <img src="/public/img/LogoBlanco.png" alt="Logo de CENFOTEC" class="logo">
+            <h1>CENFOTEC Página Web Eventos</h1>
+
+            <div class="usuario">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user"></i>
+                <span>Administrador</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="menu-lateral">
+            <nav>
+                <a href="/public/pages/DashBoard/menuPrincipal.html">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Dashboard
+                </a>
+
+                <a href="/public/pages/Administrador/listarAdmin.html">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Administradores
+                </a>
+
+                <a href="/public/pages/Evento/moduloEvento.html">
+                    <i class="fa-solid fa-award"></i>
+                    Eventos
+                </a>
+
+                <a href="/public/pages/Actividad/moduloActividad.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Actividades
+                </a>
+
+                <a href="/public/pages/Stands/listarStands.html">
+                    <i class="fa-solid fa-cube"></i>
+                    Stands
+                </a>
+
+                <a href="/public/pages/Participantes/participantes.html">
+                    <i class="fa-solid fa-users"></i>
+                    Participantes
+                </a>
+
+                <a href="/public/pages/Agenda/consultarAgenda.html">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Agenda
+                </a>
+
+                <a href="/public/pages/Responsables/listarResponsables.html">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Responsables
+                </a>
+
+                <a href="/public/pages/DashBoard/pagoSimulado.html">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Pagos
+                </a>
+
+                <a href="#" id="cerrarSesion" class="cerrar-sesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </a>
+            </nav>
+        </aside>
+
+        <section class="section">
+            <div class="contenedor tarjeta-Inicio-Sesion">
+                <h2>Crear nuevo Stands</h2>
+                <form id="formularioStand" class="formulario" action="#" method="post" novalidate>
+                    <label for="Evento">Evento
+                        <select name="evento" id="evento">
+                            <option value="defecto">Seleccione una Opcion</option>
+                            <option value="Maker Faire">
+                                Maker Faire
+                            </option>
+                        </select>
+                    </label>
+                    <label for="Nombre">Nombre
+                        <input type="text" name="Nombre Completo" id="nombre" placeholder="Taller Maker Faire "
+                            required>
+                    </label>
+                    <label for="Responsable"> Responsable
+                        <select name="Responsable" id="responsable">
+                            <option value="defecto">Seleccione una Opcion</option>
+                            <option value="juanito">
+                                juanito
+                            </option>
+                        </select>
+                    </label>
+                    <label for="correo">Correo Electronico
+                        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+                    </label>
+                    <div>
+                        <label>Teléfono
+                            <input id="telefono" type="tel" name="telefono" placeholder="88888888" required>
+                        </label>
+                    </div>
+
+                    <label for="descripcion">
+                        Descripcion
+                        <textarea id="descripcion" name="descripcion" rows="5"
+                            placeholder="Ingrese la descripcion del stand" required></textarea>
+                    </label>
+
+                    <button type="submit" class="boton boton-primario boton-bloque boton-lg" id="boton-ingresar">
+                        Crear Stand</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <h2>Somos lo que sabemos </h2>
+        <p>&copy; 2026 Universidad Cenfotec </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/public/js/cerrarSesion.js"></script>
+    <script src="/public/js/registrarStand.js"></script>
+</body>
+
+</html>
