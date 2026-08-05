@@ -79,6 +79,24 @@ async function obtenerParticipantePorId(
     return participante;
 }
 
+// Busca un participante según su número de identificación
+async function obtenerParticipantePorIdentificacion(
+    baseDatos,
+    identificacion
+){
+
+    // Obtiene la colección de participantes
+    const coleccionParticipantes =
+        baseDatos.collection(COLECCION);
+
+    // Busca un participante con la identificación indicada
+    const participante =
+        await coleccionParticipantes.findOne({
+            identificacion: identificacion
+        });
+
+    return participante;
+}
 
 // Modifica un participante según su identificador
 async function modificarParticipante(
@@ -115,6 +133,7 @@ module.exports = {
     insertarParticipante,
     obtenerParticipantes,
     obtenerParticipantePorId,
+    obtenerParticipantePorIdentificacion,
     modificarParticipante,
     eliminarParticipante
 };

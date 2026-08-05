@@ -12,11 +12,19 @@ const nombreBaseDatos = process.env.DB_NAME;
 const clienteMongo = new MongoClient(uri);
 
 // Función para conectarse a MongoDB Atlas
-async function conectarBaseDatos(){
+async function conectarBaseDatos() {
 
     await clienteMongo.connect();
 
     const baseDatos = clienteMongo.db(nombreBaseDatos);
+
+    // Crea un índice único para impedir identificaciones duplicadas
+    await baseDatos
+        .collection("participantes")
+        .createIndex(
+            { identificacion: 1 },
+            { unique: true }
+        );
 
     console.log("Conexión exitosa con MongoDB Atlas");
 

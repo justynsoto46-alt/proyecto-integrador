@@ -5,6 +5,7 @@ const {
     insertarParticipante,
     obtenerParticipantes,
     obtenerParticipantePorId,
+    obtenerParticipantePorIdentificacion,
     modificarParticipante,
     eliminarParticipante
 } = require("../services/participanteService");
@@ -17,15 +18,30 @@ const {
 
 
 // Función para registrar un participante
-async function registrarParticipante(req, res){
+async function registrarParticipante(req, res) {
 
-    try{
+    try {
 
         // Obtiene la base de datos guardada en Express
         const baseDatos = req.app.locals.baseDatos;
 
         // Crea el participante utilizando la estructura del modelo
         const datosParticipante = crearParticipante(req.body);
+
+        // Verifica si ya existe un participante con la misma identificación
+        const participanteExistente =
+            await obtenerParticipantePorIdentificacion(
+                baseDatos,
+                datosParticipante.identificacion
+            );
+
+        if (participanteExistente !== null) {
+
+            return res.status(409).json({
+                mensaje:
+                    "Ya existe un participante registrado con esta identificación."
+            });
+        }
 
         // Envía los datos al servicio para guardarlos en MongoDB
         const resultado = await insertarParticipante(
@@ -39,7 +55,7 @@ async function registrarParticipante(req, res){
             idParticipante: resultado.insertedId
         });
 
-    } catch(error){
+    } catch (error) {
 
         console.error("Error al registrar participante:", error);
 
@@ -50,9 +66,9 @@ async function registrarParticipante(req, res){
 }
 
 // Función para listar todos los participantes
-async function listarParticipantes(req, res){
+async function listarParticipantes(req, res) {
 
-    try{
+    try {
 
         // Obtiene la conexión a la base de datos
         const baseDatos = req.app.locals.baseDatos;
@@ -64,7 +80,7 @@ async function listarParticipantes(req, res){
         // Devuelve la lista al frontend
         res.status(200).json(participantes);
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al listar participantes:",
@@ -79,9 +95,9 @@ async function listarParticipantes(req, res){
 }
 
 // Función para consultar un participante por su identificador
-async function consultarParticipantePorId(req, res){
+async function consultarParticipantePorId(req, res) {
 
-    try{
+    try {
 
         // Obtiene la conexión a la base de datos
         const baseDatos = req.app.locals.baseDatos;
@@ -97,7 +113,7 @@ async function consultarParticipantePorId(req, res){
             );
 
         // Verifica si el participante existe
-        if(participante === null){
+        if (participante === null) {
 
             return res.status(404).json({
                 mensaje: "No se encontró el participante."
@@ -107,7 +123,7 @@ async function consultarParticipantePorId(req, res){
         // Devuelve el participante al frontend
         res.status(200).json(participante);
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al consultar participante:",
@@ -123,9 +139,9 @@ async function consultarParticipantePorId(req, res){
 
 
 // Función para modificar un participante
-async function modificarParticipantePorId(req, res){
+async function modificarParticipantePorId(req, res) {
 
-    try{
+    try {
 
         // Obtiene la conexión a la base de datos
         const baseDatos = req.app.locals.baseDatos;
@@ -146,7 +162,7 @@ async function modificarParticipantePorId(req, res){
             );
 
         // Verifica si el identificador era válido
-        if(resultado === null){
+        if (resultado === null) {
 
             return res.status(400).json({
                 mensaje:
@@ -155,7 +171,7 @@ async function modificarParticipantePorId(req, res){
         }
 
         // Verifica si se encontró el participante
-        if(resultado.matchedCount === 0){
+        if (resultado.matchedCount === 0) {
 
             return res.status(404).json({
                 mensaje: "No se encontró el participante."
@@ -168,7 +184,7 @@ async function modificarParticipantePorId(req, res){
                 "Participante modificado correctamente."
         });
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al modificar participante:",
@@ -183,9 +199,9 @@ async function modificarParticipantePorId(req, res){
 }
 
 // Función para eliminar un participante
-async function eliminarParticipantePorId(req, res){
+async function eliminarParticipantePorId(req, res) {
 
-    try{
+    try {
 
         // Obtiene la conexión a la base de datos
         const baseDatos = req.app.locals.baseDatos;
@@ -200,7 +216,7 @@ async function eliminarParticipantePorId(req, res){
         );
 
         // Verifica si se encontró y eliminó un participante
-        if(resultado.deletedCount === 0){
+        if (resultado.deletedCount === 0) {
 
             return res.status(404).json({
                 mensaje: "No se encontró el participante."
@@ -212,7 +228,7 @@ async function eliminarParticipantePorId(req, res){
             mensaje: "Participante eliminado correctamente."
         });
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al eliminar participante:",
