@@ -190,8 +190,91 @@ function validarProfesion(){
     return error;
 }
 
-// Función Principal
-function modificarParticipanteRetorno(){
+// Obtiene el identificador del participante seleccionado
+const idParticipante =
+    sessionStorage.getItem("participanteModificarId");
+
+
+// Función para cargar los datos del participante
+async function cargarParticipanteRetorno(){
+
+    // Verifica que exista un participante seleccionado
+    if(idParticipante === null){
+
+        Swal.fire({
+            title: "Participante no seleccionado",
+            text: "Debe seleccionar un participante desde el listado.",
+            icon: "warning",
+            confirmButtonText: "Volver al listado"
+        }).then(function(){
+
+            window.location.href =
+                "/pages/Participantes/listarParticipantes.html";
+        });
+
+        return;
+    }
+
+    try{
+
+        // Solicita los datos del participante al backend
+        const respuesta = await fetch(
+            `/api/participantes/${idParticipante}`
+        );
+
+        // Convierte la respuesta en un objeto JavaScript
+        const participante = await respuesta.json();
+
+        // Verifica si el backend respondió con un error
+        if(respuesta.ok === false){
+
+            throw new Error(participante.mensaje);
+        }
+
+        // Coloca los datos recibidos en el formulario
+        inputNombreCompleto.value =
+            participante.nombreCompleto || "";
+
+        inputIdentificacion.value =
+            participante.identificacion || "";
+
+        inputCorreo.value =
+            participante.correoElectronico || "";
+
+        inputTelefono.value =
+            participante.telefono || "";
+
+        inputEdad.value =
+            participante.edad === null
+                ? ""
+                : participante.edad;
+
+        inputProfesion.value =
+            participante.profesion || "";
+
+    } catch(error){
+
+        console.error(
+            "Error al cargar participante:",
+            error
+        );
+
+        Swal.fire({
+            title: "Error al cargar participante",
+            text: "No fue posible obtener la información del participante.",
+            icon: "error",
+            confirmButtonText: "Volver al listado"
+        }).then(function(){
+
+            window.location.href =
+                "/pages/Participantes/listarParticipantes.html";
+        });
+    }
+}
+
+
+// Función principal para modificar el participante
+async function modificarParticipanteRetorno(){
 
     if(validarCamposVacios() === false &&
        validarNombreCompleto() === false &&
@@ -199,29 +282,123 @@ function modificarParticipanteRetorno(){
        validarEdad() === false &&
        validarProfesion() === false){
 
-        Swal.fire({
-            title: "Cambios guardados",
-            text: "La información del participante fue actualizada correctamente.",
-            icon: "success",
-            confirmButtonText: "Aceptar"
-        }).then(() => {
+        // Crea el objeto con los campos que se pueden modificar
+        const datosActualizados = {
+            nombreCompleto:
+                inputNombreCompleto.value.trim(),
 
-            window.location.href = "/pages/Participantes/listarParticipantes.html";
-        });
+            telefono:
+                inputTelefono.value.trim(),
 
+            edad:
+                inputEdad.value.trim() === ""
+                    ? null
+                    : Number(inputEdad.value.trim()),
+
+            profesion:
+                inputProfesion.value.trim()
+        };
+
+        try{
+
+            // Envía los cambios al backend
+            const respuesta = await fetch(
+                `/api/participantes/${idParticipante}`,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(
+                        datosActualizados
+                    )
+                }
+            );
+
+            // Convierte la respuesta en un objeto
+            const datosRespuesta =
+                await respuesta.json();
+
+            // Verifica si ocurrió un error
+            if(respuesta.ok === false){
+
+                throw new Error(
+                    datosRespuesta.mensaje
+                );
+            }
+
+            // Muestra el mensaje de éxito
+            Swal.fire({
+                title: "Cambios guardados",
+                text: datosRespuesta.mensaje,
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            }).then(function(){
+
+                // Elimina el identificador temporal
+                sessionStorage.removeItem(
+                    "participanteModificarId"
+                );
+
+                // Regresa al listado
+                window.location.href =
+                    "/pages/Participantes/listarParticipantes.html";
+            });
+
+        } catch(error){
+
+            console.error(
+                "Error al modificar participante:",
+                error
+            );
+
+            Swal.fire({
+                title: "No se pudieron guardar los cambios",
+                text: error.message,
+                icon: "error",
+                confirmButtonText: "Aceptar"
+            });
+        }
     }
 }
 
-// Función para cancelar la modificación y volver al listado
+// Función para cancelar la modificación
 function cancelarModificacionRetorno(){
-    window.location.href = "/pages/Participantes/listarParticipantes.html";
+
+    // Elimina el identificador temporal
+    sessionStorage.removeItem(
+        "participanteModificarId"
+    );
+
+    // Regresa al listado
+    window.location.href =
+        "/pages/Participantes/listarParticipantes.html";
 }
 
 // Evento que se ejecuta al enviar el formulario
-formularioParticipante.addEventListener("submit", function(evento){
-    evento.preventDefault();
-    modificarParticipanteRetorno();
-});
+formularioParticipante.addEventListener(
+    "submit",
+    function(evento){
+
+        // Evita que el formulario se envíe automáticamente
+        evento.preventDefault();
+
+        // Ejecuta la modificación
+        modificarParticipanteRetorno();
+    }
+);
 
 // Evento que se ejecuta al presionar cancelar
-btnCancelar.addEventListener("click", cancelarModificacionRetorno);
+btnCancelar.addEventListener(
+    "click",
+    cancelarModificacionRetorno
+);
+
+// Carga los datos al abrir la pantalla
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        cargarParticipanteRetorno();
+    }
+);

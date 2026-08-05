@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CENFOTEC Página Web Eventos - Participantes</title>
 
     <!-- FontAwesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="/css/menuPrincipal.css">
     <link rel="stylesheet" href="/css/listarParticipantes.css">
@@ -95,7 +95,8 @@
                 <div class="barra-filtros">
                     <div class="campo-busqueda">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="search" id="buscarParticipante" placeholder="Buscar por nombre, identificación o correo...">
+                        <input type="search" id="buscarParticipante"
+                            placeholder="Buscar por nombre, identificación o correo...">
                     </div>
                 </div>
 
@@ -110,102 +111,20 @@
                         </tr>
                     </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>María Fernanda López Rodríguez</td>
-                            <td>1-1745-0896</td>
-                            <td>mlopezb@ucenfotec.ac.cr</td>
-                            <td>87124589</td>
-                            <td class="celda-acciones">
-                                <a href="/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <button type="button" class="btn-icono boton-eliminar">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Andrés José Ramírez Vargas</td>
-                            <td>2-1538-4421</td>
-                            <td>aramirezv@ucenfotec.ac.cr</td>
-                            <td>88652314</td>
-                            <td class="celda-acciones">
-                                <a href="/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <button type="button" class="btn-icono boton-eliminar">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Sofía Valeria Chaves Solano</td>
-                            <td>1-1823-5510</td>
-                            <td>schavess@ucenfotec.ac.cr</td>
-                            <td>84217798</td>
-                            <td class="celda-acciones">
-                                <a href="/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <button type="button" class="btn-icono boton-eliminar">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Daniel Esteban Morales Castro</td>
-                            <td>3-1698-1147</td>
-                            <td>dmoralesc@ucenfotec.ac.cr</td>
-                            <td>89743652</td>
-                            <td class="celda-acciones">
-                                <a href="/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <button type="button" class="btn-icono boton-eliminar">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Valentina Jiménez Araya</td>
-                            <td>1-1902-6685</td>
-                            <td>vjimeneza@ucenfotec.ac.cr</td>
-                            <td>85391427</td>
-                            <td class="celda-acciones">
-                                <a href="/pages/Participantes/modificarParticipante.html" class="btn-icono boton-modificar">
-                                    <i class="fa-solid fa-pen"></i>
-                                </a>
-                                <button type="button" class="btn-icono boton-eliminar">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
+                    <tbody id="cuerpoTablaParticipantes">
+                        <!-- Las filas se agregarán dinámicamente desde JavaScript -->
                     </tbody>
+
                 </table>
 
-                <p id="sinResultados" class="sin-resultados" style="display:none;">
-                    No se encontraron participantes que coincidan con la búsqueda.
+                <p id="sinResultados" class="sin-resultados">
+                    No se encontraron participantes registrados.
                 </p>
 
                 <div class="paginacion">
-                    <span class="texto-paginacion">
-                        Mostrando 1 a 6 (Filtrado de 5,000 total entradas)
+                    <span id="textoPaginacion" class="texto-paginacion">
+                        Total de participantes: 0
                     </span>
-
-                    <div class="controles-paginacion">
-                        <button class="btn-pag">Anterior</button>
-                        <button class="btn-pag activo">1</button>
-                        <button class="btn-pag">2</button>
-                        <span>...</span>
-                        <button class="btn-pag">5</button>
-                        <button class="btn-pag">Siguiente</button>
-                    </div>
                 </div>
 
             </div>
@@ -222,4 +141,5 @@
     <script src="/js/cerrarSesion.js"></script>
     <script src="/js/listarParticipantes.js"></script>
 </body>
+
 </html>

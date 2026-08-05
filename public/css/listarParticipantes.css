@@ -186,6 +186,7 @@ body{
 }
 
 .sin-resultados{
+    display: none;
     text-align:center;
     color:#777;
     padding:20px;
