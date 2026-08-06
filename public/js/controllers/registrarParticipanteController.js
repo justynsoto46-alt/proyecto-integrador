@@ -1,3 +1,12 @@
+// Importa el modelo del participante
+import { crearParticipante }
+    from "../models/participante.js";
+
+// Importa el servicio para registrar participantes
+import { registrarParticipante }
+    from "../services/participanteService.js";
+
+
 // Se obtienen los elementos del formulario de registro de participante
 const formulario = document.getElementById("formulario");
 const inputNombreCompleto = document.getElementById("nombreCompleto");
@@ -8,12 +17,12 @@ const inputEdad = document.getElementById("edad");
 const inputProfesion = document.getElementById("profesion");
 
 // Función para validar los campos obligatorios
-function validarCamposVacios(){
+function validarCamposVacios() {
 
     let error = false;
 
     // Nombre completo
-    if(inputNombreCompleto.value.trim() === ""){
+    if (inputNombreCompleto.value.trim() === "") {
         inputNombreCompleto.classList.add("input-error");
 
         Swal.fire({
@@ -24,12 +33,12 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputNombreCompleto.classList.remove("input-error");
     }
 
     // Identificación
-    if(inputIdentificacion.value.trim() === ""){
+    if (inputIdentificacion.value.trim() === "") {
         inputIdentificacion.classList.add("input-error");
 
         Swal.fire({
@@ -40,12 +49,12 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputIdentificacion.classList.remove("input-error");
     }
 
     // Correo electrónico
-    if(inputCorreo.value.trim() === ""){
+    if (inputCorreo.value.trim() === "") {
         inputCorreo.classList.add("input-error");
 
         Swal.fire({
@@ -56,12 +65,12 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputCorreo.classList.remove("input-error");
     }
 
     // Teléfono
-    if(inputTelefono.value.trim() === ""){
+    if (inputTelefono.value.trim() === "") {
         inputTelefono.classList.add("input-error");
 
         Swal.fire({
@@ -72,7 +81,7 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputTelefono.classList.remove("input-error");
     }
 
@@ -80,27 +89,27 @@ function validarCamposVacios(){
 }
 
 // Función para validar el nombre completo
-function validarNombreCompleto(){
+function validarNombreCompleto() {
 
     let error = false;
     const nombreCompleto = inputNombreCompleto.value.trim();
 
     // Valida que el nombre no esté vacío
-    if(nombreCompleto === ""){
+    if (nombreCompleto === "") {
         error = true;
     }
 
     // Valida que tenga mínimo 3 caracteres
-    if(nombreCompleto.length < 3){
+    if (nombreCompleto.length < 3) {
         error = true;
     }
 
     // Valida que no contenga números
-    if(/\d/.test(nombreCompleto)){
+    if (/\d/.test(nombreCompleto)) {
         error = true;
     }
 
-    if(error){
+    if (error) {
         inputNombreCompleto.classList.add("input-error");
 
         Swal.fire({
@@ -110,7 +119,7 @@ function validarNombreCompleto(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputNombreCompleto.classList.remove("input-error");
     }
 
@@ -118,32 +127,32 @@ function validarNombreCompleto(){
 }
 
 // Función para validar la identificación
-function validarIdentificacion(){
+function validarIdentificacion() {
 
     let error = false;
     const identificacion = inputIdentificacion.value.trim();
 
     // Valida que la identificación no esté vacía
-    if(identificacion === ""){
+    if (identificacion === "") {
         error = true;
     }
 
     // Valida que contenga únicamente números
-    if(isNaN(identificacion)){
+    if (isNaN(identificacion)) {
         error = true;
     }
 
     // Valida que tenga mínimo 9 dígitos
-    if(identificacion.length < 9){
+    if (identificacion.length < 9) {
         error = true;
     }
 
     // Valida que no tenga más de 15 dígitos
-    if(identificacion.length > 15){
+    if (identificacion.length > 15) {
         error = true;
     }
 
-    if(error){
+    if (error) {
         inputIdentificacion.classList.add("input-error");
 
         Swal.fire({
@@ -153,7 +162,7 @@ function validarIdentificacion(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputIdentificacion.classList.remove("input-error");
     }
 
@@ -161,22 +170,22 @@ function validarIdentificacion(){
 }
 
 // Función para validar el formato del correo electrónico
-function validarCorreo(){
+function validarCorreo() {
 
     let error = false;
     const correo = inputCorreo.value.trim();
 
     // El correo no debe contener espacios
-    if(correo.includes(" ")){
+    if (correo.includes(" ")) {
         error = true;
     }
 
     // Debe contener @ y .
-    if(!correo.includes("@") || !correo.includes(".")){
+    if (!correo.includes("@") || !correo.includes(".")) {
         error = true;
     }
 
-    if(error){
+    if (error) {
         inputCorreo.classList.add("input-error");
 
         Swal.fire({
@@ -186,7 +195,7 @@ function validarCorreo(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputCorreo.classList.remove("input-error");
     }
 
@@ -194,22 +203,22 @@ function validarCorreo(){
 }
 
 // Función para validar el teléfono
-function validarTelefono(){
+function validarTelefono() {
 
     let error = false;
     const telefono = inputTelefono.value.trim();
 
     // Debe contener únicamente números
-    if(isNaN(telefono)){
+    if (isNaN(telefono)) {
         error = true;
     }
 
     // Debe contener exactamente 8 dígitos
-    if(telefono.length !== 8){
+    if (telefono.length !== 8) {
         error = true;
     }
 
-    if(error){
+    if (error) {
 
         inputTelefono.classList.add("input-error");
 
@@ -220,22 +229,22 @@ function validarTelefono(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputTelefono.classList.remove("input-error");
     }
     return error;
 }
 
 // Función para validar la edad del participante
-function validarEdad(){
+function validarEdad() {
 
     let error = false;
     const edad = inputEdad.value.trim();
 
     // La edad es opcional, pero si se ingresa debe ser válida
-    if(edad !== ""){
+    if (edad !== "") {
 
-        if(isNaN(edad) || Number(edad) < 16 || Number(edad) > 120){
+        if (isNaN(edad) || Number(edad) < 16 || Number(edad) > 120) {
 
             inputEdad.classList.add("input-error");
             error = true;
@@ -247,10 +256,10 @@ function validarEdad(){
                 confirmButtonText: "Aceptar"
             });
 
-        } else{
+        } else {
             inputEdad.classList.remove("input-error");
         }
-    } else{
+    } else {
         inputEdad.classList.remove("input-error");
     }
 
@@ -258,25 +267,25 @@ function validarEdad(){
 }
 
 // Función para validar la profesión
-function validarProfesion(){
+function validarProfesion() {
 
     let error = false;
     const profesion = inputProfesion.value.trim();
 
     // La profesión es opcional, pero si se ingresa debe ser válida
-    if(profesion !== ""){
+    if (profesion !== "") {
 
         // Valida que tenga mínimo 3 caracteres
-        if(profesion.length < 3){
+        if (profesion.length < 3) {
             error = true;
         }
 
         // Valida que no sea solo numérica
-        if(!isNaN(profesion)){
+        if (!isNaN(profesion)) {
             error = true;
         }
 
-        if(error){
+        if (error) {
 
             inputProfesion.classList.add("input-error");
 
@@ -286,10 +295,10 @@ function validarProfesion(){
                 icon: "warning",
                 confirmButtonText: "Aceptar"
             });
-        } else{
+        } else {
             inputProfesion.classList.remove("input-error");
         }
-    } else{
+    } else {
         inputProfesion.classList.remove("input-error");
     }
 
@@ -297,15 +306,15 @@ function validarProfesion(){
 }
 
 // Función principal para registrar un participante
-async function registrarParticipanteRetorno(){
+async function registrarParticipanteRetorno() {
 
-    if(validarCamposVacios() === false &&
-       validarNombreCompleto() === false &&
-       validarIdentificacion() === false &&
-       validarCorreo() === false &&
-       validarTelefono() === false &&
-       validarEdad() === false &&
-       validarProfesion() === false){
+    if (validarCamposVacios() === false &&
+        validarNombreCompleto() === false &&
+        validarIdentificacion() === false &&
+        validarCorreo() === false &&
+        validarTelefono() === false &&
+        validarEdad() === false &&
+        validarProfesion() === false) {
 
         // Crea el objeto con los datos ingresados en el formulario
         const participante = {
@@ -319,22 +328,26 @@ async function registrarParticipanteRetorno(){
             profesion: inputProfesion.value.trim()
         };
 
-        try{
+        try {
 
-            // Envía los datos del participante al backend
-            const respuesta = await fetch("/api/participantes", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(participante)
-            });
+            // Crea el objeto participante usando el modelo
+            const participante = crearParticipante(
+                inputNombreCompleto.value.trim(),
+                inputIdentificacion.value.trim(),
+                inputCorreo.value.trim(),
+                inputTelefono.value.trim(),
+                inputEdad.value.trim(),
+                inputProfesion.value.trim()
+            );
 
-            // Convierte la respuesta del backend a un objeto JavaScript
-            const datosRespuesta = await respuesta.json();
+            // Envía el participante al service
+            const {
+                respuesta,
+                datosRespuesta
+            } = await registrarParticipante(participante);
 
             // Verifica si el backend respondió con un error
-            if(respuesta.ok === false){
+            if (respuesta.ok === false) {
 
                 Swal.fire({
                     title: "No se pudo realizar el registro",
@@ -360,7 +373,7 @@ async function registrarParticipanteRetorno(){
                     "/pages/Actividad/seleccionarActividades.html";
             });
 
-        } catch(error){
+        } catch (error) {
 
             console.error("Error al registrar participante:", error);
 
@@ -375,7 +388,7 @@ async function registrarParticipanteRetorno(){
 }
 
 // Función para limpiar el formulario
-function limpiarFormulario(){
+function limpiarFormulario() {
 
     // Limpia los campos de texto
     inputNombreCompleto.value = "";
@@ -396,7 +409,7 @@ function limpiarFormulario(){
 }
 
 // Evento que se ejecuta cuando el usuario intenta registrar el participante
-formulario.addEventListener("submit", function(evento){
+formulario.addEventListener("submit", function (evento) {
 
     // Evita que el formulario se envíe automáticamente
     evento.preventDefault();

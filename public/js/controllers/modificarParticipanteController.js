@@ -1,3 +1,15 @@
+// Importa el modelo del participante
+import {
+    crearParticipante
+} from "../models/participante.js";
+
+// Importa las funciones del servicio de participantes
+import {
+    obtenerParticipantePorId,
+    modificarParticipante
+} from "../services/participanteService.js";
+
+
 // Se obtienen los elementos del formulario de modificación de participante
 const formularioParticipante = document.getElementById("formularioParticipante");
 
@@ -11,12 +23,12 @@ const inputProfesion = document.getElementById("profesion");
 const btnCancelar = document.getElementById("btnCancelar");
 
 // Función para validar los campos obligatorios
-function validarCamposVacios(){
+function validarCamposVacios() {
 
     let error = false;
 
     // Nombre completo
-    if(inputNombreCompleto.value.trim() === ""){
+    if (inputNombreCompleto.value.trim() === "") {
         inputNombreCompleto.classList.add("input-error");
 
         Swal.fire({
@@ -27,12 +39,12 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputNombreCompleto.classList.remove("input-error");
     }
 
     // Teléfono
-    if(inputTelefono.value.trim() === ""){
+    if (inputTelefono.value.trim() === "") {
         inputTelefono.classList.add("input-error");
 
         Swal.fire({
@@ -43,34 +55,34 @@ function validarCamposVacios(){
         });
 
         error = true;
-    } else{
+    } else {
         inputTelefono.classList.remove("input-error");
     }
     return error;
 }
 
 // Función para validar el nombre completo
-function validarNombreCompleto(){
+function validarNombreCompleto() {
 
     let error = false;
     const nombreCompleto = inputNombreCompleto.value.trim();
 
     // Valida que el nombre no esté vacío
-    if(nombreCompleto === ""){
+    if (nombreCompleto === "") {
         error = true;
     }
 
     // Valida que tenga mínimo 3 caracteres
-    if(nombreCompleto.length < 3){
+    if (nombreCompleto.length < 3) {
         error = true;
     }
 
     // Valida que no contenga números
-    if(/\d/.test(nombreCompleto)){
+    if (/\d/.test(nombreCompleto)) {
         error = true;
     }
 
-    if(error){
+    if (error) {
         inputNombreCompleto.classList.add("input-error");
 
         Swal.fire({
@@ -80,7 +92,7 @@ function validarNombreCompleto(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputNombreCompleto.classList.remove("input-error");
     }
 
@@ -88,22 +100,22 @@ function validarNombreCompleto(){
 }
 
 // Función para validar el teléfono
-function validarTelefono(){
+function validarTelefono() {
 
     let error = false;
     const telefono = inputTelefono.value.trim();
 
     // Debe contener únicamente números
-    if(isNaN(telefono)){
+    if (isNaN(telefono)) {
         error = true;
     }
 
     // Debe contener exactamente 8 dígitos
-    if(telefono.length !== 8){
+    if (telefono.length !== 8) {
         error = true;
     }
 
-    if(error){
+    if (error) {
 
         inputTelefono.classList.add("input-error");
 
@@ -114,22 +126,22 @@ function validarTelefono(){
             confirmButtonText: "Aceptar"
         });
 
-    } else{
+    } else {
         inputTelefono.classList.remove("input-error");
     }
     return error;
 }
 
 // Función para validar la edad del participante
-function validarEdad(){
+function validarEdad() {
 
     let error = false;
     const edad = inputEdad.value.trim();
 
     // La edad es opcional, pero si se ingresa debe ser válida
-    if(edad !== ""){
+    if (edad !== "") {
 
-        if(isNaN(edad) || Number(edad) < 16 || Number(edad) > 120){
+        if (isNaN(edad) || Number(edad) < 16 || Number(edad) > 120) {
 
             inputEdad.classList.add("input-error");
             error = true;
@@ -141,10 +153,10 @@ function validarEdad(){
                 confirmButtonText: "Aceptar"
             });
 
-        } else{
+        } else {
             inputEdad.classList.remove("input-error");
         }
-    } else{
+    } else {
         inputEdad.classList.remove("input-error");
     }
 
@@ -152,25 +164,25 @@ function validarEdad(){
 }
 
 // Función para validar la profesión
-function validarProfesion(){
+function validarProfesion() {
 
     let error = false;
     const profesion = inputProfesion.value.trim();
 
     // La profesión es opcional, pero si se ingresa debe ser válida
-    if(profesion !== ""){
+    if (profesion !== "") {
 
         // Valida que tenga mínimo 3 caracteres
-        if(profesion.length < 3){
+        if (profesion.length < 3) {
             error = true;
         }
 
         // Valida que no sea solo numérica
-        if(!isNaN(profesion)){
+        if (!isNaN(profesion)) {
             error = true;
         }
 
-        if(error){
+        if (error) {
 
             inputProfesion.classList.add("input-error");
 
@@ -180,10 +192,10 @@ function validarProfesion(){
                 icon: "warning",
                 confirmButtonText: "Aceptar"
             });
-        } else{
+        } else {
             inputProfesion.classList.remove("input-error");
         }
-    } else{
+    } else {
         inputProfesion.classList.remove("input-error");
     }
 
@@ -196,17 +208,17 @@ const idParticipante =
 
 
 // Función para cargar los datos del participante
-async function cargarParticipanteRetorno(){
+async function cargarParticipanteRetorno() {
 
     // Verifica que exista un participante seleccionado
-    if(idParticipante === null){
+    if (idParticipante === null) {
 
         Swal.fire({
             title: "Participante no seleccionado",
             text: "Debe seleccionar un participante desde el listado.",
             icon: "warning",
             confirmButtonText: "Volver al listado"
-        }).then(function(){
+        }).then(function () {
 
             window.location.href =
                 "/pages/Participantes/listarParticipantes.html";
@@ -215,18 +227,21 @@ async function cargarParticipanteRetorno(){
         return;
     }
 
-    try{
+    try {
 
-        // Solicita los datos del participante al backend
-        const respuesta = await fetch(
-            `/api/participantes/${idParticipante}`
+        // Solicita al service la información del participante
+        const {
+            respuesta,
+            datosRespuesta
+        } = await obtenerParticipantePorId(
+            idParticipante
         );
 
-        // Convierte la respuesta en un objeto JavaScript
-        const participante = await respuesta.json();
+        // Guarda los datos recibidos
+        const participante = datosRespuesta;
 
         // Verifica si el backend respondió con un error
-        if(respuesta.ok === false){
+        if (respuesta.ok === false) {
 
             throw new Error(participante.mensaje);
         }
@@ -252,7 +267,7 @@ async function cargarParticipanteRetorno(){
         inputProfesion.value =
             participante.profesion || "";
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al cargar participante:",
@@ -264,7 +279,7 @@ async function cargarParticipanteRetorno(){
             text: "No fue posible obtener la información del participante.",
             icon: "error",
             confirmButtonText: "Volver al listado"
-        }).then(function(){
+        }).then(function () {
 
             window.location.href =
                 "/pages/Participantes/listarParticipantes.html";
@@ -274,53 +289,38 @@ async function cargarParticipanteRetorno(){
 
 
 // Función principal para modificar el participante
-async function modificarParticipanteRetorno(){
+async function modificarParticipanteRetorno() {
 
-    if(validarCamposVacios() === false &&
-       validarNombreCompleto() === false &&
-       validarTelefono() === false &&
-       validarEdad() === false &&
-       validarProfesion() === false){
+    if (validarCamposVacios() === false &&
+        validarNombreCompleto() === false &&
+        validarTelefono() === false &&
+        validarEdad() === false &&
+        validarProfesion() === false) {
 
-        // Crea el objeto con los campos que se pueden modificar
-        const datosActualizados = {
-            nombreCompleto:
-                inputNombreCompleto.value.trim(),
+        // Crea el objeto participante utilizando el modelo
+        const participante = crearParticipante(
+            inputNombreCompleto.value.trim(),
+            inputIdentificacion.value.trim(),
+            inputCorreo.value.trim(),
+            inputTelefono.value.trim(),
+            inputEdad.value.trim(),
+            inputProfesion.value.trim(),
+            idParticipante
+        );
 
-            telefono:
-                inputTelefono.value.trim(),
+        try {
 
-            edad:
-                inputEdad.value.trim() === ""
-                    ? null
-                    : Number(inputEdad.value.trim()),
-
-            profesion:
-                inputProfesion.value.trim()
-        };
-
-        try{
-
-            // Envía los cambios al backend
-            const respuesta = await fetch(
-                `/api/participantes/${idParticipante}`,
-                {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(
-                        datosActualizados
-                    )
-                }
+            // Solicita al service modificar el participante
+            const {
+                respuesta,
+                datosRespuesta
+            } = await modificarParticipante(
+                idParticipante,
+                participante
             );
 
-            // Convierte la respuesta en un objeto
-            const datosRespuesta =
-                await respuesta.json();
-
             // Verifica si ocurrió un error
-            if(respuesta.ok === false){
+            if (respuesta.ok === false) {
 
                 throw new Error(
                     datosRespuesta.mensaje
@@ -333,7 +333,7 @@ async function modificarParticipanteRetorno(){
                 text: datosRespuesta.mensaje,
                 icon: "success",
                 confirmButtonText: "Aceptar"
-            }).then(function(){
+            }).then(function () {
 
                 // Elimina el identificador temporal
                 sessionStorage.removeItem(
@@ -345,7 +345,7 @@ async function modificarParticipanteRetorno(){
                     "/pages/Participantes/listarParticipantes.html";
             });
 
-        } catch(error){
+        } catch (error) {
 
             console.error(
                 "Error al modificar participante:",
@@ -363,7 +363,7 @@ async function modificarParticipanteRetorno(){
 }
 
 // Función para cancelar la modificación
-function cancelarModificacionRetorno(){
+function cancelarModificacionRetorno() {
 
     // Elimina el identificador temporal
     sessionStorage.removeItem(
@@ -378,7 +378,7 @@ function cancelarModificacionRetorno(){
 // Evento que se ejecuta al enviar el formulario
 formularioParticipante.addEventListener(
     "submit",
-    function(evento){
+    function (evento) {
 
         // Evita que el formulario se envíe automáticamente
         evento.preventDefault();
@@ -397,7 +397,7 @@ btnCancelar.addEventListener(
 // Carga los datos al abrir la pantalla
 document.addEventListener(
     "DOMContentLoaded",
-    function(){
+    function () {
 
         cargarParticipanteRetorno();
     }

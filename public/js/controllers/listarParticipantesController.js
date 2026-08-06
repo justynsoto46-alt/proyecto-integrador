@@ -1,3 +1,10 @@
+// Importa las funciones del servicio de participantes
+import {
+    obtenerParticipantes,
+    eliminarParticipante
+} from "../services/participanteService.js";
+
+
 // Se obtienen los elementos necesarios para mostrar
 // y buscar participantes
 const inputBuscarParticipante =
@@ -19,7 +26,7 @@ let participantesRegistrados = [];
 
 
 // Función para eliminar las tildes de un texto
-function quitarTildes(texto){
+function quitarTildes(texto) {
 
     return texto
         .normalize("NFD")
@@ -28,13 +35,13 @@ function quitarTildes(texto){
 
 
 // Función para crear las filas de la tabla
-function mostrarParticipantesRetorno(participantes){
+function mostrarParticipantesRetorno(participantes) {
 
     // Limpia el contenido anterior de la tabla
     cuerpoTablaParticipantes.innerHTML = "";
 
     // Verifica si existen participantes para mostrar
-    if(participantes.length === 0){
+    if (participantes.length === 0) {
 
         mensajeSinResultados.style.display = "block";
 
@@ -48,7 +55,7 @@ function mostrarParticipantesRetorno(participantes){
     mensajeSinResultados.style.display = "none";
 
     // Recorre el arreglo de participantes
-    participantes.forEach(function(participante){
+    participantes.forEach(function (participante) {
 
         // Crea una fila nueva
         const fila = document.createElement("tr");
@@ -97,35 +104,34 @@ function mostrarParticipantesRetorno(participantes){
 
 
 // Función para consultar participantes desde el backend
-async function cargarParticipantesRetorno(){
+async function cargarParticipantesRetorno() {
 
-    try{
+    try {
 
-        // Solicita los participantes a la API
-        const respuesta =
-            await fetch("/api/participantes");
-
-        // Convierte la respuesta en un arreglo
-        const participantes =
-            await respuesta.json();
+        // Solicita los participantes por medio del service
+        const {
+            respuesta,
+            datosRespuesta
+        } = await obtenerParticipantes();
 
         // Verifica si el backend respondió con un error
-        if(respuesta.ok === false){
+        if (respuesta.ok === false) {
 
             throw new Error(
-                participantes.mensaje
+                datosRespuesta.mensaje
             );
         }
 
         // Guarda la lista obtenida desde MongoDB
-        participantesRegistrados = participantes;
+        participantesRegistrados =
+            datosRespuesta;
 
         // Muestra los participantes en la tabla
         mostrarParticipantesRetorno(
             participantesRegistrados
         );
 
-    } catch(error){
+    } catch (error) {
 
         console.error(
             "Error al cargar participantes:",
@@ -135,7 +141,8 @@ async function cargarParticipantesRetorno(){
         mensajeSinResultados.textContent =
             "No fue posible cargar los participantes.";
 
-        mensajeSinResultados.style.display = "block";
+        mensajeSinResultados.style.display =
+            "block";
 
         Swal.fire({
             title: "Error al cargar participantes",
@@ -148,7 +155,7 @@ async function cargarParticipantesRetorno(){
 
 
 // Función para buscar participantes
-function buscarParticipanteRetorno(){
+function buscarParticipanteRetorno() {
 
     const textoBuscar = quitarTildes(
         inputBuscarParticipante
@@ -158,7 +165,7 @@ function buscarParticipanteRetorno(){
     );
 
     // Si el campo está vacío, restaura la lista completa
-    if(textoBuscar === ""){
+    if (textoBuscar === "") {
 
         mensajeSinResultados.textContent =
             "No hay participantes registrados.";
@@ -171,7 +178,7 @@ function buscarParticipanteRetorno(){
     }
 
     // Valida que tenga al menos 3 caracteres
-    if(textoBuscar.length < 3){
+    if (textoBuscar.length < 3) {
 
         // No realiza todavía la búsqueda
         return;
@@ -180,7 +187,7 @@ function buscarParticipanteRetorno(){
     // Filtra por nombre, identificación o correo
     const participantesFiltrados =
         participantesRegistrados.filter(
-            function(participante){
+            function (participante) {
 
                 const nombre = quitarTildes(
                     participante.nombreCompleto
@@ -216,7 +223,7 @@ function buscarParticipanteRetorno(){
 
 
 // Función para ir a modificar un participante
-function modificarParticipanteRetorno(idParticipante){
+function modificarParticipanteRetorno(idParticipante) {
 
     // Guarda temporalmente el id seleccionado
     sessionStorage.setItem(
@@ -231,7 +238,7 @@ function modificarParticipanteRetorno(idParticipante){
 
 
 // Función para eliminar un participante
-async function eliminarParticipanteRetorno(idParticipante){
+async function eliminarParticipanteRetorno(idParticipante) {
 
     Swal.fire({
         title: "¿Eliminar participante?",
@@ -241,27 +248,23 @@ async function eliminarParticipanteRetorno(idParticipante){
         confirmButtonText: "Sí, eliminar",
         cancelButtonText: "Cancelar"
 
-    }).then(async function(resultado){
+    }).then(async function (resultado) {
 
         // Verifica si el usuario confirmó la eliminación
-        if(resultado.isConfirmed){
+        if (resultado.isConfirmed) {
 
-            try{
+            try {
 
-                // Envía la solicitud al backend para eliminar
-                const respuesta = await fetch(
-                    `/api/participantes/${idParticipante}`,
-                    {
-                        method: "DELETE"
-                    }
+                // Solicita al service eliminar el participante
+                const {
+                    respuesta,
+                    datosRespuesta
+                } = await eliminarParticipante(
+                    idParticipante
                 );
 
-                // Convierte la respuesta a JSON
-                const datosRespuesta =
-                    await respuesta.json();
-
                 // Verifica si ocurrió algún error
-                if(respuesta.ok === false){
+                if (respuesta.ok === false) {
 
                     throw new Error(
                         datosRespuesta.mensaje
@@ -279,7 +282,7 @@ async function eliminarParticipanteRetorno(idParticipante){
                 // Vuelve a consultar la base de datos
                 cargarParticipantesRetorno();
 
-            } catch(error){
+            } catch (error) {
 
                 console.error(
                     "Error al eliminar participante:",
@@ -303,7 +306,7 @@ async function eliminarParticipanteRetorno(idParticipante){
 
 
 // Función para agregar eventos a los botones dinámicos
-function agregarEventosBotones(){
+function agregarEventosBotones() {
 
     const botonesModificar =
         document.querySelectorAll(
@@ -316,11 +319,11 @@ function agregarEventosBotones(){
         );
 
     // Agrega el evento a los botones Modificar
-    botonesModificar.forEach(function(boton){
+    botonesModificar.forEach(function (boton) {
 
         boton.addEventListener(
             "click",
-            function(){
+            function () {
 
                 modificarParticipanteRetorno(
                     boton.getAttribute("data-id")
@@ -330,11 +333,11 @@ function agregarEventosBotones(){
     });
 
     // Agrega el evento a los botones Eliminar
-    botonesEliminar.forEach(function(boton){
+    botonesEliminar.forEach(function (boton) {
 
         boton.addEventListener(
             "click",
-            function(){
+            function () {
 
                 eliminarParticipanteRetorno(
                     boton.getAttribute("data-id")
@@ -348,7 +351,7 @@ function agregarEventosBotones(){
 // Ejecuta la búsqueda mientras el usuario escribe
 inputBuscarParticipante.addEventListener(
     "input",
-    function(){
+    function () {
 
         buscarParticipanteRetorno();
     }
@@ -358,7 +361,7 @@ inputBuscarParticipante.addEventListener(
 // Carga los participantes al abrir la página
 document.addEventListener(
     "DOMContentLoaded",
-    function(){
+    function () {
 
         cargarParticipantesRetorno();
     }
