@@ -28,6 +28,8 @@ body {
 }
 
 main {
+    display: flex;
+    align-items: flex-start;
     flex: 1;
 }
 
